@@ -1,2 +1,2 @@
 # burdauasite
-burda.ua ofisial site
+burda.ua official site
