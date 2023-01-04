@@ -1,0 +1,15 @@
+@import "extends.scss";
+@import "mixins.scss";
+@import "variable.scss";
+@import "null.css";
+
+body {
+    font-family: $fontfamily;
+}
+
+.wrapper {
+    @include dflex(center, center);
+    flex-direction: column;
+    max-width: 1920px;
+    height: 100%;
+}

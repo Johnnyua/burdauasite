@@ -1,0 +1,17 @@
+@mixin dflex($juscon, $alitems) {
+    display: flex;
+    justify-content: $juscon;
+    align-items: $alitems;
+}
+
+@mixin dgrid($columncount, $columnsize) {
+    display: grid;
+    grid-template-columns: repeat($columncount, $columnsize);
+}
+
+@mixin before-after-line ($width, $height, $background) {
+  @extend %before-after-line;
+  width: $width;
+  height: $height;
+  background: $background; 
+}

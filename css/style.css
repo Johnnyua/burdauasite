@@ -1,0 +1,13 @@
+@import "null.css";
+body {
+  font-family: "Nunito Sans, Arial, Helvetica, sans-serif";
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1920px;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
