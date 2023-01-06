@@ -1,3 +1,4 @@
+@import "function.scss";
 
 /*Fonts ====================================================*/
 $fontfamily: "Nunito Sans, Arial, Helvetica, sans-serif";
@@ -19,5 +20,5 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 /*Break points*/
-$bp1: 750;
+$bp1: 845;
 /*End Width ====================================================*/

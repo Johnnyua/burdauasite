@@ -2,6 +2,7 @@
     display: flex;
     justify-content: $juscon;
     align-items: $alitems;
+    flex-wrap: wrap;
 }
 
 @mixin dgrid($columncount, $columnsize) {

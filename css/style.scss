@@ -2,13 +2,16 @@
 @import "mixins.scss";
 @import "variable.scss";
 @import "function.scss";
+@import "null.css";
+
 
 
 
 body {
     background-color: $mainColor;
+    color: $colorBlack;
     font-family: $fontfamily;
-    font-size: $defaultFontSize;;
+    font-size: $defaultFontSize;
 }
 
 .wrapper {
@@ -26,19 +29,63 @@ body {
         max-width: $bp1 + px;   
     }
     height: 100%;
+    padding: 0 15px;
+}
+
+.flex_center {
+    @include dflex(center, center);
+}
+
+.flex_between {
+    @include dflex(space-between, center);
 }
 
 // Header===========================================
 .header {
+    width: 100%;
     height: 70px;
 }
 
+.header__nav {
+    @media (max-width: $bp1 + px) {
+        display: none;   
+    }
+}
+
+.nav__list {
+    font-weight: 800;
+    gap: 40px;
+    &.nav__item {
+        
+    }
+}
+
+.burger,
+.header__logo {
+    width: 40px;
+    height: 40px;
+    @media (min-width: $bp1 + px) {
+        display: none;   
+    }
+}
+
+.search-lang {
+    width: 100%;
+    height: 100%;
+}
+ 
 // Main===========================================
 .main {
     flex:  1 1 auto;
+    max-width: 100%;
+    width: 100%;
+    background-color: aqua;
 }
 
 // Footer===========================================
 .footer {
-
+    background-color: yellow;
+    max-width: 100%;
+    width: 100%;
+    min-height: rem(70);
 }
