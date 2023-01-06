@@ -6,7 +6,9 @@
 
 
 body {
+    background-color: $mainColor;
     font-family: $fontfamily;
+    font-size: $defaultFontSize;;
 }
 
 .wrapper {
@@ -14,5 +16,29 @@ body {
     flex-direction: column;
     max-width: 1920px;
     height: 100%;
+    margin: 0 auto;
 }
 
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    @media (max-width: $bp1 + px) {
+        max-width: $bp1 + px;   
+    }
+    height: 100%;
+}
+
+// Header===========================================
+.header {
+    height: 70px;
+}
+
+// Main===========================================
+.main {
+    flex:  1 1 auto;
+}
+
+// Footer===========================================
+.footer {
+
+}
