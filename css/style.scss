@@ -83,12 +83,13 @@ body {
 
 .nav__list {
   font-weight: 400;
-  gap: 40px;
-  line-height: rem(26);
+  @include adaptiveValue("gap", 40, 5, 0, 1630, 800);
+  line-height: lh(26, 16);
   .nav__item {
+    transition: font-weight 0.3s ease 0s;
     &:hover {
       font-weight: 800;
-      transition: all 0.3s ease;
+      
     }
     &.active::after {
       @include before-after-line(0, 2px, $colorBlue);
@@ -108,8 +109,11 @@ body {
 
 .search-lang {
   height: 100%;
+  margin-left: 20px;
   .search {
     position: relative;
+    width: 20px;
+    height: 20px;
     margin: 0 40px 0 0;
     input {
       display: none;
@@ -177,7 +181,8 @@ body {
     flex-basis: 50%;
 }
 .home__content__title {
-    font-size: calc(rem(25) + 3vw);
+     @include adaptiveValue("font-size", 40, 5, 0, 1630, 800);
+    // font-size: calc(rem(25) + 3vw);
     line-height: calc(rem(39) + 3vw);;
     font-weight: 800;
     flex-direction: column;
@@ -188,7 +193,7 @@ body {
     
     .description__text {
     font-size: rem(28);
-    line-height: rem(38);
+    line-height: lh(38,28);
     font-weight: 700;
     color: $colorBlue;
     }

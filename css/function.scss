@@ -10,3 +10,8 @@
     $result: math.div($px1,$px2) + em;
     @return $result;
 }
+
+@function lh($lineHeightSize, $fontSize) {
+    $result: math.div($lineHeightSize,$fontSize);
+    @return $result;
+}

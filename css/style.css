@@ -102,12 +102,16 @@ body {
 
 .nav__list {
   font-weight: 400;
-  gap: 40px;
-  line-height: 1.625rem;
+  gap: calc(
+      5px + 35 * ((100vw - 320px) / 1310)
+    );
+  line-height: 1.625;
+}
+.nav__list .nav__item {
+  transition: font-weight 0.3s ease 0s;
 }
 .nav__list .nav__item:hover {
   font-weight: 800;
-  transition: all 0.3s ease;
 }
 .nav__list .nav__item.active::after {
   width: 0;
@@ -130,9 +134,12 @@ body {
 
 .search-lang {
   height: 100%;
+  margin-left: 20px;
 }
 .search-lang .search {
   position: relative;
+  width: 20px;
+  height: 20px;
   margin: 0 40px 0 0;
 }
 .search-lang .search input {
@@ -201,7 +208,9 @@ body {
 }
 
 .home__content__title {
-  font-size: calc(1.5625rem + 3vw);
+  font-size: calc(
+      5px + 35 * ((100vw - 320px) / 1310)
+    );
   line-height: calc(2.4375rem + 3vw);
   font-weight: 800;
   flex-direction: column;
@@ -210,7 +219,7 @@ body {
 
 .home__content__description .description__text {
   font-size: 1.75rem;
-  line-height: 2.375rem;
+  line-height: 1.3571428571;
   font-weight: 700;
   color: #14276F;
 }
