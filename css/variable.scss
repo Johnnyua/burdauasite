@@ -3,23 +3,32 @@
 /*Fonts ====================================================*/
 $fontfamily: "Nunito Sans";
 $defaultFontSize: rem(18);
+$defaultLineHeight: rem(26);
 /*End Fonts ====================================================*/
 
 /*Colors ====================================================*/
-$mainColor: #E5E5E5;
+$mainColor: #fff;
 $colorHome: #faf7f5;
 $colorBlack: #28282C;
 $colorLightGrey: #E3E3E3;
 $colorGrey: #8B939A;
 $colorBlue: #14276F;
+
+$colorCyan: #179ED8;
+$colorGreen: #28A255;
+$colorOrange: #F09F44;
+$colorPurpule: #773484; 
+$colorRed: #CB2026;
 /*End Colors ====================================================*/
 
 /*Width ====================================================*/
-$minWidth: 320;
+$minWidth: 360;
 $maxWidth: 1920;
-$maxWidthContainer: 1630;
+$maxWidthContainerMedium: 1630;
+$maxWidthContainerBig: 1864;
 $containerPadding: 30;
-$containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidthMedium: $maxWidthContainerMedium + $containerPadding;
+$containerWidthBig: $maxWidthContainerBig + $containerPadding;
 
 /*Break points*/
 $bp1: 845;

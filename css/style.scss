@@ -9,17 +9,18 @@ body {
   color: $colorBlack;
   font-family: $fontfamily;
   font-size: $defaultFontSize;
+  line-height: $defaultLineHeight;
 }
 
 .wrapper {
   flex-direction: column;
-  max-width: 1920px;
+  max-width: $containerWidthBig + px;
   height: 100%;
   margin: 0 auto;
 }
 
+// Container
 .container {
-  max-width: $maxWidthContainer + px;
   margin: 0 auto;
   @media (max-width: $bp1 + px) {
     max-width: $bp1 + px;
@@ -28,6 +29,16 @@ body {
   padding: 0 15px;
 }
 
+._big {
+  max-width: $containerWidthBig + px;
+}
+
+._medium {
+  max-width: $containerWidthMedium + px;
+}
+// End container
+
+// Flex
 .flex_center {
   @include dflex(center, center);
 }
@@ -48,6 +59,26 @@ body {
   @include dflex(flex-start, flex-start);
   flex-direction: column;
 }
+
+.flex_center_column {
+  @include dflex(center, center);
+  flex-direction: column;
+}
+// End Flex
+.grid_union {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(340), rem(618)));
+  justify-content: center;
+}
+
+.grid_content {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+// Grid
+
+//End Grid
 .icons {
   width: 40px;
   height: 40px;
@@ -62,6 +93,48 @@ body {
   }
 }
 
+.title_big {
+  font-size: rem(46);
+  line-height: rem(62.74);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+// Colors classes
+.c_cyan {
+  color: $colorCyan;
+}
+.c_green {
+  color: $colorGreen;
+}
+.c_orange {
+  color: $colorOrange;
+}
+.c_purpule {
+  color: $colorPurpule;
+}
+.c_red {
+  color: $colorRed;
+}
+.c_grey {
+  color: $colorGrey;
+}
+.section_bcgrey {
+  background-color: $colorLightGrey;
+}
+// End colors classes
+
+// Buttons
+.btn_action {
+  background-color: $colorBlack;
+  color: $mainColor;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 800;
+  padding: 10px 20px;
+
+}
+// End buttons
 .burger {
   position: relative;
   cursor: pointer;
@@ -92,9 +165,8 @@ body {
       transform: rotate(-45deg);
       transition: transform 0.8s ease 0.5s;
     }
-    }
   }
-
+}
 
 // Header===========================================
 .header {
@@ -103,7 +175,7 @@ body {
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 70px;
 }
 .header__content {
@@ -195,10 +267,13 @@ body {
     height: 50px;
     left: 100%;
     margin: 0 0 0 10px;
+    @media (min-width: $bp1 + px) {
+      transform: translateX(-100%);
+    }
     transform: translateX(100%);
     &.active {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateX(100%);
       transition: all 0.5s ease 0s;
     }
   }
@@ -214,6 +289,7 @@ body {
       margin: 0 auto;
     }
     position: relative;
+    cursor: pointer;
     width: 20px;
     height: 20px;
     margin: 0 40px 0 0;
@@ -249,19 +325,19 @@ body {
 }
 // Main===========================================
 .main {
-  background-color: $colorHome;
   flex: 1 1 auto;
-  max-width: 100%;
-  width: 100%;
+  // max-width: 100%;
+  width: 100vw;
   position: relative;
   z-index: 1;
   padding: 70px 0 0 0;
 }
 
 // Home Section===================================
-.home {
+.home__main {
+  background-color: $colorHome;
   position: relative;
-  height: 100%;
+  padding: 0 0 10px 0;
   .social_icons {
     position: absolute;
     gap: 20px;
@@ -275,11 +351,11 @@ body {
   }
 }
 
-.home__container {
+.home__content__container {
   gap: 40px;
   position: relative;
-  @include adaptiveValue("padding-left", 200, 20, 0, 1630, 320);
-  @include adaptiveValue("padding-top", 200, 20, 0, 1630, 320);
+  @include adaptiveValue("padding-left", 200, 20, 0, 1630, 360);
+  @include adaptiveValue("padding-top", 200, 20, 0, 1630, 360);
   flex-wrap: wrap;
   // padding: 200px 0 0 200px;
 }
@@ -315,10 +391,31 @@ body {
   min-height: 440px;
   flex-basis: 45%;
 }
+
+// Home Service section
+.services__content {
+  gap: 2px;
+  max-width: 100%
+}
+.content__service {
+  @include adaptiveValue("padding-top", 50, 20, 0, 1890, 360);
+  @include adaptiveValue("padding-left", 135, 30, 0, 1890, 360);
+   @include adaptiveValue("padding-bottom", 50, 20, 0, 1890, 360);
+  @include adaptiveValue("padding-right", 135, 30, 0, 1890, 360);
+  // padding: rem(50) rem(135);
+}
+.services__footer {
+  background-color: $mainColor;
+  width: 100vw;
+  text-align: center;
+}
+// End Home Service section
+
 // Footer=========================================
 .footer {
   background-color: yellow;
-  max-width: 100%;
-  width: 100%;
+  width: 100vw;
   min-height: rem(70);
 }
+
+// End Footer=========================================
