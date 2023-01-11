@@ -11,8 +11,12 @@
     @return $result;
 }
 
-@function lh($lineHeightSize, $fontSize) {
-    $result: math.div($lineHeightSize,$fontSize);
-    @return $result;
+@function adaptiveFont($minFont, $maxFont) {
+    $result: max($minFont, min($maxFont, 5.333vw));
+    @return $result;  
 }
+// @function lh($lineHeightSize, $fontSize) {
+//     $result: math.div($lineHeightSize,$fontSize);
+//     @return $result;
+// }
 

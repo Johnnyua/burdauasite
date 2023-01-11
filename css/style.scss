@@ -96,12 +96,26 @@ body {
   }
 }
 
+// Text
 .title_big {
   font-size: rem(46);
   line-height: rem(62.74);
   font-weight: 800;
   text-transform: uppercase;
 }
+
+.description__title {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.description__text{
+  font-weight: 600;
+  font-size: adaptiveFont(rem(18), rem(28));
+  line-height: adaptiveFont(rem(26), rem(38));  
+}
+// End Text
 
 // Colors classes
 .c_cyan {
@@ -132,7 +146,8 @@ body {
   line-height: inherit;
   font-weight: 800;
   padding: 10px 20px;
-
+  max-width: rem(220);
+  // @include adaptiveValue("width", )
 }
 // End buttons
 .burger {
@@ -213,8 +228,8 @@ body {
 
 .nav__list {
   font-weight: 400;
-  @include adaptiveValue("gap", 40, 5, 0, 1630, 800);
-  line-height: lh(26, 16);
+  @include adaptiveValue("gap", 40, 5, 2, 1630, 800);
+  line-height: rem(26);
   @media (max-width: $bp1 + px) {
     flex-direction: column;
     padding: 30px 60px;
@@ -222,30 +237,30 @@ body {
 }
 
 .nav__item {
-    transition: font-weight 0.3s ease 0s;
-    &:hover {
-      font-weight: 800;
-      @media (max-width: $bp1 + px) {
-        background-color: $colorBlack;
-      }
-    }
-    &.active::after {
-      @include before-after-line(0, 2px, $colorBlue);
-      @media (min-width: $bp1 + px) {
-        width: 50%;
-      }
-    }
-
+  transition: font-weight 0.3s ease 0s;
+  &:hover {
+    font-weight: 800;
     @media (max-width: $bp1 + px) {
-      background-color: $colorGrey;
-      color: $colorHome;
-      gap: 20px;
-      max-width: rem(220);
-      width: 100%;
-      text-align: center;
-      padding: 7px 0;
+      background-color: $colorBlack;
     }
   }
+  &.active::after {
+    @include before-after-line(0, 2px, $colorBlue);
+    @media (min-width: $bp1 + px) {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: $bp1 + px) {
+    background-color: $colorGrey;
+    color: $colorHome;
+    gap: 20px;
+    max-width: rem(220);
+    width: 100%;
+    text-align: center;
+    padding: 7px 0;
+  }
+}
 
 .header__logo {
   width: rem(40);
@@ -278,7 +293,7 @@ body {
       transition: all 0.5s ease 0s;
     }
     @media (min-width: $bp1 + px) {
-      left: -150%;  
+      left: -150%;
     }
   }
 }
@@ -300,7 +315,7 @@ body {
   }
 }
 .lang_container {
-  height: 30px;
+  min-height: 30px;
   border: 1px solid $colorBlack;
   border-image: initial;
   border-radius: 50px;
@@ -345,6 +360,7 @@ body {
     position: absolute;
     gap: 20px;
     top: 50%;
+    left: 0;
   }
   .logo_big {
     position: absolute;
@@ -359,37 +375,33 @@ body {
 .home__content__container {
   gap: 40px;
   position: relative;
-  @include adaptiveValue("padding-left", 200, 20, 0, 1630, 360);
-  @include adaptiveValue("padding-top", 200, 20, 0, 1630, 360);
+  @include adaptiveValue("padding-left", 200, 20, 2, 1920, 360);
+  @include adaptiveValue("padding-top", 200, 20, 2, 1920, 360);
   flex-wrap: wrap;
   // padding: 200px 0 0 200px;
 }
 .home__content {
+  @include adaptiveValue("gap", 70, 30, 2, 1920, 360);
   flex-basis: 50%;
-}
-.home__content__title {
-  // font-size: calc(rem(25) + 3vw);
-  font-size: max(rem(34), min(rem(75), 5.333vw));
-  line-height: max(rem(42), min(rem(90), 5.333vw));
-  font-weight: 800;
-  flex-direction: column;
-  margin: 0 0 70px 0;
-}
-
-.home__content__description {
-  .description__text {
-    font-size: rem(28);
-    line-height: lh(38, 28);
-    font-weight: 700;
+  .description__title {
     color: $colorBlue;
   }
 }
-.description__number {
-  color: $colorBlue;
-  font-size: rem(128);
+.home__content__title {
+  font-size: adaptiveFont(rem(34), rem(75));
+  line-height: adaptiveFont(rem(42), rem(90));
   font-weight: 800;
+  flex-direction: column;
+}
+
+.home__content__description {
+}
+.description__number {
   height: 100%;
   margin-right: 16px;
+  img {
+    max-width: fit-content;
+  }
 }
 
 .home__image {
@@ -404,13 +416,13 @@ body {
 }
 .services__content {
   gap: 2px;
-  max-width: 100%
+  max-width: 100%;
 }
 .content__item {
-  @include adaptiveValue("padding-top", 50, 20, 0, 1890, 360);
-  @include adaptiveValue("padding-left", 135, 30, 0, 1890, 360);
-   @include adaptiveValue("padding-bottom", 50, 20, 0, 1890, 360);
-  @include adaptiveValue("padding-right", 135, 30, 0, 1890, 360);
+  @include adaptiveValue("padding-top", 50, 20, 2, 1890, 360);
+  @include adaptiveValue("padding-left", 135, 30, 2, 1890, 360);
+  @include adaptiveValue("padding-bottom", 50, 20, 2, 1890, 360);
+  @include adaptiveValue("padding-right", 135, 30, 2, 1890, 360);
   // padding: rem(50) rem(135);
 }
 .services__footer {
