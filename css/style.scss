@@ -14,9 +14,10 @@ body {
 
 .wrapper {
   flex-direction: column;
-  max-width: $containerWidthBig + px;
-  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
+  max-width: $maxWidth + px;
+  width: 100%;
 }
 
 // Container
@@ -74,6 +75,8 @@ body {
 .grid_content {
   display: grid;
   grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  row-gap: 30px;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
 }
 // Grid
@@ -118,9 +121,6 @@ body {
 }
 .c_grey {
   color: $colorGrey;
-}
-.section_bcgrey {
-  background-color: $colorLightGrey;
 }
 // End colors classes
 
@@ -174,8 +174,8 @@ body {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
-  width: 100vw;
+  max-width: inherit;
+  width: inherit;
   height: 70px;
 }
 .header__content {
@@ -219,7 +219,9 @@ body {
     flex-direction: column;
     padding: 30px 60px;
   }
-  .nav__item {
+}
+
+.nav__item {
     transition: font-weight 0.3s ease 0s;
     &:hover {
       font-weight: 800;
@@ -238,11 +240,12 @@ body {
       background-color: $colorGrey;
       color: $colorHome;
       gap: 20px;
+      max-width: rem(220);
       width: 100%;
       text-align: center;
+      padding: 7px 0;
     }
   }
-}
 
 .header__logo {
   width: rem(40);
@@ -263,18 +266,19 @@ body {
     opacity: 0;
     height: 2em;
     position: absolute;
-    width: 100vw;
-    height: 50px;
-    left: 100%;
+    width: 250px;
+    top: 150%;
+    left: 0;
     margin: 0 0 0 10px;
-    @media (min-width: $bp1 + px) {
-      transform: translateX(-100%);
-    }
-    transform: translateX(100%);
+    padding: 20px 10px;
+    transform: translateY(100%);
     &.active {
       opacity: 1;
-      transform: translateX(100%);
+      transform: translateY(0);
       transition: all 0.5s ease 0s;
+    }
+    @media (min-width: $bp1 + px) {
+      left: -150%;  
     }
   }
 }
@@ -326,8 +330,7 @@ body {
 // Main===========================================
 .main {
   flex: 1 1 auto;
-  // max-width: 100%;
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 1;
   padding: 70px 0 0 0;
@@ -345,6 +348,8 @@ body {
   }
   .logo_big {
     position: absolute;
+    top: 0;
+    left: 0;
     @media (max-width: $bp1 + px) {
       display: none;
     }
@@ -363,8 +368,9 @@ body {
   flex-basis: 50%;
 }
 .home__content__title {
-  font-size: calc(rem(25) + 3vw);
-  line-height: calc(rem(39) + 3vw);
+  // font-size: calc(rem(25) + 3vw);
+  font-size: max(rem(34), min(rem(75), 5.333vw));
+  line-height: max(rem(42), min(rem(90), 5.333vw));
   font-weight: 800;
   flex-direction: column;
   margin: 0 0 70px 0;
@@ -393,11 +399,14 @@ body {
 }
 
 // Home Service section
+.home__services {
+  background-color: $colorLightGrey;
+}
 .services__content {
   gap: 2px;
   max-width: 100%
 }
-.content__service {
+.content__item {
   @include adaptiveValue("padding-top", 50, 20, 0, 1890, 360);
   @include adaptiveValue("padding-left", 135, 30, 0, 1890, 360);
    @include adaptiveValue("padding-bottom", 50, 20, 0, 1890, 360);
@@ -414,7 +423,7 @@ body {
 // Footer=========================================
 .footer {
   background-color: yellow;
-  width: 100vw;
+  width: 100%;
   min-height: rem(70);
 }
 
