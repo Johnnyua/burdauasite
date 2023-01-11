@@ -160,11 +160,10 @@ body {
 .btn_action {
   background-color: #28282C;
   color: #fff;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: max(0.875rem, min(1.125rem, 5.333vw));
+  line-height: max(1.125rem, min(1.625rem, 5.333vw));
   font-weight: 800;
   padding: 10px 20px;
-  max-width: 13.75rem;
 }
 
 .burger {

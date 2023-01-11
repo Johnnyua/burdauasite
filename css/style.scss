@@ -66,6 +66,8 @@ body {
   flex-direction: column;
 }
 // End Flex
+
+// Grid
 .grid_union {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(340), rem(618)));
@@ -79,8 +81,6 @@ body {
   row-gap: 30px;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
 }
-// Grid
-
 //End Grid
 .icons {
   width: 40px;
@@ -142,11 +142,11 @@ body {
 .btn_action {
   background-color: $colorBlack;
   color: $mainColor;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: adaptiveFont(rem(14), rem(18));
+  line-height: adaptiveFont(rem(18), rem(26));
   font-weight: 800;
   padding: 10px 20px;
-  max-width: rem(220);
+  // max-width: rem(220);
   // @include adaptiveValue("width", )
 }
 // End buttons
