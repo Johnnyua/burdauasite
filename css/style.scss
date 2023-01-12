@@ -2,124 +2,12 @@
 @import "mixins.scss";
 @import "variable.scss";
 @import "function.scss";
+@import "global.scss";
 @import "null.css";
 
-body {
-  background-color: $mainColor;
-  color: $colorBlack;
-  font-family: $fontfamily;
-  font-size: $defaultFontSize;
-  line-height: $defaultLineHeight;
-  font-weight: $defaultFontWeight;
+.path-name {
+    fill: black;
 }
-
-.wrapper {
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
-  max-width: $maxWidth + px;
-  width: 100%;
-}
-
-// Container
-.container {
-  margin: 0 auto;
-  @media (max-width: $bp1 + px) {
-    max-width: $bp1 + px;
-  }
-  height: 100%;
-  padding: 0 15px;
-}
-
-._big {
-  max-width: $containerWidthBig + px;
-}
-
-._medium {
-  max-width: $containerWidthMedium + px;
-}
-// End container
-
-// Flex
-.flex_center {
-  @include dflex(center, center);
-}
-
-.flex_between {
-  @include dflex(space-between, center);
-}
-
-.flex_jstart {
-  @include dflex(flex-start, center);
-}
-
-.flex_start {
-  @include dflex(flex-start, flex-start);
-}
-
-.flex_start_column {
-  @include dflex(flex-start, flex-start);
-  flex-direction: column;
-}
-
-.flex_center_column {
-  @include dflex(center, center);
-  flex-direction: column;
-}
-// End Flex
-
-// Grid
-.grid_union {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(340), rem(618)));
-  justify-content: center;
-}
-
-.grid_content {
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-rows: 1fr;
-  row-gap: 30px;
-  grid-template: auto 1fr minmax(40px, auto) / 1fr;
-}
-//End Grid
-.icons {
-  width: 40px;
-  height: 40px;
-}
-.display-none {
-  display: none;
-}
-.main_title {
-  text-transform: uppercase;
-  span {
-    color: $colorBlue;
-  }
-}
-
-// Text
-.title_big {
-  font-size: rem(46);
-  line-height: rem(62.74);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.section__title {
-  font-size: adaptiveFont(rem(18), rem(28));
-  line-height: adaptiveFont(rem(26), rem(38));
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.fw600{
-  font-weight: 600;  
-}
-.fw700{
-  font-weight: 700;  
-}
-// End Text
-
 // Colors classes
 .c_cyan {
   color: $colorCyan;
@@ -141,50 +29,8 @@ body {
 }
 // End colors classes
 
-// Buttons
-.btn_action {
-  background-color: $colorBlack;
-  color: $mainColor;
-  font-size: adaptiveFont(rem(14), rem(18));
-  line-height: adaptiveFont(rem(18), rem(26));
-  font-weight: 800;
-  padding: 10px 20px;
-  // max-width: rem(220);
-  // @include adaptiveValue("width", )
-}
-// End buttons
-.burger {
-  position: relative;
-  cursor: pointer;
-  width: rem(20);
-  height: rem(22);
-  div {
-    position: absolute;
-    height: rem(2);
-    width: rem(20);
-    background-color: $colorBlack;
-    top: rem(11);
-    left: 0;
 
-    &:first-child {
-      top: 0;
-    }
 
-    &:last-child {
-      top: rem(22);
-    }
-    &.burger-rotate-positive {
-      top: rem(11);
-      transform: rotate(45deg);
-      transition: transform 0.8s ease 0.5s;
-    }
-    &.burger-rotate-negative {
-      top: rem(11);
-      transform: rotate(-45deg);
-      transition: transform 0.8s ease 0.5s;
-    }
-  }
-}
 
 // Header===========================================
 .header {
@@ -437,9 +283,19 @@ body {
 
 // Footer=========================================
 .footer {
-  background-color: yellow;
+  background-color: $colorBlack;
+  color: $mainColor;
   width: 100%;
   min-height: rem(70);
+  margin: 0 auto;
+}
+
+.footer__inner{
+// padding: 0 10%;
+}
+
+.footer__contacts {
+  width: 100%;
 }
 
 // End Footer=========================================
