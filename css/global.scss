@@ -30,12 +30,12 @@ body {
   height: 100%;
   padding: 0 15px;
   &.__big {
-  max-width: $containerWidthBig + px;
-}
+    max-width: $containerWidthBig + px;
+  }
 
-&._medium {
-  max-width: $containerWidthMedium + px;
-}
+  &._medium {
+    max-width: $containerWidthMedium + px;
+  }
 }
 // End container
 
@@ -113,11 +113,11 @@ body {
   text-transform: uppercase;
 }
 
-.fw600{
-  font-weight: 600;  
+.fw600 {
+  font-weight: 600;
 }
-.fw700{
-  font-weight: 700;  
+.fw700 {
+  font-weight: 700;
 }
 // End Text
 
@@ -133,8 +133,22 @@ body {
 // End buttons
 
 .icons {
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
   width: rem(40);
   height: rem(40);
+  a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  }
 }
 
 .display-none {
