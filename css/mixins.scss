@@ -1,3 +1,7 @@
+@import "function.scss";
+
+
+
 @mixin dflex($juscon, $alitems) {
   display: flex;
   justify-content: $juscon;
@@ -49,4 +53,19 @@
       #{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
     );
   }
+}
+
+
+@mixin adaptiveFont($pcSize, $mobSize, $maxWidth, $bp) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+  $remSize: rem($pcSize);
+  $remMobSize: rem($mobSize);
+
+	@media (max-width: $bp + px) {
+		font-size: calc(#{$remMobSize} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+	}
+	@media (min-width: $bp + px) {
+		font-size: calc(#{$remMobSize} + #{$addSize} * (100vw / #{$maxWidth}));
+	}
 }

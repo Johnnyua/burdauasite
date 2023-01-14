@@ -3,7 +3,7 @@
 /*Fonts ====================================================*/
 $fontfamily: "Nunito Sans";
 $defaultFontSize: rem(18);
-$defaultLineHeight: rem(26);
+$defaultLineHeight: calc(26 / 18);
 $defaultFontWeight: 400;
 /*End Fonts ====================================================*/
 

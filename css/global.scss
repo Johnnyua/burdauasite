@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
   max-width: $maxWidth + px;
   width: 100%;
-  padding: 0 15px;
+  // padding: 0 15px;
 }
 
 // Container
@@ -28,7 +28,7 @@ body {
     max-width: $bp1 + px;
   }
   height: 100%;
-  padding: 0 15px;
+  padding: 0 20px;
   &.__big {
     max-width: $containerWidthBig + px;
   }
@@ -92,33 +92,52 @@ body {
 //End Grid
 
 // Text
-.main_title {
-  text-transform: uppercase;
+.title {
+  @include adaptiveFont(75, 34, $maxWidth, $bp1);
+  font-weight: 800;
   span {
     color: $colorBlue;
   }
 }
 
-.title_big {
-  font-size: rem(46);
-  line-height: rem(62.74);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.section__title {
-  font-size: adaptiveFont(rem(18), rem(28));
-  line-height: adaptiveFont(rem(26), rem(38));
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.fw600 {
-  font-weight: 600;
-}
-.fw700 {
+.title__section {
+  @include adaptiveFont(46, 28, $maxWidth, $bp1);
   font-weight: 700;
+  @media (max-width: $bp1 + px) {
+    font-weight:800;
+  }
 }
+
+.title__subtitle {
+  @include adaptiveFont(28, 18, $maxWidth, $bp1);
+  font-weight: 800;
+  @media (max-width: $bp1 + px) {
+    font-weight:700;
+  }
+}
+
+.text__title {
+  font-size: rem(18);
+  font-weight: 800;
+  @media (max-width: $bp1 + px) {
+    font-weight:700;
+  }
+}
+
+.text{
+  @include adaptiveFont(18, 14, $maxWidth, $bp1);
+  @media (max-width: $bp1 + px) {
+    font-weight:700;
+  }  
+}
+
+.title,
+.title__section,
+.title__subtitle {
+  text-transform: uppercase;
+}
+
+
 // End Text
 
 // Buttons
@@ -126,7 +145,6 @@ body {
   background-color: $colorBlack;
   color: $mainColor;
   font-size: adaptiveFont(rem(14), rem(18));
-  line-height: adaptiveFont(rem(18), rem(26));
   font-weight: 800;
   padding: 10px 20px;
 }
@@ -148,6 +166,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  }
+}
+
+.mobile__logo {
+  width: rem(40);
+  height: rem(40);
+  @media (min-width: $bp1 + px) {
+    display: none;
   }
 }
 

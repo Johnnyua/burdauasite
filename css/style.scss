@@ -111,14 +111,6 @@
   }
 }
 
-.header__logo {
-  width: rem(40);
-  height: rem(40);
-  @media (min-width: $bp1 + px) {
-    display: none;
-  }
-}
-
 .burger_search {
   gap: 30px;
 }
@@ -291,7 +283,14 @@
 }
 
 .footer__inner{
-// padding: 0 10%;
+  @include adaptiveValue("padding-top", 40, 20, 2, 1920, 380);
+  @include adaptiveValue("padding-right", 245, 20, 2, 1920, 380); 
+  @include adaptiveValue("padding-bottom", 40, 20, 2, 1920, 380);
+  @include adaptiveValue("padding-left", 245, 20, 2, 1920, 380);  
+  gap: rem(30);
+  :only-child {
+    flex-basis: 100%;
+  }
 }
 
 .footer__contacts {
@@ -299,11 +298,19 @@
 }
 
 .footer__social-list {
-  gap: 40px;
+  gap: rem(30);
 }
 
-.footer__social-item {
+.footer__social-item  {
   background-color: $colorGrey; 
+}
+
+.footer__menu-item {
+  padding: rem(11) rem(28);
+  &:not(:last-child) {
+    border-right: 2px solid $colorGrey;
+  }
+  
 }
 
 // End Footer=========================================

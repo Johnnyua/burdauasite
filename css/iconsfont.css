@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icon';
   src:
-    url('../fonts/icon.ttf?wkfc0a') format('truetype'),
-    url('../fonts/icon.woff?wkfc0a') format('woff'),
-    url('../fonts/icon.svg?wkfc0a#icon') format('svg');
+     url('../fonts/icon.ttf?f1zsl6') format('truetype'),
+    url('../fonts/icon.woff?f1zsl6') format('woff'),
+    url('../fonts/icon.svg?f1zsl6#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,24 +25,60 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mobile-phone:before {
+.icon-creative:before {
+  content: "\e90d";
+}
+.icon-digital:before {
+  content: "\e90e";
+}
+.icon-distribution:before {
+  content: "\e90f";
+}
+.icon-events:before {
+  content: "\e910";
+}
+.icon-influencer:before {
+  content: "\e911";
+}
+.icon-magazines:before {
+  content: "\e912";
+}
+.icon-ukraine:before {
+  content: "\e90a";
+}
+.icon-burda_big:before {
+  content: "\e90b";
+}
+.icon-media_big:before {
+  content: "\e90c";
+}
+.icon-burda:before {
   content: "\e900";
 }
-.icon-phone:before {
+.icon-email:before {
   content: "\e901";
 }
-.icon-email:before {
+.icon-facebook:before {
   content: "\e902";
 }
-.icon-facebook:before {
+.icon-instagram:before {
   content: "\e903";
 }
-.icon-instagram:before {
+.icon-media:before {
   content: "\e904";
 }
-.icon-twitter:before {
+.icon-mobile-phone:before {
   content: "\e905";
 }
-.icon-youtube:before {
+.icon-phone:before {
   content: "\e906";
+}
+.icon-twitter:before {
+  content: "\e907";
+}
+.icon-uk:before {
+  content: "\e908";
+}
+.icon-youtube:before {
+  content: "\e909";
 }

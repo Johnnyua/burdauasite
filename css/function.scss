@@ -12,7 +12,7 @@
 }
 
 @function adaptiveFont($minFont, $maxFont) {
-    $result: max($minFont, min($maxFont, 5.333vw));
+    $result: max($minFont, min($maxFont, 3.333vw));
     @return $result;  
 }
 // @function lh($lineHeightSize, $fontSize) {
