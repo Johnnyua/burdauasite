@@ -46,6 +46,13 @@ body {
   flex-wrap: wrap;
 }
 
+.flex_evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .flex_between {
   display: flex;
   justify-content: space-between;
@@ -107,8 +114,15 @@ body {
   display: grid;
   grid-auto-flow: row;
   grid-auto-rows: 1fr;
-  row-gap: 30px;
+  gap: 30px;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
+}
+@media (max-width: 1920px) {
+  .grid_content {
+    gap: calc(
+        10px + 20 * ((100vw - 360px) / 1560)
+      );
+  }
 }
 
 .title {
@@ -203,6 +217,7 @@ body {
   color: #fff;
   font-size: max(0.875rem, min(1.125rem, 3.333vw));
   font-weight: 800;
+  margin: 0 0 6.25rem 0;
   padding: 10px 20px;
 }
 
@@ -228,11 +243,6 @@ body {
 .mobile__logo {
   width: 2.5rem;
   height: 2.5rem;
-}
-@media (min-width: 845px) {
-  .mobile__logo {
-    display: none;
-  }
 }
 
 .display-none {

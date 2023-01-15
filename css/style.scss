@@ -293,16 +293,43 @@
   }
 }
 
+.footer__logo {
+  @media (max-width: $bp1 + px) {
+    display: none;
+  }
+  .icon-burda_big {
+    color: $colorGrey;
+  }
+}
+
 .footer__contacts {
   width: 100%;
 }
 
+.footer__icons {
+  justify-content: space-evenly;
+  flex-basis: 100%;
+  
+}
+
 .footer__social-list {
-  gap: rem(30);
 }
 
 .footer__social-item  {
   background-color: $colorGrey; 
+  &:hover {
+    background-color: $colorBlue;
+  }
+}
+
+.footer__menu {
+  width: 100%;  
+}
+
+.footer__menu-list {
+  @media (max-width: $bp2 + px) {
+    display: none;
+  }
 }
 
 .footer__menu-item {
@@ -310,7 +337,22 @@
   &:not(:last-child) {
     border-right: 2px solid $colorGrey;
   }
-  
+  &:hover {
+    background-color: $colorGrey;
+  }
+}
+
+.dep__text,
+.org__text,
+.footer__copyrigth {
+  color: $colorGrey;
+}
+
+.footer__menu,
+.footer__contacts,
+.footer__social-list,
+.footer__contacts-dep {
+  @include adaptiveValue("gap", 30, 15, 2, 1920, 380);
 }
 
 // End Footer=========================================
