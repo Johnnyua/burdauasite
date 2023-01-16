@@ -23,13 +23,12 @@ $colorRed: #CB2026;
 /*End Colors ====================================================*/
 
 /*Width ====================================================*/
-$minWidth: 360;
+$minWidth: 380;
 $maxWidth: 1920;
-$maxWidthContainerMedium: 1630;
-$maxWidthContainerBig: 1864;
+$maxWidthContainer: 1630;
 $containerPadding: 30;
-$containerWidthMedium: $maxWidthContainerMedium + $containerPadding;
-$containerWidthBig: $maxWidthContainerBig + $containerPadding;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
 
 /*Break points*/
 $bp1: 845;

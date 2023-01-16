@@ -22,60 +22,69 @@ body {
 }
 
 // Container
-.container {
+.container,
+.container_fluid {
   margin: 0 auto;
   @media (max-width: $bp1 + px) {
     max-width: $bp1 + px;
   }
   height: 100%;
-  padding: 0 20px;
-  &.__big {
-    max-width: $containerWidthBig + px;
-  }
+  padding: 0 15px;
+}
+.container {
+  max-width: $containerWidth + px;
+  
+}
 
-  &._medium {
-    max-width: $containerWidthMedium + px;
-  }
+.container_fluid {
+  max-width: $containerWidth + px;
 }
 // End container
 
 // Flex
-.flex_center {
-  @include dflex(center, center);
+  //row
+.flex_normal {
+  @include dFlexRow(normal, normal);
 }
 
-.flex_evenly {
-  @include dflex(space-evenly, center);
+.flex_center {
+  @include dFlexRow(center, center);
 }
 
 .flex_between {
-  @include dflex(space-between, center);
+  @include dFlexRow(space-between, center);
+}
+
+.flex_between_normal {
+  @include dFlexRow(space-between, normal);
+}
+
+.flex_evenly {
+  @include dFlexRow(space-evenly, center);
 }
 
 .flex_jstart {
-  @include dflex(flex-start, center);
-}
-
-.flex_astartjbet {
-  @include dflex(flex-start, center);
+  @include dFlexRow(flex-start, center);
 }
 
 .flex_astart {
-  @include dflex(center, flex-start);
+  @include dFlexRow(center, flex-start);
 }
 
 .flex_start {
-  @include dflex(flex-start, flex-start);
+  @include dFlexRow(flex-start, flex-start);
+}
+// column
+.flex_acenter_column {
+  @include dFlexColumn(normal, center);
 }
 
 .flex_start_column {
-  @include dflex(flex-start, flex-start);
-  flex-direction: column;
+  @include dFlexColumn(flex-start, flex-start);
 }
 
 .flex_center_column {
-  @include dflex(center, center);
-  flex-direction: column;
+  @include dFlexColumn(center, center);
 }
 // End Flex
 

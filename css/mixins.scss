@@ -2,8 +2,16 @@
 
 
 
-@mixin dflex($juscon, $alitems) {
+@mixin dFlexRow($juscon, $alitems) {
   display: flex;
+  justify-content: $juscon;
+  align-items: $alitems;
+  flex-wrap: wrap;
+}
+
+@mixin dFlexColumn($juscon, $alitems) {
+  display: flex;
+  flex-direction: column;
   justify-content: $juscon;
   align-items: $alitems;
   flex-wrap: wrap;
