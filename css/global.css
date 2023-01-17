@@ -236,7 +236,7 @@ body {
   color: #fff;
   font-size: max(0.875rem, min(1.125rem, 3.333vw));
   font-weight: 800;
-  margin: 0 0 6.25rem 0;
+  margin: 0 0 5.5555555556em 0;
   padding: 10px 20px;
 }
 
@@ -244,8 +244,6 @@ body {
   cursor: pointer;
   position: relative;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
 }
 .icons a {
   width: 100%;
@@ -259,6 +257,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.icons,
 .mobile__logo {
   width: 2.5rem;
   height: 2.5rem;

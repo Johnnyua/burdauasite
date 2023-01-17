@@ -23,10 +23,10 @@
 <body>
     <div class="wrapper flex_jstart">
         <header class="header">
-            <div class="header__content container _medium flex_between">
+            <div class="header__content container">
                 <div class="header__nav">
                     <nav class="nav">
-                        <ul class="nav__list flex_center">
+                        <ul class="nav__list">
                             <li class="nav__item active">
                                 <a href="#">Головна</a>
                             </li>
@@ -68,8 +68,14 @@
                             <input class="search_input" type="text" placeholder="Search..." />
                         </div>
                     </div>
-                    <div class="header__logo mobile_logo">
-                        <img src="images/logo_mobile.svg" alt="logo" />
+                    <div class="header__mini_logo mobile__logo">
+                        <a class="mobile_logo-link" href="#">
+                            <div class="">
+                                <span class="icon-burda"></span>
+                                <span class="icon-media"></span>
+                            </div>
+                            <span class="icon-uk"></span>
+                        </a>
                     </div>
                     <div class="lang_container flex_center">
                         <ul class="lang__list flex_center">
@@ -250,7 +256,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <ul class="footer__menu-list text__title">
+                        <ul class="footer__menu-list menu text__title">
                             <li class="footer__menu-item">
                                 <a href="#" class="footer__menu-link">CREATIVE</a>
                             </li>
