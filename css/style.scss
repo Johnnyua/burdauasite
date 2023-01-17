@@ -136,7 +136,7 @@
 }
 
 .header__mini_logo {
-  .icon-uk  {
+  .icon-uk {
     color: $colorBlue;
   }
 }
@@ -306,10 +306,6 @@
 }
 
 .footer__mini_logo {
-  display: none;
-  @media (max-width: $bp1 + px) {
-    display: block;
-  }
 }
 
 .footer__contacts {
@@ -356,10 +352,12 @@
 
 .footer__contacts-dep {
   @include dFlexRow(space-between, flex-start);
-  flex: auto
-  // @media (max-width: $bp3 + px) {
-  //   flex-basis: 100%;
-  // } 
+  flex: auto;
+  .dep__phone {
+    a {
+      display: block;
+    }
+  }
 }
 
 .footer__copyright {

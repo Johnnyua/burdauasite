@@ -187,6 +187,13 @@ body {
   height: rem(40);
 }
 
+.mobile__logo {
+  display: none;
+  @media (max-width: $bp1 + px) {
+    display: block;
+  }
+}
+
 .display-none {
   display: none;
 }

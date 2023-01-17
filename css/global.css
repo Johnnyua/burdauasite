@@ -263,6 +263,15 @@ body {
   height: 2.5rem;
 }
 
+.mobile__logo {
+  display: none;
+}
+@media (max-width: 845px) {
+  .mobile__logo {
+    display: block;
+  }
+}
+
 .display-none {
   display: none;
 }

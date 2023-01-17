@@ -281,6 +281,15 @@ body {
   height: 2.5rem;
 }
 
+.mobile__logo {
+  display: none;
+}
+@media (max-width: 845px) {
+  .mobile__logo {
+    display: block;
+  }
+}
+
 .display-none {
   display: none;
 }
@@ -721,15 +730,6 @@ body {
   color: #8B939A;
 }
 
-.footer__mini_logo {
-  display: none;
-}
-@media (max-width: 845px) {
-  .footer__mini_logo {
-    display: block;
-  }
-}
-
 .footer__contacts {
   display: flex;
   justify-content: normal;
@@ -795,6 +795,9 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   flex: auto;
+}
+.footer__contacts-dep .dep__phone a {
+  display: block;
 }
 
 .footer__copyright {
