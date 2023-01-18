@@ -276,6 +276,19 @@ body {
   display: none;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu .menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .burger {
   position: relative;
   cursor: pointer;
@@ -305,4 +318,9 @@ body {
   top: 0.6875rem;
   transform: rotate(-45deg);
   transition: transform 0.8s ease 0.5s;
+}
+@media (min-width: 845px) {
+  .burger {
+    display: none;
+  }
 }/*# sourceMappingURL=global.css.map */

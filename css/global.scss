@@ -198,6 +198,13 @@ body {
   display: none;
 }
 
+.menu {
+  @include dFlexRow(space-between, center);
+   .menu__list {
+    @include dFlexRow(center, center);
+   }
+}
+
 // Burger
 .burger {
   position: relative;
@@ -229,6 +236,9 @@ body {
       transform: rotate(-45deg);
       transition: transform 0.8s ease 0.5s;
     }
+  }
+  @media (min-width: $bp1 + px) {
+    display: none;
   }
 }
 // End Burger

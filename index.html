@@ -24,31 +24,36 @@
     <div class="wrapper flex_jstart">
         <header class="header">
             <div class="header__content container">
-                    <nav class="header__nav">
-                        <ul class="nav__list">
-                            <li class="nav__item active">
-                                <a href="#">Головна</a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link" href="#">Головна</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#">Сервіси</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Сервіси</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#">Журнали</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Журнали</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#">Проекти</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Проекти</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#">Новини</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Новини</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="">Наші цінності</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">Сталий розвиток</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">Вакансії</a>
+                            <li class="menu__item">
+                                Про нас
+                                <ul class="menu__sublist">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="">Наші цінності</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Сталий розвиток</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Вакансії</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -59,8 +64,8 @@
                             <div></div>
                             <div></div>
                         </div>
-                        <div class="search_container">
-                            <div id="search" class="search">
+                        <div class="search">
+                            <div id="search" class="search__icon">
                                 <img src="images/search-icon.svg" alt="search icon" />
                             </div>
                             <input class="search_input" type="text" placeholder="Search..." />
@@ -75,17 +80,17 @@
                             <span class="icon-uk"></span>
                         </a>
                     </div>
-                    <div class="lang_container">
+                    <div class="lang">
                         <ul class="lang__list">
-                            <li class="lang__item"><a class="active" href="#">Укр</a></li>
-                            <li class="lang__item"><a href="#">Eng</a></li>
+                            <li class="lang__item"><a class="lang__link active" href="#">Укр</a></li>
+                            <li class="lang__item"><a class="lang__link" href="#">Eng</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
         <main class="main">
-            <section class="home__main">
+            <!-- <section class="home__main">
                 <div class="container _medium flex_center_column">
                     <div class="home__content__container flex_center">
                         <div class="logo_big">
@@ -218,7 +223,7 @@
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
         <footer class="footer">
             <div class="container">
@@ -232,49 +237,51 @@
                             <span class="icon-ukraine"></span>
                         </a>
                     </div>
-                    <nav class="footer__menu">
-                        <div class="footer__icons">
-                            <div class="footer__mini_logo mobile__logo">
-                                <a class="mobile_logo-link" href="#">
-                                    <div class="">
-                                        <span class="icon-burda"></span>
-                                        <span class="icon-media"></span>
-                                    </div>
-                                    <span class="icon-uk"></span>
-                                </a>
+                    <div class="footer__menu menu">
+                        <nav class="footer__nav nav">
+                            <div class="footer__icons">
+                                <div class="footer__mini_logo mobile__logo">
+                                    <a class="mobile_logo-link" href="#">
+                                        <div class="">
+                                            <span class="icon-burda"></span>
+                                            <span class="icon-media"></span>
+                                        </div>
+                                        <span class="icon-uk"></span>
+                                    </a>
+                                </div>
+                                <div class="footer__social">
+                                    <ul class="footer__social-list">
+                                        <li class="footer__social-item icons">
+                                            <a class="footer__social-link icon-facebook" href="#"></a>
+                                        </li>
+                                        <li class="footer__social-item icons">
+                                            <a class="footer__social-link icon-youtube" href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="footer__social">
-                                <ul class="footer__social-list">
-                                    <li class="footer__social-item icons">
-                                        <a class="footer__social-link icon-facebook" href="#"></a>
-                                    </li>
-                                    <li class="footer__social-item icons">
-                                        <a class="footer__social-link icon-youtube" href="#"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <ul class="footer__menu-list menu text__title">
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">CREATIVE</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">DIGITAL</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">MAGAZINES</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">INFLUENCER</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">EVENTS</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#" class="footer__menu-link">DISTRIBUTION</a>
-                            </li>
-                        </ul>
-                    </nav>
+                            <ul class="menu__list  text__title">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">CREATIVE</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">DIGITAL</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">MAGAZINES</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">INFLUENCER</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">EVENTS</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">DISTRIBUTION</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                     <div class="footer__contacts">
                         <div class="footer__contacts-dep">
                             <div class="dep__item">
