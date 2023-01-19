@@ -13,7 +13,7 @@ function init() {
 }
 
 function showMobileMenu(e) {
-  const mobileNav = document.querySelector(".header__nav");
+  const mobileNav = document.querySelector(".header__menu");
   mobileNav.classList.toggle("open");
   burger.classList.toggle("burger-close");
   e.currentTarget.children[0].classList.toggle("burger-rotate-positive");
