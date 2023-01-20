@@ -21,9 +21,12 @@
 </head>
 
 <body>
-    <div class="wrapper flex_jstart">
+    <div class="wrapper">
         <header class="header">
             <div class="header__content container">
+                <a class="header__logo" href="#">
+                    <img src="images/logotype.svg" alt="logo" />
+                </a>
                 <nav class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item active">
@@ -52,22 +55,22 @@
                                 <a class="menu__link" href="#">Вакансії</a>
                             </li>
                         </div>
-                        <li class="submenu">
-                            <span>Про нас</span>
+                        <li id="headerSubOpen" class="submenu">
+                            <a class="menu__link" href="">Про нас</a>
                             <div class="submenu__icon icons">
                                 <img class="icon-arrow__link" src="images/read-more-icon.svg" alt="More">
-                                <ul class="submenu__list">
-                                    <li class="submenu__item">
-                                        <a class="submenu__link" href="">Наші цінності</a>
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a class="submenu__link" href="#">Сталий розвиток</a>
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a class="submenu__link" href="#">Вакансії</a>
-                                    </li>
-                                </ul>
                             </div>
+                            <ul class="submenu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">Наші цінності</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">Сталий розвиток</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">Вакансії</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -95,7 +98,7 @@
                         </a>
                     </div>
                     <div class="lang">
-                        <ul class="lang__list">
+                        <ul id="lang" class="lang__list">
                             <li class="lang__item"><a class="lang__link active" href="#">Укр</a></li>
                             <li class="lang__item"><a class="lang__link" href="#">Eng</a></li>
                         </ul>
@@ -104,26 +107,27 @@
             </div>
         </header>
         <main class="main">
-            <!-- <section class="home__main">
-                <div class="container _medium flex_center_column">
-                    <div class="home__content__container flex_center">
+            <section class="home">
+                    <div class="home__container container">
                         <div class="logo_big">
                             <img src="images/logotype.svg" alt="logo" />
                         </div>
-                        <div class="social_icons flex_start_column">
-                            <div class="icons">
-                                <img src="images/icons/facebook_icon.svg" alt="facebook" />
-                            </div>
-                            <div class="icons">
-                                <img src="images/icons/youtube_icon.svg" alt="youtube" />
-                            </div>
+                        <div class="home__social icons">
+                            <ul class="home__social-list icons__list">
+                                <li class="home__social-item icons__item">
+                                    <a class="home__social-link icon-facebook icons__link" href="#"></a>
+                                </li>
+                                <li class="home__social-item icons__item">
+                                    <a class="home__social-link icon-youtube icons__link" href="#"></a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="home__content flex_start_column">
-                            <h1 class="home__content__title main_title flex_start">
+                        <div class="home__content">
+                            <h1 class="home__content__title main_title">
                                 <span>МЕДIА &</span>
                                 МАРКЕТИНГОВИЙ ХОЛДИНГ
                             </h1>
-                            <div class="home__content__description flex_between">
+                            <div class="home__content__description">
                                 <div class="description__number">
                                     <img src="images/six.svg" alt="Units count" />
                                 </div>
@@ -142,101 +146,100 @@
                         </div>
                     </div>
                     <h3 class="title__subtitle">
-                        <span >Сервіси</span>
+                        <span>Сервіси</span>
                         <span class="footer__logo logo">
                             <span class="icon-burda_big"></span>
                             <span class="icon-media_big"></span>
                         </span>
                         </span>
                     </h3>
-                </div>
             </section>
-            <section class="home__services">
-                <div class="container _big flex_center_column">
-                    <div class="services__content grid_union">
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_cyan">CREATIVE</h2>
-                            <div class="content__text">
-                                <p>
-                                    Креативне контентне агентство, як вирішує як ситуативні, так
-                                    і стратегічні задачі клієнтів: від створення комунікаційної
-                                    стратегії клієнта до розробки й реалізації точкових
-                                    рекламних або PR-кампаній.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">Більше</div>
-                        </article>
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_green">DIGITAL</h2>
-                            <div class="content__text">
-                                <p>
-                                    Ми розвиваємо добре знані в Україні онлайн-майданчики, які
-                                    вже давно завоювали любов та визнання своєї читацької
-                                    аудиторії.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">
-                                Більше
-                            </div>
-                        </article>
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_orange">MAGAZINES</h2>
-                            <div class="content__text">
-                                <p>
-                                    Видавнича компанія з найбільшим в Україні портфелем
-                                    друкованих видань. Серед них і журнали, що стали легендами:
-                                    Marie Claire, Playboy, how to be a MAN, журнал «Отдохни!»,
-                                    Burda Style, «Добрі Поради», «Люблю готувати». Щомісячне
-                                    охоплення всіх наших друкованих видань - більше мільйона
-                                    осіб.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">Більше</div>
-                        </article>
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_purpule">INFLUENCER</h2>
-                            <div class="content__text">
-                                <p>
-                                    Агентство, яке розробляє та реалізує «під ключ» проекти та
-                                    рекламні кампанії із залученням інфлюенсерів - лідерів
-                                    суспільної думки, блогерів, зірок і активних користувачів
-                                    соціальних мереж.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">Більше</div>
-                        </article>
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_red">EVENTS</h2>
-                            <div class="content__text">
-                                <p>
-                                    Агентство, яке вже багато років проводить різні за
-                                    масштабами та цільовою аудиторією івенти - як для власних
-                                    брендів, так для партнерів. Щорічно наша команда організовує
-                                    понад 30 заходів для більш ніж 200 тисяч відвідувачів.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">Більше</div>
-                        </article>
-                        <article class="content__item grid_content">
-                            <h2 class="content__title title__section c_grey">DISTRIBUTION</h2>
-                            <div class="content__text">
-                                <p>
-                                    Дистрибуційна компанія з багаторічним досвідом успішної
-                                    роботи на ринку України. В її портфелі як видання Burda
-                                    Magazines, так і друкована і не тільки продукція наших
-                                    партнерів-видавців: журнали, комікси, книги різної тематики;
-                                    арт-буки і т.д.
-                                </p>
-                            </div>
-                            <div class="content__btn btn_more">Більше</div>
-                        </article>
-                    </div>
-                    <div class="services__footer">
-                        <button class="services__btn btn_action">
-                            Є питання? Напиши нам
-                        </button>
-                    </div>
+            <!-- <section class="home__services"> -->
+            <div class="container _big">
+                <div class="services__content">
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_cyan">CREATIVE</h2>
+                        <div class="content__text">
+                            <p>
+                                Креативне контентне агентство, як вирішує як ситуативні, так
+                                і стратегічні задачі клієнтів: від створення комунікаційної
+                                стратегії клієнта до розробки й реалізації точкових
+                                рекламних або PR-кампаній.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">Більше</div>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_green">DIGITAL</h2>
+                        <div class="content__text">
+                            <p>
+                                Ми розвиваємо добре знані в Україні онлайн-майданчики, які
+                                вже давно завоювали любов та визнання своєї читацької
+                                аудиторії.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">
+                            Більше
+                        </div>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_orange">MAGAZINES</h2>
+                        <div class="content__text">
+                            <p>
+                                Видавнича компанія з найбільшим в Україні портфелем
+                                друкованих видань. Серед них і журнали, що стали легендами:
+                                Marie Claire, Playboy, how to be a MAN, журнал «Отдохни!»,
+                                Burda Style, «Добрі Поради», «Люблю готувати». Щомісячне
+                                охоплення всіх наших друкованих видань - більше мільйона
+                                осіб.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">Більше</div>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_purpule">INFLUENCER</h2>
+                        <div class="content__text">
+                            <p>
+                                Агентство, яке розробляє та реалізує «під ключ» проекти та
+                                рекламні кампанії із залученням інфлюенсерів - лідерів
+                                суспільної думки, блогерів, зірок і активних користувачів
+                                соціальних мереж.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">Більше</div>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_red">EVENTS</h2>
+                        <div class="content__text">
+                            <p>
+                                Агентство, яке вже багато років проводить різні за
+                                масштабами та цільовою аудиторією івенти - як для власних
+                                брендів, так для партнерів. Щорічно наша команда організовує
+                                понад 30 заходів для більш ніж 200 тисяч відвідувачів.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">Більше</div>
+                    </article>
+                    <article class="content__item">
+                        <h2 class="content__title title__section c_grey">DISTRIBUTION</h2>
+                        <div class="content__text">
+                            <p>
+                                Дистрибуційна компанія з багаторічним досвідом успішної
+                                роботи на ринку України. В її портфелі як видання Burda
+                                Magazines, так і друкована і не тільки продукція наших
+                                партнерів-видавців: журнали, комікси, книги різної тематики;
+                                арт-буки і т.д.
+                            </p>
+                        </div>
+                        <div class="content__btn btn_more">Більше</div>
+                    </article>
                 </div>
+                <div class="services__footer">
+                    <button class="services__btn btn_action">
+                        Є питання? Напиши нам
+                    </button>
+                </div>
+            </div>
             </section> -->
         </main>
         <footer class="footer">

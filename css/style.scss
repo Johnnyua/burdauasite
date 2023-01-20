@@ -31,22 +31,35 @@
 
 // Header===========================================
 .header {
+  @include dFlexRow(space-between, center);
   background-color: rgba(250, 247, 245, 0.91);
   position: fixed;
   z-index: 10;
   top: 0;
   max-width: inherit;
   width: 100%;
-  height: 70px;
+  // height: 1px;
+  min-height: 70px;
+}
+
+.header__logo {
+  display: none;
+  @include adaptiveValue("gap", 40, 5, 2, 1630, 800);
+  @include adaptiveValue("width", 180, 50, 2, 1630, 380);
+  @media (min-width: rem($bp1 + 1)) and (max-width: rem($bp4)) {
+    display: block;
+  }
 }
 
 .header__content {
   @include dFlexRow(space-between, center);
   position: relative;
+  width: 100%;
+  min-height: 70px;
 }
 
 .header__menu {
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     opacity: 0;
     position: absolute;
     z-index: 11;
@@ -56,7 +69,7 @@
       $colorHome 95.19%
     );
     backdrop-filter: blur(5.15455px);
-    top: 70px;
+    top: 100%;
     left: 0;
     width: 100%;
     transform: translateY(-200%);
@@ -70,34 +83,44 @@
   .menu__list {
     font-weight: 400;
     @include adaptiveValue("gap", 40, 5, 2, 1630, 800);
-    @media (max-width: $bp1 + px) {
+    @media (max-width: rem($bp1)) {
       flex-direction: column;
-      padding: 30px 60px;
+      width: rem(220);
+      padding: rem(30) 0;
+      overflow-y: scroll;
     }
   }
   .menu__submenu {
-    display: none;
-    @media (max-width: $bp1) {
-      display: block;
+    display: flex;
+    gap: calc(5px + 35 * ((100vw - 360px) / 1270));
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: rem($bp1)) and (max-width: rem($bp4)) {
+      display: none;
+    }
+    @media (min-width: rem($bp4)) {
+      flex-direction: row;
+      width: inherit;
     }
   }
   .menu__item,
   .submenu__item {
     transition: font-weight 0.3s ease 0s;
+    
     &:hover {
       font-weight: 800;
-      @media (max-width: $bp1 + px) {
+      @media (max-width: rem($bp1)) {
         background-color: $colorBlack;
       }
     }
     &.active::after {
       @include before-after-line(0, 2px, $colorBlue);
-      @media (min-width: $bp1 + px) {
+      @media (min-width: rem($bp1)) {
         width: 50%;
       }
     }
 
-    @media (max-width: $bp1 + px) {
+    @media (max-width: rem($bp1)) {
       background-color: $colorGrey;
       color: $colorHome;
       gap: 20px;
@@ -108,34 +131,46 @@
     }
   }
   .submenu {
-    @include dFlexRow(center, center);
+    display: none;
     cursor: pointer;
     position: relative;
-    .icon-arrow__link {
-      &:hover {
+    z-index: 6;
+    @media (min-width: rem($bp1)) and (max-width: rem($bp4)) {
+      @include dFlexRow(center, center);
+      flex-wrap: nowrap;
+      background-color: $colorHome;
+    }
+    &:hover {
+      .submenu__icon {
         transform: rotate(90deg);
         transition: all 0.3s ease-in-out 0s;
-        +.submenu__list {
-        visibility: visible;
-        transform: translateY(0);
-        transition-delay: 0s, 0s;
+        ~ .submenu__list {
+          visibility: visible;
+          transform: translateY(0);
+          transition-delay: 0s, 0s;
+        }
       }
-      }
-      
     }
   }
+
   .submenu__list {
     visibility: hidden;
     @include dFlexColumn(flex-start, flex-start);
     flex-wrap: nowrap;
     gap: rem(10);
     position: absolute;
-    z-index: -1;
+    z-index: 5;
+    background-color: $colorHome;
     top: 100%;
     left: 0;
     width: max-content;
     transform: translateY(-2em);
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  }
+  .menu__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -148,6 +183,7 @@
   position: relative;
   gap: 20px;
   input {
+    border: 1px solid $colorBlack;
     opacity: 0;
     height: 2em;
     position: absolute;
@@ -158,12 +194,12 @@
     padding: 20px 10px;
     transform: translateY(100%);
     &.active {
+      @media (max-width:rem($bp1)) {
+        transform: translate(0%, 0%);  
+      }
       opacity: 1;
-      transform: translateY(0);
+      transform: translate(-50%, 0%);
       transition: all 0.5s ease 0s;
-    }
-    @media (min-width: $bp1 + px) {
-      left: -150%;
     }
   }
 }
@@ -175,13 +211,13 @@
 }
 .search-lang {
   @include dFlexRow(space-between, center);
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     flex: 1 1 auto;
   }
   height: 100%;
   margin-left: 20px;
   .search {
-    @media (max-width: $bp1 + px) {
+    @media (max-width: rem($bp1)) {
       margin: 0 auto;
     }
     position: relative;
@@ -203,21 +239,20 @@
   @include dFlexRow(space-between, center);
   gap: 5px;
   .lang__item {
-    @media (max-width: $bp1 + px) {
+    @media (max-width: rem($bp1)) {
       font-weight: 700;
       font-size: rem(14);
       line-height: rem(18);
     }
-    padding: 1px;
-    a {
-      padding: 0px 6px 0px 0px;
-    }
+    padding: rem(5) ;
+    
     .active {
       border-radius: 50px;
       color: $colorHome;
       background-color: $colorBlack;
       font-weight: 800;
       padding: 1px 11px;
+      transition: background-color 1.5s linear;
     }
   }
 }
@@ -227,11 +262,11 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  padding: 70px 0 0 0;
+  padding: rem(70) 0 0 0;
 }
 
 // Home Section===================================
-.home__main {
+.home {
   background-color: $colorHome;
   position: relative;
   padding: 0 0 10px 0;
@@ -245,13 +280,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    @media (max-width: $bp1 + px) {
+    @media (max-width: rem($bp4)) {
       display: none;
     }
   }
 }
 
-.home__content__container {
+.home__container {
   gap: 40px;
   position: relative;
   @include adaptiveValue("padding-left", 200, 20, 2, 1920, 360);
@@ -333,7 +368,7 @@
 }
 
 .footer__logo {
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     display: none;
   }
   .icon-burda_big {
@@ -349,7 +384,6 @@
 }
 
 .footer__icons {
-  @include dFlexRow(space-evenly, center);
   flex: auto;
 }
 
@@ -369,7 +403,7 @@
   .menu__list {
     @include dFlexRow(center, center);
     row-gap: rem(30);
-    @media (max-width: $bp2 + px) {
+    @media (max-width: rem($bp2)) {
       display: none;
     }
   }
