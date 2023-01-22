@@ -270,11 +270,15 @@
   background-color: $colorHome;
   position: relative;
   padding: 0 0 10px 0;
-  .social_icons {
+  .icons {
     position: absolute;
     gap: 20px;
     top: 50%;
     left: 0;
+    .icons-item {
+      background-color: $colorBlue;
+      color: $mainColor;
+    }
   }
   .logo_big {
     position: absolute;
@@ -294,21 +298,32 @@
   flex-wrap: wrap;
   // padding: 200px 0 0 200px;
 }
+
+.home__social {
+  position: absolute;
+  .icons__list {
+    flex-direction: column;
+  }
+  .icons__item {
+    background-color: $colorBlue;
+    color: $mainColor;
+  }
+}
 .home__content {
   @include adaptiveValue("gap", 70, 30, 2, 1920, 360);
   flex-basis: 50%;
   .section__title {
     color: $colorBlue;
   }
-}
-.home__content__title {
+  .content__title {
   font-size: adaptiveFont(rem(34), rem(75));
   line-height: adaptiveFont(rem(42), rem(90));
   font-weight: 800;
   flex-direction: column;
 }
 
-.home__content__description {
+.content__description {
+  position: relative;
 }
 .description__number {
   height: 100%;
@@ -318,11 +333,14 @@
   }
 }
 
-.home__image {
+.content__image {
   min-width: 300px;
   min-height: 440px;
   flex-basis: 45%;
 }
+}
+
+
 
 // Home Service section
 .home__services {
@@ -385,18 +403,18 @@
 
 .footer__icons {
   flex: auto;
-}
-
-.footer__social-list {
-  @include dFlexRow(center, center);
-}
-
-.footer__social-item {
+  .icons__item {
   background-color: $colorGrey;
   &:hover {
     background-color: $colorBlue;
   }
 }
+}
+
+.footer__social-list {
+}
+
+
 
 .footer__nav {
   @include dFlexRow(space-between, center);

@@ -262,15 +262,13 @@ body {
 
 .icons__list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   gap: 1.875rem;
 }
 .icons__list .icons__item {
   cursor: pointer;
-  background-color: #14276F;
-  color: #fff;
   position: relative;
   border-radius: 50%;
   width: 2.5rem;
@@ -288,7 +286,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.icons,
+.icons__item,
 .mobile__logo {
   width: 2.5rem;
   height: 2.5rem;
@@ -694,11 +692,15 @@ body {
   position: relative;
   padding: 0 0 10px 0;
 }
-.home .social_icons {
+.home .icons {
   position: absolute;
   gap: 20px;
   top: 50%;
   left: 0;
+}
+.home .icons .icons-item {
+  background-color: #14276F;
+  color: #fff;
 }
 .home .logo_big {
   position: absolute;
@@ -733,6 +735,17 @@ body {
   }
 }
 
+.home__social {
+  position: absolute;
+}
+.home__social .icons__list {
+  flex-direction: column;
+}
+.home__social .icons__item {
+  background-color: #14276F;
+  color: #fff;
+}
+
 .home__content {
   gap: 70px;
   flex-basis: 50%;
@@ -747,25 +760,25 @@ body {
 .home__content .section__title {
   color: #14276F;
 }
-
-.home__content__title {
+.home__content .content__title {
   font-size: max(2.125rem, min(4.6875rem, 3.333vw));
   line-height: max(2.625rem, min(5.625rem, 3.333vw));
   font-weight: 800;
   flex-direction: column;
 }
-
-.description__number {
+.home__content .content__description {
+  position: relative;
+}
+.home__content .description__number {
   height: 100%;
   margin-right: 16px;
 }
-.description__number img {
+.home__content .description__number img {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-
-.home__image {
+.home__content .content__image {
   min-width: 300px;
   min-height: 440px;
   flex-basis: 45%;
@@ -888,18 +901,10 @@ body {
 .footer__icons {
   flex: auto;
 }
-
-.footer__social-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer__social-item {
+.footer__icons .icons__item {
   background-color: #8B939A;
 }
-.footer__social-item:hover {
+.footer__icons .icons__item:hover {
   background-color: #14276F;
 }
 

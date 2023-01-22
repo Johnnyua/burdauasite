@@ -163,12 +163,10 @@ body {
 // End buttons
 
 .icons__list {
-  @include dFlexRow(space-evenly, center);
+  @include dFlexRow(flex-start, center);
   gap: rem(30);
   .icons__item {
     cursor: pointer;
-    background-color: $colorBlue;
-    color: $mainColor;
     position: relative;
     border-radius: 50%;
     width: rem(40);
@@ -187,7 +185,7 @@ body {
   }
 }
 
-.icons,
+.icons__item,
 .mobile__logo {
   width: rem(40);
   height: rem(40);
