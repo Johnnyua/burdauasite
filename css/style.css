@@ -698,63 +698,59 @@ body {
   top: 50%;
   left: 0;
 }
+@media (max-width: 55rem) {
+  .home .icons {
+    top: 100%;
+    right: 0;
+    left: auto;
+  }
+}
 .home .icons .icons-item {
   background-color: #14276F;
   color: #fff;
 }
-.home .logo_big {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media (max-width: 75rem) {
-  .home .logo_big {
-    display: none;
+@media (min-width: 55rem) {
+  .home .icons .icons__list {
+    flex-direction: column;
   }
+}
+.home .icons .icons__list .icons__item {
+  background-color: #14276F;
+  color: #fff;
 }
 
 .home__container {
   gap: 40px;
   position: relative;
-  padding-left: 200px;
-  padding-top: 200px;
+  padding-left: calc(
+      40px + 160 * ((100vw - 360px) / 1560)
+    );
+  padding-top: calc(
+      40px + 160 * ((100vw - 360px) / 1560)
+    );
   flex-wrap: wrap;
-}
-@media (max-width: 1920px) {
-  .home__container {
-    padding-left: calc(
-        20px + 180 * ((100vw - 360px) / 1560)
-      );
-  }
-}
-@media (max-width: 1920px) {
-  .home__container {
-    padding-top: calc(
-        20px + 180 * ((100vw - 360px) / 1560)
-      );
-  }
-}
-
-.home__social {
-  position: absolute;
-}
-.home__social .icons__list {
-  flex-direction: column;
-}
-.home__social .icons__item {
-  background-color: #14276F;
-  color: #fff;
 }
 
 .home__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 70px;
-  flex-basis: 50%;
 }
 @media (max-width: 1920px) {
   .home__content {
     gap: calc(
         30px + 40 * ((100vw - 360px) / 1560)
       );
+  }
+}
+.home__content .logo_big {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 75rem) {
+  .home__content .logo_big {
+    display: none;
   }
 }
 .home__content .section__title {
@@ -767,7 +763,17 @@ body {
   flex-direction: column;
 }
 .home__content .content__description {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (max-width: 55rem) {
+  .home__content .content__description {
+    position: relative;
+  }
 }
 .home__content .description__number {
   height: 100%;
@@ -779,9 +785,7 @@ body {
   max-width: fit-content;
 }
 .home__content .content__image {
-  min-width: 300px;
-  min-height: 440px;
-  flex-basis: 45%;
+  min-width: 200px;
 }
 
 .home__services {

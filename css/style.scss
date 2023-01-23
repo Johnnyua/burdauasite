@@ -106,7 +106,7 @@
   .menu__item,
   .submenu__item {
     transition: font-weight 0.3s ease 0s;
-    
+
     &:hover {
       font-weight: 800;
       @media (max-width: rem($bp1)) {
@@ -194,8 +194,8 @@
     padding: 20px 10px;
     transform: translateY(100%);
     &.active {
-      @media (max-width:rem($bp1)) {
-        transform: translate(0%, 0%);  
+      @media (max-width: rem($bp1)) {
+        transform: translate(0%, 0%);
       }
       opacity: 1;
       transform: translate(-50%, 0%);
@@ -244,8 +244,8 @@
       font-size: rem(14);
       line-height: rem(18);
     }
-    padding: rem(5) ;
-    
+    padding: rem(5);
+
     .active {
       border-radius: 50px;
       color: $colorHome;
@@ -275,11 +275,40 @@
     gap: 20px;
     top: 50%;
     left: 0;
+    @media (max-width: rem($bp1)) {
+      top: 100%;
+      right: 0;
+      left: auto;
+    }
     .icons-item {
       background-color: $colorBlue;
       color: $mainColor;
     }
+    .icons__list {
+      @media (min-width: rem($bp1)){
+        flex-direction: column;
+      }
+      .icons__item {
+        background-color: $colorBlue;
+        color: $mainColor;
+      }
+    }
   }
+}
+
+.home__container {
+  gap: 40px;
+  position: relative;
+  @include adaptiveValue("padding-left", 200, 40, 20, 1920, $bp1);
+  @include adaptiveValue("padding-top", 200, 40, 20, 1920, $bp1);
+  flex-wrap: wrap;
+  // padding: 200px 0 0 200px;
+}
+
+.home__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  @include adaptiveValue("gap", 70, 30, 2, 1920, 360);
   .logo_big {
     position: absolute;
     top: 0;
@@ -288,59 +317,36 @@
       display: none;
     }
   }
-}
-
-.home__container {
-  gap: 40px;
-  position: relative;
-  @include adaptiveValue("padding-left", 200, 20, 2, 1920, 360);
-  @include adaptiveValue("padding-top", 200, 20, 2, 1920, 360);
-  flex-wrap: wrap;
-  // padding: 200px 0 0 200px;
-}
-
-.home__social {
-  position: absolute;
-  .icons__list {
-    flex-direction: column;
-  }
-  .icons__item {
-    background-color: $colorBlue;
-    color: $mainColor;
-  }
-}
-.home__content {
-  @include adaptiveValue("gap", 70, 30, 2, 1920, 360);
-  flex-basis: 50%;
   .section__title {
     color: $colorBlue;
   }
   .content__title {
-  font-size: adaptiveFont(rem(34), rem(75));
-  line-height: adaptiveFont(rem(42), rem(90));
-  font-weight: 800;
-  flex-direction: column;
-}
-
-.content__description {
-  position: relative;
-}
-.description__number {
-  height: 100%;
-  margin-right: 16px;
-  img {
-    max-width: fit-content;
+    font-size: adaptiveFont(rem(34), rem(75));
+    line-height: adaptiveFont(rem(42), rem(90));
+    font-weight: 800;
+    flex-direction: column;
+  }
+  .content__about {
+  }
+  .content__description {
+    @include dFlexRow(space-between, center);
+    flex-wrap: nowrap;
+    gap: rem(16);
+    @media (max-width: rem($bp1)) {
+      position: relative;
+    }
+  }
+  .description__number {
+    height: 100%;
+    margin-right: 16px;
+    img {
+      max-width: fit-content;
+    }
+  }
+  .content__image {
+    min-width: 200px;
   }
 }
-
-.content__image {
-  min-width: 300px;
-  min-height: 440px;
-  flex-basis: 45%;
-}
-}
-
-
 
 // Home Service section
 .home__services {
@@ -404,17 +410,15 @@
 .footer__icons {
   flex: auto;
   .icons__item {
-  background-color: $colorGrey;
-  &:hover {
-    background-color: $colorBlue;
+    background-color: $colorGrey;
+    &:hover {
+      background-color: $colorBlue;
+    }
   }
-}
 }
 
 .footer__social-list {
 }
-
-
 
 .footer__nav {
   @include dFlexRow(space-between, center);
