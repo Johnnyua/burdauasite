@@ -388,11 +388,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background-color: rgba(250, 247, 245, 0.91);
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 10;
   top: 0;
+  left: 0;
+  right: 0;
   max-width: inherit;
-  width: 100%;
   min-height: 70px;
 }
 
@@ -684,7 +686,6 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
-  padding: 4.375rem 0 0 0;
 }
 
 .home {
