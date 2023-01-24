@@ -29,7 +29,7 @@ body {
     max-width: rem($bp1);
   }
   height: 100%;
-  padding: 0 15px;
+  padding: 0 rem(15);
 }
 .container {
   max-width: rem($containerWidth);
@@ -40,71 +40,8 @@ body {
 }
 // End container
 
-// Flex
-//row
-.flex_normal {
-  @include dFlexRow(normal, normal);
-}
-
-.flex_center {
-  @include dFlexRow(center, center);
-}
-
-.flex_between {
-  @include dFlexRow(space-between, center);
-}
-
-.flex_between_normal {
-  @include dFlexRow(space-between, normal);
-}
-
-.flex_evenly {
-  @include dFlexRow(space-evenly, center);
-}
-
-.flex_jstart {
-  @include dFlexRow(flex-start, center);
-}
-
-.flex_astart {
-  @include dFlexRow(center, flex-start);
-}
-
-.flex_start {
-  @include dFlexRow(flex-start, flex-start);
-}
-// column
-.flex_acenter_column {
-  @include dFlexColumn(normal, center);
-}
-
-.flex_start_column {
-  @include dFlexColumn(flex-start, flex-start);
-}
-
-.flex_center_column {
-  @include dFlexColumn(center, center);
-}
-// End Flex
-
-// Grid
-.grid_union {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(340), rem(618)));
-  justify-content: center;
-}
-
-.grid_content {
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-rows: 1fr;
-  @include adaptiveValue("gap", 30, 10, 2, 1920, 380);
-  grid-template: auto 1fr minmax(40px, auto) / 1fr;
-}
-//End Grid
-
 // Text
-.title {
+.main_title {
   @include adaptiveFont(75, 34, $maxWidth, $bp1);
   font-weight: 800;
   span {
@@ -118,6 +55,11 @@ body {
   @media (max-width: $bp1 + px) {
     font-weight: 800;
   }
+}
+
+.main_title span, 
+.title__section {
+  color: $colorBlue;
 }
 
 .title__subtitle {

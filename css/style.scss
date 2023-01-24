@@ -192,7 +192,7 @@
     left: 0;
     margin: 0 0 0 10px;
     padding: 20px 10px;
-    transform: translateY(100%);
+    transform: translate(-50%,100%);
     &.active {
       @media (max-width: rem($bp1)) {
         transform: translate(0%, 0%);
@@ -321,8 +321,8 @@
     color: $colorBlue;
   }
   .content__title {
-    font-size: adaptiveFont(rem(34), rem(75));
-    line-height: adaptiveFont(rem(42), rem(90));
+    // font-size: adaptiveFont(rem(34), rem(75));
+    // line-height: adaptiveFont(rem(42), rem(90));
     font-weight: 800;
     flex-direction: column;
   }
