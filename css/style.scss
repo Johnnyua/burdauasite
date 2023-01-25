@@ -270,13 +270,59 @@
   background-color: $colorHome;
   position: relative;
   padding: 0 0 10px 0;
+}
+
+.home__container {
+  @include dFlexColumn(center, center);
+  @include adaptiveValue("gap", 100, 50, 0, $maxWidth, $bp4);
+  position: relative;
+  // @include adaptiveValue("padding-left", 200, 0, 2, 1920, $bp1);
+  // @include adaptiveValue("padding-top", 200, 0, 2, 1920, $bp1);
+}
+
+.home__content {
+  display: grid;
+  justify-items: center;
+  @media (min-width: rem($bp4)) {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+  @include adaptiveValue("gap", 70, 30, 2, 1920, 380);
+  .logo_big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @media (max-width: rem($bp4)) {
+      display: none;
+    }
+  }
+
+  .content__title {
+    font-weight: 800;
+    flex-direction: column;
+  }
+  .content__about {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: space-between;
+    gap: rem(40); 
+    @include adaptiveValue("padding-left", 200, 0, 2, 1920, $bp1);
+    @include adaptiveValue("padding-top", 200, 0, 2, 1920, $bp1);
+    @media (max-width: rem($bp1)) {
+      position: relative;
+    }
+  }
+  .content__description {
+    @include dFlexRow(space-between, center);
+    flex-wrap: nowrap;
+    gap: rem(16);
+    
+  }
   .icons {
     position: absolute;
-    gap: 20px;
-    top: 50%;
+    gap: rem(20);
     left: 0;
     @media (max-width: rem($bp1)) {
-      top: 100%;
+      bottom: 0;
       right: 0;
       left: auto;
     }
@@ -294,54 +340,17 @@
       }
     }
   }
-}
-
-.home__container {
-  gap: 40px;
-  position: relative;
-  @include adaptiveValue("padding-left", 200, 40, 20, 1920, $bp1);
-  @include adaptiveValue("padding-top", 200, 40, 20, 1920, $bp1);
-  flex-wrap: wrap;
-  // padding: 200px 0 0 200px;
-}
-
-.home__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  @include adaptiveValue("gap", 70, 30, 2, 1920, 360);
-  .logo_big {
-    position: absolute;
-    top: 0;
-    left: 0;
-    @media (max-width: rem($bp4)) {
-      display: none;
-    }
-  }
-  .section__title {
-    color: $colorBlue;
-  }
-  .content__title {
-    // font-size: adaptiveFont(rem(34), rem(75));
-    // line-height: adaptiveFont(rem(42), rem(90));
-    font-weight: 800;
-    flex-direction: column;
-  }
-  .content__about {
-  }
-  .content__description {
-    @include dFlexRow(space-between, center);
-    flex-wrap: nowrap;
-    gap: rem(16);
-    @media (max-width: rem($bp1)) {
-      position: relative;
-    }
-  }
   .description__number {
     height: 100%;
     margin-right: 16px;
     img {
       max-width: fit-content;
     }
+  }
+
+  .content_btn {
+    justify-self: start;
+    align-self: end;
   }
   .content__image {
     min-width: 200px;

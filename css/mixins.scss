@@ -44,7 +44,7 @@
     @media (min-width: #{$maxWidth + px}) {
       #{$property}: calc(
         #{$minSize + px} + #{$addSize} *
-          ((100vw - 360px) / #{$maxWidthContainer - 360})
+          ((100vw - 360px) / #{$maxWidthContainer - 380})
       );
     }
   } @else if $type == 2 {
@@ -52,13 +52,13 @@
     #{$property}: $startSize + px;
     @media (max-width: #{$maxWidth + px}) {
       #{$property}: calc(
-        #{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
+        #{$minSize + px} + #{$addSize} * ((100vw - 380px) / #{$maxWidth - 360})
       );
     }
   } @else {
     // Завжди
     #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
+      #{$minSize + px} + #{$addSize} * ((100vw - 380px) / #{$maxWidth - 360})
     );
   }
 }
@@ -71,7 +71,7 @@
   $remMobSize: rem($mobSize);
 
 	@media (max-width: $bp + px) {
-		font-size: calc(#{$remMobSize} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+		font-size: calc(#{$remMobSize} + #{$addMobSize} * ((100vw - 380px) / #{$maxWidth}));
 	}
 	@media (min-width: $bp + px) {
 		font-size: calc(#{$remMobSize} + #{$addSize} * (100vw / #{$maxWidth}));

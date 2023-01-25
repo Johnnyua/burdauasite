@@ -48,7 +48,7 @@ body {
 }
 @media (max-width: 880px) {
   .main_title {
-    font-size: calc(2.125rem + 69.7 * ((100vw - 320px) / 1920));
+    font-size: calc(2.125rem + 69.7 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
@@ -65,7 +65,7 @@ body {
 }
 @media (max-width: 880px) {
   .title__section {
-    font-size: calc(1.75rem + 30.6 * ((100vw - 320px) / 1920));
+    font-size: calc(1.75rem + 30.6 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
@@ -89,7 +89,7 @@ body {
 }
 @media (max-width: 880px) {
   .title__subtitle {
-    font-size: calc(1.125rem + 17 * ((100vw - 320px) / 1920));
+    font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
@@ -115,7 +115,7 @@ body {
 
 @media (max-width: 880px) {
   .text {
-    font-size: calc(0.875rem + 6.8 * ((100vw - 320px) / 1920));
+    font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
@@ -140,8 +140,7 @@ body {
   color: #fff;
   font-size: max(0.875rem, min(1.125rem, 3.333vw));
   font-weight: 800;
-  margin: 0 0 5.5555555556em 0;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
 }
 
 .icons__list {

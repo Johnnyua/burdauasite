@@ -99,8 +99,7 @@ body {
   color: $mainColor;
   font-size: adaptiveFont(rem(14), rem(18));
   font-weight: 800;
-  margin: 0 0 em(100, 18) 0;
-  padding: 10px 20px;
+  padding: rem(10) rem(20);
 }
 // End buttons
 
