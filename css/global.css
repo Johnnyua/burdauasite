@@ -281,4 +281,9 @@ body {
 .card {
   display: grid;
   gap: 2px;
+}
+.action {
+  margin-bottom: calc(
+      50px + 40 * ((100vw - 380px) / 1560)
+    );
 }/*# sourceMappingURL=global.css.map */

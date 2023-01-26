@@ -97,9 +97,11 @@
   @include adaptiveFont(18, 14, $maxWidth, $minWidth);
   font-weight: 800;
   padding: rem(10) rem(20);
+
 }
 
 .btn_more {
+  @include dFlexRow(center, center);
   @include adaptiveFont(18, 14, $maxWidth, $minWidth);
   background-color: transparent;
 }

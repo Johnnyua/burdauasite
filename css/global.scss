@@ -119,3 +119,7 @@ body {
   .card__btn {
   }
 }
+
+.action {
+   @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
+}
