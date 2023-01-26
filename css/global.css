@@ -31,7 +31,7 @@ body {
 @media (max-width: 55rem) {
   .container,
 .container_fluid {
-    max-width: 55rem;
+    max-width: 880px;
   }
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .container_fluid {
-  max-width: 103.75rem;
+  max-width: 118.125rem;
 }
 
 .main_title {
@@ -184,8 +184,11 @@ body {
   }
 }
 
-.display-none {
-  display: none;
+.logo {
+  font-size: 1.375rem;
+}
+.logo .icon-media_big {
+  color: #8B939A;
 }
 
 .menu {

@@ -3,6 +3,7 @@
 @import "variable.scss";
 @import "function.scss";
 
+
 body {
   background-color: $mainColor;
   color: $colorBlack;
@@ -26,7 +27,7 @@ body {
 .container_fluid {
   margin: 0 auto;
   @media (max-width: rem($bp1)) {
-    max-width: rem($bp1);
+    max-width: $bp1 + px;
   }
   height: 100%;
   padding: 0 rem(15);
@@ -36,7 +37,7 @@ body {
 }
 
 .container_fluid {
-  max-width: rem($containerWidth);
+  max-width: rem($containerWidthFluid);
 }
 // End container
 
@@ -139,8 +140,11 @@ body {
   }
 }
 
-.display-none {
-  display: none;
+.logo {
+  font-size: rem(22);
+  .icon-media_big {
+    color: $colorGrey;
+  }
 }
 
 .menu {

@@ -51,7 +51,7 @@ body {
 @media (max-width: 55rem) {
   .container,
 .container_fluid {
-    max-width: 55rem;
+    max-width: 880px;
   }
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .container_fluid {
-  max-width: 103.75rem;
+  max-width: 118.125rem;
 }
 
 .main_title {
@@ -204,8 +204,11 @@ body {
   }
 }
 
-.display-none {
-  display: none;
+.logo {
+  font-size: 1.375rem;
+}
+.logo .icon-media_big {
+  color: #8B939A;
 }
 
 .menu {
@@ -594,7 +597,7 @@ body {
 .home {
   background-color: #faf7f5;
   position: relative;
-  padding: 0 0 10px 0;
+  padding: 0 0 0.625rem 0;
 }
 
 .home__container {
@@ -616,7 +619,7 @@ body {
 }
 @media (min-width: 75rem) {
   .home__content {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   }
 }
 @media (max-width: 1920px) {
@@ -646,12 +649,20 @@ body {
   align-content: space-between;
   gap: 2.5rem;
   padding-left: 200px;
+  padding-right: 20px;
   padding-top: 200px;
 }
 @media (max-width: 1920px) {
   .home__content .content__about {
     padding-left: calc(
         0px + 200 * ((100vw - 380px) / 1560)
+      );
+  }
+}
+@media (max-width: 1920px) {
+  .home__content .content__about {
+    padding-right: calc(
+        0px + 20 * ((100vw - 380px) / 1560)
       );
   }
 }
@@ -669,7 +680,7 @@ body {
 }
 .home__content .content__description {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
@@ -721,6 +732,10 @@ body {
   background-color: #E3E3E3;
 }
 
+.services__container {
+  margin: 0 0 1.875rem 0;
+}
+
 .services__content {
   gap: 2px;
   max-width: 100%;
@@ -732,31 +747,31 @@ body {
   padding-bottom: 50px;
   padding-right: 135px;
 }
-@media (max-width: 1890px) {
+@media (max-width: 1920px) {
   .content__item {
     padding-top: calc(
-        20px + 30 * ((100vw - 380px) / 1530)
+        20px + 30 * ((100vw - 380px) / 1560)
       );
   }
 }
-@media (max-width: 1890px) {
+@media (max-width: 1920px) {
   .content__item {
     padding-left: calc(
-        30px + 105 * ((100vw - 380px) / 1530)
+        30px + 105 * ((100vw - 380px) / 1560)
       );
   }
 }
-@media (max-width: 1890px) {
+@media (max-width: 1920px) {
   .content__item {
     padding-bottom: calc(
-        20px + 30 * ((100vw - 380px) / 1530)
+        20px + 30 * ((100vw - 380px) / 1560)
       );
   }
 }
-@media (max-width: 1890px) {
+@media (max-width: 1920px) {
   .content__item {
     padding-right: calc(
-        30px + 105 * ((100vw - 380px) / 1530)
+        30px + 105 * ((100vw - 380px) / 1560)
       );
   }
 }

@@ -269,22 +269,20 @@
 .home {
   background-color: $colorHome;
   position: relative;
-  padding: 0 0 10px 0;
+  padding: 0 0 rem(10) 0;
 }
 
 .home__container {
   @include dFlexColumn(center, center);
   @include adaptiveValue("gap", 100, 50, 0, $maxWidth, $bp4);
   position: relative;
-  // @include adaptiveValue("padding-left", 200, 0, 2, 1920, $bp1);
-  // @include adaptiveValue("padding-top", 200, 0, 2, 1920, $bp1);
 }
 
 .home__content {
   display: grid;
   justify-items: center;
   @media (min-width: rem($bp4)) {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
   }
   @include adaptiveValue("gap", 70, 30, 2, 1920, 380);
   .logo_big {
@@ -306,13 +304,14 @@
     align-content: space-between;
     gap: rem(40); 
     @include adaptiveValue("padding-left", 200, 0, 2, 1920, $bp1);
+    @include adaptiveValue("padding-right", 20, 0, 2, 1920, $bp1);
     @include adaptiveValue("padding-top", 200, 0, 2, 1920, $bp1);
     @media (max-width: rem($bp1)) {
       position: relative;
     }
   }
   .content__description {
-    @include dFlexRow(space-between, center);
+    @include dFlexRow(flex-start, center);
     flex-wrap: nowrap;
     gap: rem(16);
     
@@ -361,15 +360,21 @@
 .home__services {
   background-color: $colorLightGrey;
 }
+
+.services__container {
+  margin: 0 0 rem(30) 0;
+}
+
 .services__content {
   gap: 2px;
   max-width: 100%;
+  
 }
 .content__item {
-  @include adaptiveValue("padding-top", 50, 20, 2, 1890, 360);
-  @include adaptiveValue("padding-left", 135, 30, 2, 1890, 360);
-  @include adaptiveValue("padding-bottom", 50, 20, 2, 1890, 360);
-  @include adaptiveValue("padding-right", 135, 30, 2, 1890, 360);
+  @include adaptiveValue("padding-top", 50, 20, 2, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-left", 135, 30, 2, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-bottom", 50, 20, 2, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-right", 135, 30, 2, $maxWidth, $minWidth);
   // padding: rem(50) rem(135);
 }
 .services__footer {
