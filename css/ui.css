@@ -1,0 +1,125 @@
+/*Fonts ====================================================*/
+/*End Fonts ====================================================*/
+/*Colors ====================================================*/
+/*End Colors ====================================================*/
+/*Width ====================================================*/
+/*Break points*/
+/*End Width ====================================================*/
+.burger {
+  position: relative;
+  cursor: pointer;
+  width: 1.5625rem;
+  height: 1.375rem;
+}
+.burger div {
+  position: absolute;
+  height: 0.125rem;
+  width: 50%;
+  background-color: #28282C;
+  top: 0.6875rem;
+  left: 0;
+}
+.burger div:first-child {
+  top: 0;
+  width: 100%;
+}
+.burger div:last-child {
+  top: 1.375rem;
+  width: 70%;
+}
+.burger div.burger-rotate-positive {
+  top: 0.6875rem;
+  transform: rotate(45deg);
+  transition: transform 0.8s ease 0.5s;
+  width: 100%;
+}
+.burger div.burger-rotate-negative {
+  top: 0.6875rem;
+  transform: rotate(-45deg);
+  transition: transform 0.8s ease 0.5s;
+  width: 100%;
+}
+@media (min-width: 55rem) {
+  .burger {
+    display: none;
+  }
+}
+
+.icons__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+.icons__list .icons__item {
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.icons__list .icons__item .icons__link {
+  max-width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.icons__list .icons__item .icons__link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons__item,
+.mobile__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.mobile__logo {
+  display: none;
+}
+@media (max-width: 55rem) {
+  .mobile__logo {
+    display: block;
+  }
+}
+
+.logo {
+  font-size: 1.375rem;
+}
+.logo .icon-media_big {
+  color: #8B939A;
+}
+
+.btn_action {
+  background-color: #28282C;
+  color: #fff;
+  font-weight: 800;
+  padding: 0.625rem 1.25rem;
+}
+@media (max-width: 380px) {
+  .btn_action {
+    font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 380px) {
+  .btn_action {
+    font-size: calc(0.875rem + 4 * (100vw / 1920));
+  }
+}
+
+.btn_more {
+  background-color: transparent;
+}
+@media (max-width: 380px) {
+  .btn_more {
+    font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 380px) {
+  .btn_more {
+    font-size: calc(0.875rem + 4 * (100vw / 1920));
+  }
+}/*# sourceMappingURL=ui.css.map */

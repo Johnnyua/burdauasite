@@ -192,7 +192,7 @@
     left: 0;
     margin: 0 0 0 10px;
     padding: 20px 10px;
-    transform: translate(-50%,100%);
+    transform: translate(-50%, 100%);
     &.active {
       @media (max-width: rem($bp1)) {
         transform: translate(0%, 0%);
@@ -302,7 +302,7 @@
     display: grid;
     grid-auto-flow: row;
     align-content: space-between;
-    gap: rem(40); 
+    gap: rem(40);
     @include adaptiveValue("padding-left", 200, 0, 2, 1920, $bp1);
     @include adaptiveValue("padding-right", 20, 0, 2, 1920, $bp1);
     @include adaptiveValue("padding-top", 200, 0, 2, 1920, $bp1);
@@ -314,7 +314,6 @@
     @include dFlexRow(flex-start, center);
     flex-wrap: nowrap;
     gap: rem(16);
-    
   }
   .icons {
     position: absolute;
@@ -330,7 +329,7 @@
       color: $mainColor;
     }
     .icons__list {
-      @media (min-width: rem($bp1)){
+      @media (min-width: rem($bp1)) {
         flex-direction: column;
       }
       .icons__item {
@@ -362,21 +361,34 @@
 }
 
 .services__container {
-  margin: 0 0 rem(30) 0;
 }
 
 .services__content {
-  gap: 2px;
-  max-width: 100%;
-  
+  background-color: $mainColor;
+  grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
+  @media (min-width: rem($bp3)) {
+    grid-template-columns: repeat(3, 1fr);  
+  }
+  .card__item {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: 1fr minmax(40px, auto ) / 1fr;
+    @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
+    background-color: $colorLightGrey;
+    @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 135, 30,0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
+  }
+  &:first-child div {
+    height: 100px;
+  }
+  .card__btn {
+    @include dFlexRow(center, center);
+    justify-self: center;
+  }
 }
-.content__item {
-  @include adaptiveValue("padding-top", 50, 20, 2, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-left", 135, 30, 2, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-bottom", 50, 20, 2, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-right", 135, 30, 2, $maxWidth, $minWidth);
-  // padding: rem(50) rem(135);
-}
+
 .services__footer {
   background-color: $mainColor;
   width: 100vw;
