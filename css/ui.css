@@ -126,4 +126,7 @@
   .btn_more {
     font-size: calc(0.875rem + 4 * (100vw / 1920));
   }
+}
+.btn_more:hover {
+  font-weight: 800;
 }/*# sourceMappingURL=ui.css.map */

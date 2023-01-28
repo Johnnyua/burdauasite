@@ -104,5 +104,8 @@
   @include dFlexRow(center, center);
   @include adaptiveFont(18, 14, $maxWidth, $minWidth);
   background-color: transparent;
+  &:hover {
+    font-weight: 800;
+  }
 }
 // End buttons

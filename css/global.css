@@ -118,6 +118,10 @@
 }
 
 .btn_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: transparent;
 }
 @media (max-width: 380px) {
@@ -129,6 +133,9 @@
   .btn_more {
     font-size: calc(0.875rem + 4 * (100vw / 1920));
   }
+}
+.btn_more:hover {
+  font-weight: 800;
 }
 
 body {
@@ -263,6 +270,30 @@ body {
 .title__section,
 .title__subtitle {
   text-transform: uppercase;
+}
+
+.c_cyan {
+  color: #179ED8;
+}
+
+.c_green {
+  color: #28A255;
+}
+
+.c_orange {
+  color: #F09F44;
+}
+
+.c_purpule {
+  color: #773484;
+}
+
+.c_red {
+  color: #CB2026;
+}
+
+.c_grey {
+  color: #8B939A;
 }
 
 .menu {

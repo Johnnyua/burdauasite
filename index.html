@@ -23,46 +23,31 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__content container">
-                <a class="header__logo" href="#">
-                    <img src="images/logotype.svg" alt="logo" />
-                </a>
-                <nav class="header__menu menu">
-                    <ul class="menu__list">
-                        <li class="menu__item active">
-                            <a class="menu__link" href="#">Головна</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Сервіси</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Журнали</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Проекти</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Новини</a>
-                        </li>
-                        <div class="menu__submenu">
-                            <li class="menu__item">
-                                <a class="menu__link" href="">Наші цінності</a>
+            <div class="container">
+                <div class="header__content">
+                    <a class="header__logo" href="#">
+                        <img src="images/logotype.svg" alt="logo" />
+                    </a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link" href="#">Головна</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Сталий розвиток</a>
+                                <a class="menu__link" href="#">Сервіси</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Вакансії</a>
+                                <a class="menu__link" href="#">Журнали</a>
                             </li>
-                        </div>
-                        <li id="headerSubOpen" class="submenu">
-                            <a class="menu__link" href="">Про нас</a>
-                            <div class="submenu__icon icons">
-                                <img class="icon-arrow__link" src="images/read-more-icon.svg" alt="More">
-                            </div>
-                            <ul class="submenu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Проекти</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Новини</a>
+                            </li>
+                            <div class="menu__submenu">
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">Наші цінності</a>
+                                    <a class="menu__link" href="">Наші цінності</a>
                                 </li>
                                 <li class="menu__item">
                                     <a class="menu__link" href="#">Сталий розвиток</a>
@@ -70,39 +55,128 @@
                                 <li class="menu__item">
                                     <a class="menu__link" href="#">Вакансії</a>
                                 </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="search-lang">
-                    <div class="burger_search">
-                        <div id="burger" class="burger">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="search">
-                            <div id="search" class="search__icon">
-                                <img src="images/search-icon.svg" alt="search icon" />
                             </div>
-                            <input class="search_input" type="text" placeholder="Search..." />
-                        </div>
-                    </div>
-                    <div class="header__mini_logo mobile__logo">
-                        <a class="mobile_logo-link" href="#">
-                            <div class="">
-                                <span class="icon-burda"></span>
-                                <span class="icon-media"></span>
-                            </div>
-                            <span class="icon-uk"></span>
-                        </a>
-                    </div>
-                    <div class="lang">
-                        <ul id="lang" class="lang__list">
-                            <li class="lang__item"><a class="lang__link active" href="#">Укр</a></li>
-                            <li class="lang__item"><a class="lang__link" href="#">Eng</a></li>
+                            <li id="headerSubOpen" class="submenu">
+                                <a class="menu__link" href="">Про нас</a>
+                                <div class="submenu__icon icons">
+                                    <img class="icon-arrow__link" src="images/read-more-icon.svg" alt="More">
+                                </div>
+                                <ul class="submenu__list">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Наші цінності</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Сталий розвиток</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="#">Вакансії</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
+                    </nav>
+                    <div class="search-lang">
+                        <div class="burger_search">
+                            <div id="burger" class="burger">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="search">
+                                <div id="search" class="search__icon">
+                                    <img src="images/search-icon.svg" alt="search icon" />
+                                </div>
+                                <input class="search_input" type="text" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="header__mini_logo mobile__logo">
+                            <a class="mobile_logo-link" href="#">
+                                <div class="">
+                                    <span class="icon-burda"></span>
+                                    <span class="icon-media"></span>
+                                </div>
+                                <span class="icon-uk"></span>
+                            </a>
+                        </div>
+                        <div class="lang">
+                            <ul id="lang" class="lang__list">
+                                <li class="lang__item"><a class="lang__link active" href="#">Укр</a></li>
+                                <li class="lang__item"><a class="lang__link" href="#">Eng</a></li>
+                            </ul>
+                        </div>
                     </div>
+                    <nav class="header__menu-services menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_cyan">
+                                        <h2 class="text__title">CREATIVE</h2>
+                                    </div>
+
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_green">
+                                        <h2 class="text__title">DIGITAL</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_orange">
+                                        <h2 class="text__title">MAGAZINES</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_purpule">
+                                        <h2 class="text__title">INFLUENCER</h2>
+                                    </div>
+
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_red">
+                                        <h2 class="text__title">EVENTS</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <span class="logo">
+                                        <span class="icon-burda_big"></span>
+                                        <span class="icon-media_big"></span>
+                                    </span>
+                                    <div class="c_grey">
+                                        <h2 class="text__title">DISTRIBUTION</h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -283,7 +357,7 @@
                 </div>
             </section>
             <section class="home__projects">
-                
+
             </section>
         </main>
         <footer class="footer">

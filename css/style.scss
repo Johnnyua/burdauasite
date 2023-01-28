@@ -8,30 +8,10 @@
 .path-name {
   fill: black;
 }
-// Colors classes
-.c_cyan {
-  color: $colorCyan;
-}
-.c_green {
-  color: $colorGreen;
-}
-.c_orange {
-  color: $colorOrange;
-}
-.c_purpule {
-  color: $colorPurpule;
-}
-.c_red {
-  color: $colorRed;
-}
-.c_grey {
-  color: $colorGrey;
-}
-// End colors classes
 
 // Header===========================================
 .header {
-  @include dFlexRow(space-between, center);
+  // @include dFlexRow(space-between, center);
   background-color: rgba(250, 247, 245, 0.91);
   position: sticky;
   z-index: 10;
@@ -171,6 +151,38 @@
     display: inline-block;
     width: 100%;
     height: 100%;
+  }
+}
+
+.header__menu-services {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  background: linear-gradient(
+    168.68deg,
+    rgba(250, 247, 244, 0.55) 3.67%,
+    $colorHome 95.19%
+  );
+  backdrop-filter: blur(5.15455px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-height: rem(70);
+  width: 100%;
+  .menu__list {
+    @include adaptiveValue("gap", 100, 20, 2, $maxWidth, $bp1);
+  }
+  .menu__item {
+    &:hover .text__title {
+      color: inherit;
+    }
+  }
+  .logo {
+    font-size: rem(15);
+  }
+  .text__title {
+    color: $colorGrey;
   }
 }
 
@@ -357,28 +369,27 @@
 
 // Home Service section
 .home__services {
-  
 }
 
 .services__container {
   background-color: $colorLightGrey;
-   @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
 }
 
 .services__content {
   background-color: $mainColor;
-  grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   @media (min-width: rem($bp3)) {
-    grid-template-columns: repeat(3, 1fr);  
+    grid-template-columns: repeat(3, 1fr);
   }
   .card__item {
     display: grid;
     grid-auto-flow: row;
-    grid-template: auto 1fr minmax(40px, auto ) / 1fr;
+    grid-template: auto 1fr minmax(40px, auto) / 1fr;
     @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
     background-color: $colorLightGrey;
     @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-left", 135, 30,0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
@@ -416,6 +427,10 @@
   }
 }
 
+.footer__menu {
+  width: 100%;
+}
+
 .footer__logo {
   @media (max-width: rem($bp1)) {
     display: none;
@@ -433,6 +448,7 @@
 }
 
 .footer__icons {
+  @include dFlexRow(space-between, center);
   flex: auto;
   .icons__item {
     background-color: $colorGrey;
@@ -447,6 +463,7 @@
 
 .footer__nav {
   @include dFlexRow(space-between, center);
+  flex: auto;
   .menu__list {
     @include dFlexRow(center, center);
     row-gap: rem(30);

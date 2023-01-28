@@ -97,6 +97,27 @@ body {
 
 // End Text
 
+// Colors classes
+.c_cyan {
+  color: $colorCyan;
+}
+.c_green {
+  color: $colorGreen;
+}
+.c_orange {
+  color: $colorOrange;
+}
+.c_purpule {
+  color: $colorPurpule;
+}
+.c_red {
+  color: $colorRed;
+}
+.c_grey {
+  color: $colorGrey;
+}
+// End colors classes
+
 .menu {
   @include dFlexRow(center, center);
   .menu__list {
