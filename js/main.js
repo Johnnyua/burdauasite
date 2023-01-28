@@ -46,3 +46,16 @@ function changeLanguage(e) {
     e.target.classList.add("active");
   }
 }
+
+$("#menuServiceOpen").click(
+  function (event) {
+    event.stopPropagation();
+    $(".header__menu-services").toggleClass("active");
+  },
+);
+
+$("body").click(
+  function() {
+    $(".header__menu-services").removeClass("active");
+  },
+);
