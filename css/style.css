@@ -179,6 +179,7 @@ body {
   margin: 0 auto;
   max-width: 1920px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .display-none {
@@ -249,6 +250,8 @@ body {
 
 .title__subtitle {
   font-weight: 800;
+  margin: 0 0 0.625rem 0;
+  padding: 0.625rem 1.875rem;
 }
 @media (max-width: 880px) {
   .title__subtitle {
@@ -296,6 +299,7 @@ body {
 .title__section,
 .title__subtitle {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .c_cyan {
@@ -339,6 +343,35 @@ body {
   display: grid;
   gap: 2px;
 }
+.card .card__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto)/1fr;
+  row-gap: calc(
+      10px + 20 * ((100vw - 380px) / 1560)
+    );
+  background-color: #E3E3E3;
+  padding-top: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
+}
+.card .card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
 .action {
   margin-bottom: calc(
       50px + 40 * ((100vw - 380px) / 1560)
@@ -843,35 +876,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.services__content .card__item {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template: auto 1fr minmax(40px, auto)/1fr;
-  row-gap: calc(
-      10px + 20 * ((100vw - 380px) / 1560)
-    );
-  background-color: #E3E3E3;
-  padding-top: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
-    );
-  padding-left: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
-    );
-  padding-bottom: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
-    );
-  padding-right: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
-    );
-}
-.services__content .card__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-self: center;
-}
-
 .services__footer {
   background-color: #fff;
   width: 100vw;

@@ -153,6 +153,7 @@ body {
   margin: 0 auto;
   max-width: 1920px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .display-none {
@@ -180,20 +181,20 @@ body {
   max-width: 118.125rem;
 }
 
-.main_title {
+.main__title {
   font-weight: 800;
 }
 @media (max-width: 880px) {
-  .main_title {
+  .main__title {
     font-size: calc(2.125rem + 69.7 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .main_title {
+  .main__title {
     font-size: calc(2.125rem + 41 * (100vw / 1920));
   }
 }
-.main_title span {
+.main__title span {
   color: #14276F;
 }
 
@@ -223,6 +224,8 @@ body {
 
 .title__subtitle {
   font-weight: 800;
+  margin: 0 0 0.625rem 0;
+  padding: 0.625rem 1.875rem;
 }
 @media (max-width: 880px) {
   .title__subtitle {
@@ -270,6 +273,7 @@ body {
 .title__section,
 .title__subtitle {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .c_cyan {
@@ -313,6 +317,35 @@ body {
   display: grid;
   gap: 2px;
 }
+.card .card__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto)/1fr;
+  row-gap: calc(
+      10px + 20 * ((100vw - 380px) / 1560)
+    );
+  background-color: #E3E3E3;
+  padding-top: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
+}
+.card .card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
 .action {
   margin-bottom: calc(
       50px + 40 * ((100vw - 380px) / 1560)
