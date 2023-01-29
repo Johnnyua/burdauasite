@@ -126,6 +126,12 @@
   color: #8B939A;
 }
 
+.action {
+  background-color: #fff;
+  width: 100vw;
+  text-align: center;
+}
+
 .btn_action {
   background-color: #28282C;
   color: #fff;
@@ -207,20 +213,20 @@ body {
   max-width: 118.125rem;
 }
 
-.main_title {
+.main__title {
   font-weight: 800;
 }
 @media (max-width: 880px) {
-  .main_title {
+  .main__title {
     font-size: calc(2.125rem + 69.7 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .main_title {
+  .main__title {
     font-size: calc(2.125rem + 41 * (100vw / 1920));
   }
 }
-.main_title span {
+.main__title span {
   color: #14276F;
 }
 
@@ -326,31 +332,36 @@ body {
   color: #8B939A;
 }
 
-.menu {
+.menu,
+.sub__menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.menu .menu__list {
+.menu .menu__list,
+.sub__menu .menu__list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.card {
+.sub__menu__list {
+  display: grid;
+}
+
+.cards {
   display: grid;
   gap: 2px;
 }
-.card .card__item {
+.cards .cards__item {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
-  background-color: #E3E3E3;
   padding-top: calc(
       20px + 30 * ((100vw - 380px) / 1560)
     );
@@ -364,7 +375,7 @@ body {
       30px + 105 * ((100vw - 380px) / 1560)
     );
 }
-.card .card__btn {
+.cards .cards__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,7 +397,7 @@ body {
   background-color: rgba(250, 247, 245, 0.91);
   position: -webkit-sticky;
   position: sticky;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
@@ -575,7 +586,6 @@ body {
 }
 
 .header__menu-services {
-  display: none;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -584,13 +594,13 @@ body {
   -webkit-backdrop-filter: blur(5.15455px);
           backdrop-filter: blur(5.15455px);
   position: absolute;
+  z-index: 99;
   top: 100%;
   left: 0;
   min-height: 4.375rem;
   width: 100%;
 }
 .header__menu-services.active {
-  display: block;
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
@@ -876,12 +886,16 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.services__footer {
-  background-color: #fff;
-  width: 100vw;
-  text-align: center;
+.services__content .cards__item {
+  background-color: #E3E3E3;
 }
-
+.home__projects .projects__container {
+  background-color: #28282C;
+  color: #faf7f5;
+}
+.home__projects .cards__title {
+  color: #faf7f5;
+}
 .footer {
   background-color: #28282C;
   color: #fff;

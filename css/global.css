@@ -100,6 +100,12 @@
   color: #8B939A;
 }
 
+.action {
+  background-color: #fff;
+  width: 100vw;
+  text-align: center;
+}
+
 .btn_action {
   background-color: #28282C;
   color: #fff;
@@ -300,31 +306,36 @@ body {
   color: #8B939A;
 }
 
-.menu {
+.menu,
+.sub__menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.menu .menu__list {
+.menu .menu__list,
+.sub__menu .menu__list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.card {
+.sub__menu__list {
+  display: grid;
+}
+
+.cards {
   display: grid;
   gap: 2px;
 }
-.card .card__item {
+.cards .cards__item {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
-  background-color: #E3E3E3;
   padding-top: calc(
       20px + 30 * ((100vw - 380px) / 1560)
     );
@@ -338,7 +349,7 @@ body {
       30px + 105 * ((100vw - 380px) / 1560)
     );
 }
-.card .card__btn {
+.cards .cards__btn {
   display: flex;
   justify-content: center;
   align-items: center;

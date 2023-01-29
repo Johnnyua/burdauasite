@@ -91,6 +91,12 @@
 // End icons
 
 // Buttons
+.action {
+  background-color: $mainColor;
+  width: 100vw;
+  text-align: center;
+}
+
 .btn_action {
   background-color: $colorBlack;
   color: $mainColor;

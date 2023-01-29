@@ -14,7 +14,7 @@
   // @include dFlexRow(space-between, center);
   background-color: rgba(250, 247, 245, 0.91);
   position: sticky;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
@@ -155,7 +155,7 @@
 }
 
 .header__menu-services {
-  display: none;
+  // display: none;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -167,12 +167,13 @@
   );
   backdrop-filter: blur(5.15455px);
   position: absolute;
+  z-index: 99;
   top: 100%;
   left: 0;
   min-height: rem(70);
   width: 100%;
   &.active {
-    display: block;
+    // display: block;
     visibility: visible;
     opacity: 1;  
     transform: translateY(0);
@@ -390,29 +391,104 @@
   @media (min-width: rem($bp3)) {
     grid-template-columns: repeat(3, 1fr);
   }
-  .card__item {
+  .cards__item {
+    
     // display: grid;
     // grid-auto-flow: row;
     // grid-template: auto 1fr minmax(40px, auto) / 1fr;
     // @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
-    // background-color: $colorLightGrey;
+    background-color: $colorLightGrey;
     // @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
     // @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
     // @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
     // @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
-  .card__btn {
+  .cards__btn {
     // @include dFlexRow(center, center);
     // justify-self: center;
   }
 }
 
 .services__footer {
-  background-color: $mainColor;
-  width: 100vw;
-  text-align: center;
+  
 }
 // End Home Service section
+
+// Home Projects section
+.home__projects {
+  .projects {
+}
+.projects__title {
+  
+}
+.title__subtitle {
+  
+}
+.home__logo {
+}
+.logo {
+}
+.icon-burda_big {
+}
+.icon-media_big {
+}
+.projects__container {
+  background-color: $colorBlack;
+  color: $colorHome;
+}
+.container_fluid {
+}
+.projects__header {
+}
+.projects__menu {
+}
+.menu {
+}
+.menu__list {
+}
+.text__title {
+}
+.menu__item {
+}
+.menu__link {
+}
+.projects__cardss {
+}
+.cards {
+}
+.cards__item {
+}
+.cards_big {
+}
+.cards__data {
+}
+.main__title {
+  
+}
+.cards__title {
+  color: $colorHome;
+}
+.title__section {
+}
+.cards__text {
+}
+.cards__btn {
+}
+.btn_more {
+}
+.icons {
+}
+.icon-arrow__link {
+}
+.projects__footer {
+}
+.action {
+}
+.btn_action {
+}
+}
+
+// End Home Projects section
 
 // Footer=========================================
 .footer {

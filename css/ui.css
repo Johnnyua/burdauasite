@@ -93,6 +93,12 @@
   color: #8B939A;
 }
 
+.action {
+  background-color: #fff;
+  width: 100vw;
+  text-align: center;
+}
+
 .btn_action {
   background-color: #28282C;
   color: #fff;

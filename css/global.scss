@@ -122,35 +122,43 @@ body {
 }
 // End colors classes
 
-.menu {
+// Menu
+.menu,
+.sub__menu {
   @include dFlexRow(center, center);
   .menu__list {
     @include dFlexRow(center, center);
   }
 }
 
-.card {
+.sub__menu__list {
+  display: grid;
+
+}
+//End menu
+
+.cards {
   display: grid;
   gap: 2px;
-  .card__item {
+  .cards__item {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
     @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
-    background-color: $colorLightGrey;
+    
     @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
-  .card__item_big {
+  .cards__item_big {
 
   }
-  .card__title {
+  .cards__title {
   }
-  .card__text {
+  .cards__text {
   }
-  .card__btn {
+  .cards__btn {
     @include dFlexRow(center, center);
     justify-self: center;
   }
