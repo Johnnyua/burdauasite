@@ -416,47 +416,62 @@
 
 // Home Projects section
 .home__projects {
-  .projects {
-}
-.projects__title {
-  
-}
-.title__subtitle {
-  
-}
-.home__logo {
-}
-.logo {
-}
-.icon-burda_big {
-}
-.icon-media_big {
-}
-.projects__container {
-  background-color: $colorBlack;
-  color: $colorHome;
-}
-.container_fluid {
-}
-.projects__header {
-}
-.projects__menu {
-}
-.menu {
-}
-.menu__list {
-}
-.text__title {
-}
-.menu__item {
+    .projects {
+  }
+  .projects__title {
+    
+  }
+  .title__subtitle {
+    
+  }
+  .home__logo {
+  }
+  .logo {
+  }
+  .icon-burda_big {
+  }
+  .icon-media_big {
+  }
+  .projects__container {
+    background-color: $colorBlack;
+    color: $colorHome;
+  }
+  .container_fluid {
+  }
+  .projects__header {
+  }
+  .projects__menu {
+  }
+  .sub__menu {
+  }
+  .sub__menu__list {
+    background-color: $colorHome;
+    gap: rem(1);
+  }
+  .text__title {
+  }
+  .sub__menu__item {
+    background-color: $colorBlack;
+    padding: rem(11) 0;
+    // &:not(:last-child) {
+    //   border-right: 1px $colorHome solid;
+    // }
+    text-align: center;
+      
+  }
 }
 .menu__link {
 }
-.projects__cardss {
-}
-.cards {
+.projects__cards {
+  .cards {
 }
 .cards__item {
+  background: center / cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
+  justify-items: start;
+}
+
+.cards__image {
+  
 }
 .cards_big {
 }
@@ -473,6 +488,7 @@
 .cards__text {
 }
 .cards__btn {
+  justify-self: start;
 }
 .btn_more {
 }
@@ -487,6 +503,8 @@
 .btn_action {
 }
 }
+
+
 
 // End Home Projects section
 

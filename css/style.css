@@ -138,16 +138,6 @@
   font-weight: 800;
   padding: 0.625rem 1.25rem;
 }
-@media (max-width: 380px) {
-  .btn_action {
-    font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
-  }
-}
-@media (min-width: 380px) {
-  .btn_action {
-    font-size: calc(0.875rem + 4 * (100vw / 1920));
-  }
-}
 
 .btn_more {
   display: flex;
@@ -155,16 +145,6 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: transparent;
-}
-@media (max-width: 380px) {
-  .btn_more {
-    font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
-  }
-}
-@media (min-width: 380px) {
-  .btn_more {
-    font-size: calc(0.875rem + 4 * (100vw / 1920));
-  }
 }
 .btn_more:hover {
   font-weight: 800;
@@ -275,35 +255,39 @@ body {
   }
 }
 
-.text__title {
+.text {
   font-size: 1.125rem;
   font-weight: 800;
 }
 @media (max-width: 55rem) {
-  .text__title {
+  .text {
     font-weight: 700;
   }
 }
 
+.title__link {
+  font-weight: 800;
+}
 @media (max-width: 880px) {
-  .text {
+  .title__link {
     font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .text {
+  .title__link {
     font-size: calc(0.875rem + 4 * (100vw / 1920));
   }
 }
 @media (max-width: 55rem) {
-  .text {
+  .title__link {
     font-weight: 700;
   }
 }
 
 .title,
 .title__section,
-.title__subtitle {
+.title__subtitle,
+.title__link {
   text-transform: uppercase;
   text-align: center;
 }
@@ -332,15 +316,13 @@ body {
   color: #8B939A;
 }
 
-.menu,
-.sub__menu {
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.menu .menu__list,
-.sub__menu .menu__list {
+.menu .menu__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,6 +331,7 @@ body {
 
 .sub__menu__list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.875rem, 1fr));
 }
 
 .cards {
@@ -893,8 +876,25 @@ body {
   background-color: #28282C;
   color: #faf7f5;
 }
-.home__projects .cards__title {
+.home__projects .sub__menu__list {
+  background-color: #faf7f5;
+  gap: 0.0625rem;
+}
+.home__projects .sub__menu__item {
+  background-color: #28282C;
+  padding: 0.6875rem 0;
+  text-align: center;
+}
+
+.projects__cards .cards__item {
+  background: center/cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
+  justify-items: start;
+}
+.projects__cards .cards__title {
   color: #faf7f5;
+}
+.projects__cards .cards__btn {
+  justify-self: start;
 }
 .footer {
   background-color: #28282C;
