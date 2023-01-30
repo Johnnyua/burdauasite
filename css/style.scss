@@ -175,7 +175,7 @@
   &.active {
     // display: block;
     visibility: visible;
-    opacity: 1;  
+    opacity: 1;
     transform: translateY(0);
     transition: all 0.5s ease-in-out 0s, visibility 0s linear;
   }
@@ -387,12 +387,8 @@
 
 .services__content {
   background-color: $mainColor;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  @media (min-width: rem($bp3)) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  gap: rem(2);
   .cards__item {
-    
     // display: grid;
     // grid-auto-flow: row;
     // grid-template: auto 1fr minmax(40px, auto) / 1fr;
@@ -410,19 +406,16 @@
 }
 
 .services__footer {
-  
 }
 // End Home Service section
 
 // Home Projects section
 .home__projects {
-    .projects {
+  .projects {
   }
   .projects__title {
-    
   }
   .title__subtitle {
-    
   }
   .home__logo {
   }
@@ -433,8 +426,10 @@
   .icon-media_big {
   }
   .projects__container {
+    position: relative;
     background-color: $colorBlack;
     color: $colorHome;
+    z-index: 0;
   }
   .container_fluid {
   }
@@ -457,54 +452,73 @@
     //   border-right: 1px $colorHome solid;
     // }
     text-align: center;
-      
   }
 }
 .menu__link {
 }
 .projects__cards {
+  
   .cards {
-}
-.cards__item {
-  background: center / cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
-  justify-items: start;
-}
+  }
+  .cards__item {
+    // background: center / cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
+    justify-items: start;
+    position: relative;
+    &:hover .cards__image {
+      opacity: 1;
+    }
+    
+  }
+  .cards__item_big {
+      @media (min-width: rem($bp1)) {
+        grid-column: span 2;
+      }
+    }
 
-.cards__image {
-  
+  .cards__image {
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    z-index: -1;
+  }
+  .cards__item_wrapper {
+    // // position: absolute;
+    // top: 0;
+    // left: 0;
+    // // background-color: #000;
+    // color: white;
+    // width: 100%;
+    // height: 100%;
+  }
+  .cards_big {
+  }
+  .cards__data {
+  }
+  .main__title {
+  }
+  .cards__title {
+    color: $colorHome;
+  }
+  .title__section {
+  }
+  .cards__text {
+  }
+  .cards__btn {
+    justify-self: start;
+  }
+  .btn_more {
+  }
+  .icons {
+  }
+  .icon-arrow__link {
+  }
+  .projects__footer {
+  }
+  .action {
+  }
+  .btn_action {
+  }
 }
-.cards_big {
-}
-.cards__data {
-}
-.main__title {
-  
-}
-.cards__title {
-  color: $colorHome;
-}
-.title__section {
-}
-.cards__text {
-}
-.cards__btn {
-  justify-self: start;
-}
-.btn_more {
-}
-.icons {
-}
-.icon-arrow__link {
-}
-.projects__footer {
-}
-.action {
-}
-.btn_action {
-}
-}
-
-
 
 // End Home Projects section
 

@@ -310,7 +310,12 @@ body {
 
 .cards {
   display: grid;
-  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+@media (min-width: 90rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .cards .cards__item {
   display: grid;

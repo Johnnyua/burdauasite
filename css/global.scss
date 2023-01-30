@@ -141,7 +141,10 @@ body {
 
 .cards {
   display: grid;
-  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  @media (min-width: rem($bp3)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .cards__item {
     display: grid;
     grid-auto-flow: row;
@@ -154,7 +157,7 @@ body {
     @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
   .cards__item_big {
-
+    
   }
   .cards__title {
   }

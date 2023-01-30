@@ -336,7 +336,12 @@ body {
 
 .cards {
   display: grid;
-  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+@media (min-width: 90rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .cards .cards__item {
   display: grid;
@@ -862,19 +867,16 @@ body {
 
 .services__content {
   background-color: #fff;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-}
-@media (min-width: 90rem) {
-  .services__content {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  gap: 0.125rem;
 }
 .services__content .cards__item {
   background-color: #E3E3E3;
 }
 .home__projects .projects__container {
+  position: relative;
   background-color: #28282C;
   color: #faf7f5;
+  z-index: 0;
 }
 .home__projects .sub__menu__list {
   background-color: #faf7f5;
@@ -887,8 +889,22 @@ body {
 }
 
 .projects__cards .cards__item {
-  background: center/cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
   justify-items: start;
+  position: relative;
+}
+.projects__cards .cards__item:hover .cards__image {
+  opacity: 1;
+}
+@media (min-width: 55rem) {
+  .projects__cards .cards__item_big {
+    grid-column: span 2;
+  }
+}
+.projects__cards .cards__image {
+  position: absolute;
+  opacity: 0.5;
+  width: 100%;
+  z-index: -1;
 }
 .projects__cards .cards__title {
   color: #faf7f5;
