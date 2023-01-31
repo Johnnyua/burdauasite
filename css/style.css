@@ -1,5 +1,5 @@
 @import "null.css";
-.header__menu .menu__item.active::after,
+.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
   display: block;
@@ -12,7 +12,7 @@
 /*Width ====================================================*/
 /*Break points*/
 /*End Width ====================================================*/
-.header__menu .menu__item.active::after,
+.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
   display: block;
@@ -25,7 +25,7 @@
 /*Width ====================================================*/
 /*Break points*/
 /*End Width ====================================================*/
-.header__menu .menu__item.active::after,
+.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
   display: block;
@@ -128,7 +128,6 @@
 
 .action {
   background-color: #fff;
-  width: 100vw;
   text-align: center;
 }
 
@@ -909,9 +908,35 @@ body {
 .projects__cards .cards__title {
   color: #faf7f5;
 }
+.projects__cards .cards__title::after {
+  width: 50%;
+  height: 2px;
+  background: #faf7f5;
+}
 .projects__cards .cards__btn {
   justify-self: start;
 }
+.projects__footer {
+  position: relative;
+  padding-top: 1.875rem;
+}
+
+.projects__cards_button-prev,
+.projects__cards_button-next {
+  position: absolute;
+}
+
+.projects__cards_button-prev {
+  left: 0;
+}
+.projects__cards_button-prev .icon-arrow__link {
+  transform: rotate(180deg);
+}
+
+.projects__cards_button-next {
+  right: 0;
+}
+
 .footer {
   background-color: #28282C;
   color: #fff;

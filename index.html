@@ -390,11 +390,11 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="container_fluid"> 
-                        <div class="projects__cards cards">
-                            <article class="cards__item cards__item_big">
-                               <img class="cards__image" src="images/Cards/Frame 12.jpg" alt="home image" />
-                               <div class="cards__data main__title">07.07</div>
+                    <div class="projects__cards_container container_fluid swiper">
+                        <div class="projects__cards cards swiper-wrapper">
+                            <article class="cards__item cards__item_big swiper-slide">
+                                <img class="cards__image" src="images/Cards/Frame 12.jpg" alt="home image" />
+                                <div class="cards__data main__title">07.07</div>
                                 <h2 class="cards__title title__section">OPTIMEAL</h2>
                                 <div class="cards__text">
                                     <p>
@@ -409,7 +409,7 @@
                                     </a>
                                 </div>
                             </article>
-                            <article class="cards__item">
+                            <article class="cards__item swiper-slide">
                                 <img class="cards__image" src="images/Cards/Frame 8.jpg" alt="home image" />
                                 <div class="cards__data main__title">05.06</div>
                                 <h2 class="cards__title title__section">ПУМБ</h2>
@@ -426,7 +426,7 @@
                                     </a>
                                 </div>
                             </article>
-                            <article class="cards__item">
+                            <article class="cards__item swiper-slide">
                                 <img class="cards__image" src="images/Cards/Frame 11.png" alt="home image" />
                                 <div class="cards__data main__title">08.04</div>
                                 <h2 class="cards__title title__section">TRESEMMÉ</h2>
@@ -443,7 +443,7 @@
                                     </a>
                                 </div>
                             </article>
-                            <article class="cards__item">
+                            <article class="cards__item swiper-slide">
                                 <img class="cards__image" src="images/Cards/Frame 10.jpg" alt="home image" />
                                 <div class="cards__data main__title">09.03</div>
                                 <h2 class="cards__title title__section">СИЛА ЖІНКИ</h2>
@@ -460,7 +460,7 @@
                                     </a>
                                 </div>
                             </article>
-                            <article class="cards__item">
+                            <article class="cards__item swiper-slide">
                                 <img class="cards__image" src="images/Cards/Frame 9.jpg" alt="home image" />
                                 <div class="cards__data main__title">04.02</div>
                                 <h2 class="cards__title title__section">GIRLS-PARTY</h2>
@@ -477,9 +477,30 @@
                                     </a>
                                 </div>
                             </article>
+                            
                         </div>
                     </div>
+                </div>
+                <div class="container_fluid">
                     <div class="projects__footer action">
+                        <!-- If we need pagination -->
+                        <div class="projects__cards_pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <a class="projects__cards_button-prev">
+                            <span class="icons">
+                                <img class="icon-arrow__link" src="images/read-more-icon.svg" alt="More">
+                            </span>
+                        </a>
+                        <a class="projects__cards_button-next">
+                            <span class="icons">
+                                <img class="icon-arrow__link" src="images/read-more-icon.svg" alt="More">
+                            </span>
+                        </a>
+
+                        <!-- If we need scrollbar -->
+                        <div class="projects__cards_scrollbar"></div>
+
                         <button class="btn_action">
                             Обговорити проект
                         </button>
@@ -604,7 +625,10 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

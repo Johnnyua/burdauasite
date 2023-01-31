@@ -22,7 +22,7 @@
   grid-template-columns: repeat($columncount, $columnsize);
 }
 
-@mixin before-after-line($width, $height, $background) {
+@mixin lineBeforeAfter($width, $height, $background) {
   @extend %before-after-line;
   width: $width;
   height: $height;

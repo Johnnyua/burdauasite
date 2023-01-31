@@ -94,7 +94,7 @@
       }
     }
     &.active::after {
-      @include before-after-line(0, 2px, $colorBlue);
+      @include lineBeforeAfter(0, 2px, $colorBlue);
       @media (min-width: rem($bp1)) {
         width: 50%;
       }
@@ -457,7 +457,6 @@
 .menu__link {
 }
 .projects__cards {
-  
   .cards {
   }
   .cards__item {
@@ -467,13 +466,12 @@
     &:hover .cards__image {
       opacity: 1;
     }
-    
   }
   .cards__item_big {
-      @media (min-width: rem($bp1)) {
-        grid-column: span 2;
-      }
+    @media (min-width: rem($bp1)) {
+      grid-column: span 2;
     }
+  }
 
   .cards__image {
     position: absolute;
@@ -481,15 +479,7 @@
     width: 100%;
     z-index: -1;
   }
-  .cards__item_wrapper {
-    // // position: absolute;
-    // top: 0;
-    // left: 0;
-    // // background-color: #000;
-    // color: white;
-    // width: 100%;
-    // height: 100%;
-  }
+
   .cards_big {
   }
   .cards__data {
@@ -498,6 +488,9 @@
   }
   .cards__title {
     color: $colorHome;
+    &::after {
+      @include lineBeforeAfter(50%, 2px, $colorHome);
+    }
   }
   .title__section {
   }
@@ -512,12 +505,32 @@
   }
   .icon-arrow__link {
   }
-  .projects__footer {
+}
+
+.projects__footer {
+  position: relative;
+  padding-top: rem(30);
+}
+.projects__cards_pagination {
+}
+.projects__cards_button-prev,
+.projects__cards_button-next {
+  position: absolute;
+}
+.projects__cards_button-prev {
+  left: 0;
+  .icon-arrow__link {
+    transform: rotate(180deg);
   }
-  .action {
-  }
-  .btn_action {
-  }
+}
+.projects__cards_button-next {
+  right: 0;
+}
+.projects__cards_scrollbar {
+}
+.action {
+}
+.btn_action {
 }
 
 // End Home Projects section
