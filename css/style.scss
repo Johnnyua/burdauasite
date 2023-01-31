@@ -535,6 +535,18 @@
 
 // End Home Projects section
 
+//Home Sites section
+.home__sites {
+  margin: 0 0 rem(100) 0;
+}
+.sites__content {
+  .content__list {
+    min-height: rem(100);
+    row-gap: rem(30);
+    @include adaptiveValue("column-gap", 100, 20, 0, $maxWidth, $minWidth);
+  }
+}
+// End Home Sites section
 // Footer=========================================
 .footer {
   background-color: $colorBlack;

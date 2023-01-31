@@ -102,7 +102,6 @@
 
 .action {
   background-color: #fff;
-  width: 100vw;
   text-align: center;
 }
 
@@ -239,21 +238,21 @@ body {
   }
 }
 
-.title__link {
+.text__link {
   font-weight: 800;
 }
 @media (max-width: 880px) {
-  .title__link {
+  .text__link {
     font-size: calc(0.875rem + 6.8 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .title__link {
+  .text__link {
     font-size: calc(0.875rem + 4 * (100vw / 1920));
   }
 }
 @media (max-width: 55rem) {
-  .title__link {
+  .text__link {
     font-weight: 700;
   }
 }
@@ -290,13 +289,17 @@ body {
   color: #8B939A;
 }
 
-.menu {
+.menu,
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.menu .menu__list {
+.menu .menu__list,
+.menu .content__list,
+.content .menu__list,
+.content .content__list {
   display: flex;
   justify-content: center;
   align-items: center;
