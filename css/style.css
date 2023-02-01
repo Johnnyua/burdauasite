@@ -128,14 +128,20 @@
 
 .action {
   background-color: #fff;
+  color: #fff;
   text-align: center;
 }
 
 .btn_action {
+  display: inline-block;
   background-color: #28282C;
-  color: #fff;
+  cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
+}
+
+.more {
+  color: #8B939A;
 }
 
 .btn_more {
@@ -144,6 +150,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: transparent;
+  cursor: pointer;
 }
 .btn_more:hover {
   font-weight: 800;
@@ -853,7 +860,7 @@ body {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-.home__content .content_btn {
+.home__content .content__btn {
   justify-self: start;
   align-self: end;
 }
@@ -954,6 +961,79 @@ body {
        column-gap: calc(
       20px + 80 * ((100vw - 380px) / 1560)
     );
+}
+
+.magazines__content .content__list {
+  -moz-column-gap: calc(
+      10px + 20 * ((100vw - 380px) / 1560)
+    );
+       column-gap: calc(
+      10px + 20 * ((100vw - 380px) / 1560)
+    );
+  row-gap: calc(
+      20px + 40 * ((100vw - 380px) / 1560)
+    );
+  margin-bottom: calc(
+      20px + 10 * ((100vw - 380px) / 1560)
+    );
+}
+.magazines__content .content__image {
+  max-width: 16.875rem;
+  max-height: 23.4375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.magazines__content .content__image:hover .content__btn {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.magazines__content .content__btn {
+  position: absolute;
+  bottom: 0;
+}
+.magazines__content .content__btn.action {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  margin: 0;
+}
+.magazines__content .content__btn:hover .btn_action {
+  background-color: #505356;
+}
+.magazines__content .content__btn:hover ~ .content__dep {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content__dep {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  background-color: #faf7f5;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.2));
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+.content__dep:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dep__title.text__link {
+  color: #505356;
 }
 
 .footer {

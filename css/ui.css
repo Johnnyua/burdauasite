@@ -95,14 +95,20 @@
 
 .action {
   background-color: #fff;
+  color: #fff;
   text-align: center;
 }
 
 .btn_action {
+  display: inline-block;
   background-color: #28282C;
-  color: #fff;
+  cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
+}
+
+.more {
+  color: #8B939A;
 }
 
 .btn_more {
@@ -111,6 +117,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: transparent;
+  cursor: pointer;
 }
 .btn_more:hover {
   font-weight: 800;

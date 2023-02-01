@@ -93,23 +93,34 @@
 // Buttons
 .action {
   background-color: $mainColor;
-  // width: 100vw;
+  color: $mainColor;
   text-align: center;
 }
 
 .btn_action {
+  display: inline-block;
   background-color: $colorBlack;
-  color: $mainColor;
+  cursor: pointer;
   font-weight: 800;
   padding: rem(10) rem(20);
 
 }
 
+.more {
+  color: $colorGrey;
+}
+
 .btn_more {
   @include dFlexRow(center, center);
   background-color: transparent;
+  cursor: pointer;
   &:hover {
     font-weight: 800;
   }
 }
 // End buttons
+
+// visibility: hidden;
+// opacity: 0;
+// transform: translateY(-2em);
+// transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;

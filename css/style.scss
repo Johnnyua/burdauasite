@@ -367,7 +367,7 @@
     }
   }
 
-  .content_btn {
+  .content__btn {
     justify-self: start;
     align-self: end;
   }
@@ -547,6 +547,122 @@
   }
 }
 // End Home Sites section
+.home__magazines {
+  .container {
+  }
+}
+.magazines {
+  .magazines__title {
+    &.title__subtitle {
+    }
+  }
+  .magazines__logo {
+    &.logo {
+    }
+  }
+  .icon-burda_big {
+  }
+  .icon-media_big {
+  }
+}
+
+.magazines__content {
+  &.content {
+  }
+  .content__list {
+    @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("row-gap", 60, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
+  }
+  .content__item {
+  }
+  .content__image {
+    max-width: rem(270);
+    max-height: rem(375);
+    @include dFlexColumn(center, center);
+    flex-wrap: nowrap;
+    position: relative;
+    &:hover .content__btn {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .content__btn {
+    &.action {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-2em);
+      transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+      margin: 0;
+    }
+    position: absolute;
+    bottom: 0;
+    &:hover {
+      .btn_action {
+        background-color: $colorDarkGrey;
+      }
+      ~ .content__dep {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    }
+    
+  }
+}
+
+.btn_action {
+}
+.content__dep {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+  background-color: $colorHome;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.2));
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: rem(20) 0;
+  text-align: center;
+  &:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dep {
+}
+.dep__title {
+  &.text__link {
+    color: $colorDarkGrey;
+  }
+}
+
+.dep__text {
+}
+.dep__email {
+}
+.dep__phone {
+}
+.cards__btn {
+}
+.text {
+}
+.btn_more {
+}
+.icons {
+}
+.icon-arrow__link {
+}
+
+.magazines__footer {
+}
+// Home Magazines section
+
+// End Home Magazines section
 // Footer=========================================
 .footer {
   background-color: $colorBlack;
