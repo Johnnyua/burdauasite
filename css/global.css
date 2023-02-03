@@ -94,7 +94,7 @@
 }
 
 .logo {
-  font-size: 1.375rem;
+  font-size: 0.8em;
 }
 .logo .icon-media_big {
   color: #8B939A;
@@ -102,14 +102,20 @@
 
 .action {
   background-color: #fff;
+  color: #fff;
   text-align: center;
 }
 
 .btn_action {
+  display: inline-block;
   background-color: #28282C;
-  color: #fff;
+  cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
+}
+
+.more {
+  color: #8B939A;
 }
 
 .btn_more {
@@ -118,6 +124,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: transparent;
+  cursor: pointer;
 }
 .btn_more:hover {
   font-weight: 800;
@@ -198,6 +205,25 @@ body {
 }
 @media (max-width: 880px) {
   .title__section {
+    font-weight: 800;
+  }
+}
+
+.title__card {
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  .title__card {
+    font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .title__card {
+    font-size: calc(1.125rem + 10 * (100vw / 1920));
+  }
+}
+@media (max-width: 880px) {
+  .title__card {
     font-weight: 800;
   }
 }
@@ -328,16 +354,16 @@ body {
       10px + 20 * ((100vw - 380px) / 1560)
     );
   padding-top: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
+      20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-left: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
+      20px + 65 * ((100vw - 380px) / 1560)
     );
   padding-bottom: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
+      20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-right: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
+      20px + 65 * ((100vw - 380px) / 1560)
     );
 }
 .cards .cards__btn {

@@ -62,6 +62,14 @@ body {
   }
 }
 
+.title__card {
+  @include adaptiveFont(28, 18, $maxWidth, $bp1);
+  font-weight: 600;
+  @media (max-width: $bp1 + px) {
+    font-weight: 800;
+  }
+}
+
 .main_title span,
 .title__section {
   color: $colorBlue;
@@ -137,7 +145,6 @@ body {
 .sub__menu__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
-
 }
 //End menu
 
@@ -152,14 +159,13 @@ body {
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
     @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
-    
-    @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
+
+    @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
   }
   .cards__item_big {
-    
   }
   .cards__title {
   }
@@ -172,5 +178,5 @@ body {
 }
 
 .action {
-   @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
 }

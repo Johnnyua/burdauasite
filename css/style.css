@@ -120,7 +120,7 @@
 }
 
 .logo {
-  font-size: 1.375rem;
+  font-size: 0.8em;
 }
 .logo .icon-media_big {
   color: #8B939A;
@@ -231,6 +231,25 @@ body {
 }
 @media (max-width: 880px) {
   .title__section {
+    font-weight: 800;
+  }
+}
+
+.title__card {
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  .title__card {
+    font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .title__card {
+    font-size: calc(1.125rem + 10 * (100vw / 1920));
+  }
+}
+@media (max-width: 880px) {
+  .title__card {
     font-weight: 800;
   }
 }
@@ -361,16 +380,16 @@ body {
       10px + 20 * ((100vw - 380px) / 1560)
     );
   padding-top: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
+      20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-left: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
+      20px + 65 * ((100vw - 380px) / 1560)
     );
   padding-bottom: calc(
-      20px + 30 * ((100vw - 380px) / 1560)
+      20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-right: calc(
-      30px + 105 * ((100vw - 380px) / 1560)
+      20px + 65 * ((100vw - 380px) / 1560)
     );
 }
 .cards .cards__btn {
@@ -405,8 +424,8 @@ body {
 
 .header__logo {
   display: none;
-  gap: 40px;
-  width: 180px;
+  gap: 2.5rem;
+  width: 11.25rem;
 }
 @media (max-width: 1630px) {
   .header__logo {
@@ -460,7 +479,7 @@ body {
 }
 .header__menu .menu__list {
   font-weight: 400;
-  gap: 40px;
+  gap: 2.5rem;
 }
 @media (max-width: 1630px) {
   .header__menu .menu__list {
@@ -605,7 +624,7 @@ body {
   transition: all 0.5s ease-in-out 0s, visibility 0s linear;
 }
 .header__menu-services .menu__list {
-  gap: 100px;
+  gap: 6.25rem;
 }
 @media (max-width: 1920px) {
   .header__menu-services .menu__list {
@@ -755,7 +774,7 @@ body {
 .home__content {
   display: grid;
   justify-items: center;
-  gap: 70px;
+  gap: 4.375rem;
 }
 @media (min-width: 75rem) {
   .home__content {
@@ -788,9 +807,9 @@ body {
   grid-auto-flow: row;
   align-content: space-between;
   gap: 2.5rem;
-  padding-left: 200px;
-  padding-right: 20px;
-  padding-top: 200px;
+  padding-left: 12.5rem;
+  padding-right: 1.25rem;
+  padding-top: 12.5rem;
 }
 @media (max-width: 1920px) {
   .home__content .content__about {
@@ -881,6 +900,18 @@ body {
 }
 .services__content .cards__item {
   background-color: #E3E3E3;
+  padding-top: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      30px + 105 * ((100vw - 380px) / 1560)
+    );
 }
 .home__projects .projects__container {
   position: relative;
@@ -1036,6 +1067,27 @@ body {
   color: #505356;
 }
 
+.home__news.news .news__cards {
+  margin-bottom: calc(
+      20px + 10 * ((100vw - 380px) / 1560)
+    );
+}
+.home__news.news .cards {
+  gap: 0.125rem;
+}
+.home__news.news .cards__item {
+  row-gap: calc(
+      10px + 10 * ((100vw - 380px) / 1560)
+    );
+  background-color: #28282C;
+  color: #faf7f5;
+}
+.home__news.news .cards__data {
+  color: #8B939A;
+}
+.home__news.news .cards__btn {
+  justify-self: start;
+}
 .footer {
   background-color: #28282C;
   color: #fff;
@@ -1050,10 +1102,10 @@ body {
   justify-content: normal;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 40px;
-  padding-right: 245px;
-  padding-bottom: 40px;
-  padding-left: 245px;
+  padding-top: 2.5rem;
+  padding-right: 15.3125rem;
+  padding-bottom: 2.5rem;
+  padding-left: 15.3125rem;
   gap: 1.875rem;
 }
 @media (max-width: 1920px) {
@@ -1185,7 +1237,7 @@ body {
 .footer__social-list,
 .footer__contacts-dep,
 .footer__copyright-text {
-  gap: 30px;
+  gap: 1.875rem;
 }
 @media (max-width: 1920px) {
   .footer__nav,

@@ -394,10 +394,10 @@
     // grid-template: auto 1fr minmax(40px, auto) / 1fr;
     // @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
     background-color: $colorLightGrey;
-    // @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
-    // @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
-    // @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
-    // @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
   .cards__btn {
     // @include dFlexRow(center, center);
@@ -547,6 +547,8 @@
   }
 }
 // End Home Sites section
+
+// Home Magazines section
 .home__magazines {
   .container {
   }
@@ -604,12 +606,11 @@
         background-color: $colorDarkGrey;
       }
       ~ .content__dep {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    }
-    
   }
 }
 
@@ -660,9 +661,74 @@
 
 .magazines__footer {
 }
-// Home Magazines section
 
 // End Home Magazines section
+
+// Home News section
+
+// End Home News section
+.home__news {
+  &.news {
+    .container__fluid {
+    }
+    .news__title {
+    }
+    .title__subtitle {
+    }
+    .news__logo {
+    }
+    .logo {
+    }
+    .icon-burda_big {
+    }
+    .icon-media_big {
+    }
+    .news__cards {
+      @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
+    }
+    .cards {
+      gap: rem(2);
+    }
+    .cards__item {
+      @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
+      background-color: $colorBlack;
+      color: $colorHome;
+    }
+    .cards__item_big {
+    }
+    .swiper-slide {
+    }
+    .cards__data {
+      color: $colorGrey;
+    }
+    .title__card {
+    }
+    .cards__title {
+    }
+    .cards__text {
+    }
+    .cards__btn {
+      justify-self: start;
+    }
+    .more {
+    }
+    .text {
+    }
+    .btn_more {
+    }
+    .icons {
+    }
+    .icon-arrow__link {
+    }
+    .news__footer {
+    }
+    .action {
+    }
+    .btn_action {
+    }
+  }
+}
+
 // Footer=========================================
 .footer {
   background-color: $colorBlack;
