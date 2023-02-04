@@ -235,21 +235,21 @@ body {
   }
 }
 
-.title__card {
+.card__title {
   font-weight: 600;
 }
 @media (max-width: 880px) {
-  .title__card {
+  .card__title {
     font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .title__card {
+  .card__title {
     font-size: calc(1.125rem + 10 * (100vw / 1920));
   }
 }
 @media (max-width: 880px) {
-  .title__card {
+  .card__title {
     font-weight: 800;
   }
 }
@@ -1090,6 +1090,36 @@ body {
 }
 .home__news.news .cards__btn {
   justify-self: start;
+}
+.reviews__item .cards__text {
+  max-height: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0s;
+}
+.reviews__item .cards__text.hide {
+  max-height: 9.75rem;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out 0s;
+}
+.reviews__item .cards__btn {
+  display: none;
+  justify-self: start;
+}
+.reviews__item .cards__btn.show {
+  display: inline-block;
+}
+.reviews__item .cards__btn.less .icons {
+  transition: all 0.3s ease-in-out 0s;
+  transform: rotate(-90deg);
+}
+.reviews__item .cards__btn.less .btn_more span:first-child {
+  opacity: 0;
+}
+.reviews__item .btn_more {
+  color: #8B939A;
+}
+.reviews__item .icons {
+  transition: all 0.3s ease-in-out 0s;
 }
 .footer {
   background-color: #28282C;

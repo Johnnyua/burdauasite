@@ -670,7 +670,6 @@
 
 // Home News section
 
-// End Home News section
 .home__news {
   &.news {
     .container__fluid {
@@ -733,6 +732,81 @@
   }
 }
 
+// End Home News section
+
+// End Home Previews section
+.home__reviews {
+}
+.reviews {
+}
+.reviews__title {
+}
+.title__subtitle {
+}
+.reviews__logo {
+}
+.logo {
+}
+.icon-burda_big {
+}
+.icon-media_big {
+}
+.container_fluid {
+}
+.reviews__container {
+}
+.reviews__content {
+  &.cards {
+}
+}
+
+.reviews__item {
+  &.cards__item {
+}
+.card__title {
+}
+.cards__text {
+  max-height: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0s;
+  &.hide {
+    max-height: rem(156);
+    overflow: hidden;
+    transition: all 0.1s ease-in-out 0s;
+  }
+}
+.cards__btn {
+  display: none;
+  justify-self: start;
+  &.show {
+    display: inline-block;
+  }
+  &.less {
+    .icons {
+    transition: all 0.3s ease-in-out 0s;
+    transform: rotate(-90deg);
+  }
+  .btn_more span:first-child {
+    opacity: 0;
+  }
+  }
+}
+.more {
+}
+.text {
+}
+.btn_more {
+  color: $colorGrey;
+}
+.icons {
+  transition: all 0.3s ease-in-out 0s;
+}
+.icon_arrow__link {
+}
+}
+
+
+// End Home Previews section
 // Footer=========================================
 .footer {
   background-color: $colorBlack;

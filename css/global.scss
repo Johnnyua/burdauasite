@@ -62,7 +62,7 @@ body {
   }
 }
 
-.title__card {
+.card__title {
   @include adaptiveFont(28, 18, $maxWidth, $bp1);
   font-weight: 600;
   @media (max-width: $bp1 + px) {

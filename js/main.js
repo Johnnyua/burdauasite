@@ -59,3 +59,44 @@ $("body").click(
     $(".header__menu-services").removeClass("active");
   },
 );
+
+const reviewItemList = document.querySelectorAll(
+  ".reviews__item"
+);
+const reviewItemCountClassName = ".cards__text p";
+const reviewItemBtnClassName = ".cards__btn";
+
+function showContainerElementByClassName(containerList, classNameCount, classNameShow) {
+  const rowCount = 6;
+  for (i = 0; i < containerList.length; i++) {
+    const containerItem = containerList[i].querySelector(classNameCount);
+    const currentRowCount = computeRowContainer(containerItem);
+    if (currentRowCount > rowCount) {
+      const showEl = containerList[i].querySelector(classNameShow); 
+      showEl.classList.add("show");
+      showEl.addEventListener("click", function (e) { showMoreText(e, containerItem, showEl); });
+    }
+  }
+}
+
+function showMoreText(e, containerItem, showEl) {
+  containerItem.parentElement.classList.toggle("hide");
+  showEl.classList.toggle("less");
+}
+
+function computeRowContainer(container) {
+    
+    const style = window.getComputedStyle(container);
+    const containerHeight = parseFloat(style.height);
+    const lineHeight = parseFloat(style.lineHeight);
+
+    const currentRowsCount = Math.ceil(containerHeight / lineHeight);
+  
+    return currentRowsCount;
+}
+   
+showContainerElementByClassName(
+  reviewItemList,
+  reviewItemCountClassName,
+  reviewItemBtnClassName
+);
