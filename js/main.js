@@ -77,10 +77,15 @@ function showContainerElementByClassName(containerList, classNameCount, classNam
   for (i = 0; i < containerList.length; i++) {
     const containerItem = containerList[i].querySelector(classNameCount);
     const currentRowCount = computeRowContainer(containerItem);
+    const showEl = containerList[i].querySelector(classNameShow); 
     if (currentRowCount > rowCount) {
-      const showEl = containerList[i].querySelector(classNameShow); 
       showEl.classList.add("show");
       showEl.addEventListener("click", function (e) { showMoreText(e, containerItem, showEl); });
+    } else {
+      showEl.classList.remove("show");  
+      // showEl.removeEventListener("click", function (e) {
+      //   showMoreText(e, containerItem, showEl);
+      // });
     }
   }
 }
