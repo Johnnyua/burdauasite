@@ -66,6 +66,12 @@ const reviewItemList = document.querySelectorAll(
 const reviewItemCountClassName = ".cards__text p";
 const reviewItemBtnClassName = ".cards__btn";
 
+window.addEventListener("resize", function() {showContainerElementByClassName(
+  reviewItemList,
+  reviewItemCountClassName,
+  reviewItemBtnClassName
+);})
+
 function showContainerElementByClassName(containerList, classNameCount, classNameShow) {
   const rowCount = 6;
   for (i = 0; i < containerList.length; i++) {
