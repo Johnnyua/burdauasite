@@ -879,6 +879,9 @@ body {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+.home__content .action {
+  margin: 0;
+}
 .home__content .content__btn {
   justify-self: start;
   align-self: end;
