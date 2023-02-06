@@ -931,6 +931,9 @@ body {
   padding: 0.6875rem 0;
   text-align: center;
 }
+.home__projects .sub__menu__item:hover {
+  background-color: #505356;
+}
 
 .projects__cards .cards__item {
   justify-items: start;
@@ -1091,6 +1094,21 @@ body {
 .home__news.news .cards__btn {
   justify-self: start;
 }
+.home__reviews .container_fluid {
+  background-color: #faf7f5;
+}
+
+.reviews__container {
+  position: relative;
+}
+
+.reviews__content.cards {
+  gap: 0.125rem;
+}
+
+.reviews__item.swiper-slide {
+  width: auto;
+}
 .reviews__item .cards__text {
   max-height: 100%;
   overflow: hidden;
@@ -1106,7 +1124,7 @@ body {
   justify-self: start;
 }
 .reviews__item .cards__btn.show {
-  display: inline-block;
+  display: flex;
 }
 .reviews__item .cards__btn.less .icons {
   transition: all 0.3s ease-in-out 0s;
@@ -1121,6 +1139,43 @@ body {
 .reviews__item .icons {
   transition: all 0.3s ease-in-out 0s;
 }
+.reviews__cards_button-prev,
+.reviews__cards_button-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.reviews__cards_button-prev.swiper-button-disabled,
+.reviews__cards_button-next.swiper-button-disabled {
+  display: none;
+}
+
+.reviews__cards_button-prev {
+  left: 0;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.reviews__cards_button-next {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.reviews__cards_pagination {
+  margin: auto;
+  text-align: center;
+}
+.reviews__cards_pagination .swiper-pagination-bullet {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.625rem !important;
+  background-color: transparent;
+  border: 1px #505356 solid;
+}
+.reviews__cards_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #505356;
+}
+
 .footer {
   background-color: #28282C;
   color: #fff;
