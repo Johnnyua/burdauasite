@@ -782,7 +782,7 @@ body {
   z-index: 1;
 }
 
-.home {
+.home__general {
   background-color: #faf7f5;
   position: relative;
   padding: 0 0 0.625rem 0;
