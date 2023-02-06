@@ -11,7 +11,6 @@
 
 // Header===========================================
 .header {
-  // @include dFlexRow(space-between, center);
   background-color: rgba(250, 247, 245, 0.91);
   position: sticky;
   z-index: 100;
@@ -155,7 +154,6 @@
 }
 
 .header__menu-services {
-  // display: none;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -173,7 +171,6 @@
   min-height: rem(70);
   width: 100%;
   &.active {
-    // display: block;
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
@@ -200,28 +197,48 @@
   gap: rem(30);
 }
 
-.search {
+.header__search {
   position: relative;
   gap: 20px;
-  input {
+  .search__text {
+    @include dFlexRow(space-between, center);
+    background-color: $colorHome;
     border: 1px solid $colorBlack;
+    border-radius: 50px;
     opacity: 0;
     height: 2em;
     position: absolute;
-    width: 250px;
-    top: 150%;
+    z-index: 5;
+    width: rem(500);
+    top: 0;
     left: 0;
-    margin: 0 0 0 10px;
-    padding: 20px 10px;
-    transform: translate(-50%, 100%);
+    padding: rem(2) rem(2) rem(2) rem(20);
+    transform: translate(-100%, 100%);
+    transition: all 1s ease 0s;
     &.active {
       @media (max-width: rem($bp1)) {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 100%);
+        width: 70vw;
       }
       opacity: 1;
-      transform: translate(-50%, 0%);
-      transition: all 0.5s ease 0s;
+      transform: translate(-50%, 100%);
+      transition: all 1s ease 0s;
     }
+  }
+  .search__input,
+  .search__btn {
+    display: inline-block;
+    height: 100%;
+  }
+  .search__input {
+    background-color: transparent; 
+    width: 50%;
+  }
+  .search__btn {
+    background-color: $colorBlack;
+    color: $mainColor; 
+    border-radius: 50px;
+    padding: rem(2) rem(17);
   }
 }
 
@@ -237,14 +254,14 @@
   }
   height: 100%;
   margin-left: 20px;
-  .search {
+  .header__search {
     @media (max-width: rem($bp1)) {
       margin: 0 auto;
     }
     position: relative;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: rem(20);
+    height: rem(20);
     margin: 0 40px 0 0;
   }
 }
@@ -265,16 +282,18 @@
       font-size: rem(14);
       line-height: rem(18);
     }
-    padding: rem(5);
-
-    .active {
+    padding: rem(2);
+    .lang__link {
+      padding: rem(1) rem(11);
+      &.active {
       border-radius: 50px;
       color: $colorHome;
       background-color: $colorBlack;
       font-weight: 800;
-      padding: 1px 11px;
       transition: background-color 1.5s linear;
     }
+    }
+    
   }
 }
 // Main===========================================
@@ -283,7 +302,6 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  // padding: rem(70) 0 0 0;
 }
 
 // Home Section===================================
@@ -381,9 +399,6 @@
 }
 
 // Home Service section
-.home__services {
-}
-
 .services__container {
   background-color: $colorLightGrey;
   @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
@@ -393,55 +408,23 @@
   background-color: $mainColor;
   gap: rem(2);
   .cards__item {
-    // display: grid;
-    // grid-auto-flow: row;
-    // grid-template: auto 1fr minmax(40px, auto) / 1fr;
-    // @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
     background-color: $colorLightGrey;
     @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
   }
-  .cards__btn {
-    // @include dFlexRow(center, center);
-    // justify-self: center;
-  }
 }
 
-.services__footer {
-}
 // End Home Service section
 
 // Home Projects section
 .home__projects {
-  .projects {
-  }
-  .projects__title {
-  }
-  .title__subtitle {
-  }
-  .home__logo {
-  }
-  .logo {
-  }
-  .icon-burda_big {
-  }
-  .icon-media_big {
-  }
   .projects__container {
     position: relative;
     background-color: $colorBlack;
     color: $colorHome;
     z-index: 0;
-  }
-  .container_fluid {
-  }
-  .projects__header {
-  }
-  .projects__menu {
-  }
-  .sub__menu {
   }
   .sub__menu__list {
     background-color: $colorHome;
@@ -458,13 +441,11 @@
     }
   }
 }
-.menu__link {
-}
+
 .projects__cards {
   .cards {
   }
   .cards__item {
-    // background: center / cover url(../images/Cards/Frame\ 12.jpg) no-repeat;
     justify-items: start;
     position: relative;
     &:hover .cards__image {
@@ -483,31 +464,14 @@
     width: 100%;
     z-index: -1;
   }
-
-  .cards_big {
-  }
-  .cards__data {
-  }
-  .main__title {
-  }
   .cards__title {
     color: $colorHome;
     &::after {
       @include lineBeforeAfter(50%, 2px, $colorHome);
     }
   }
-  .title__section {
-  }
-  .cards__text {
-  }
   .cards__btn {
     justify-self: start;
-  }
-  .btn_more {
-  }
-  .icons {
-  }
-  .icon-arrow__link {
   }
 }
 
@@ -530,13 +494,6 @@
 .projects__cards_button-next {
   right: 0;
 }
-.projects__cards_scrollbar {
-}
-.action {
-}
-.btn_action {
-}
-
 // End Home Projects section
 
 //Home Sites section
@@ -554,72 +511,51 @@
 
 // Home Magazines section
 .home__magazines {
-  .container {
-  }
-}
-.magazines {
-  .magazines__title {
-    &.title__subtitle {
+  .magazines__content {
+    .content__list {
+      @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("row-gap", 60, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
     }
-  }
-  .magazines__logo {
-    &.logo {
+    .content__item {
     }
-  }
-  .icon-burda_big {
-  }
-  .icon-media_big {
-  }
-}
-
-.magazines__content {
-  &.content {
-  }
-  .content__list {
-    @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("row-gap", 60, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
-  }
-  .content__item {
-  }
-  .content__image {
-    max-width: rem(270);
-    max-height: rem(375);
-    @include dFlexColumn(center, center);
-    flex-wrap: nowrap;
-    position: relative;
-    &:hover .content__btn {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .content__btn {
-    &.action {
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(-2em);
-      transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-      margin: 0;
-    }
-    position: absolute;
-    bottom: 0;
-    &:hover {
-      .btn_action {
-        background-color: $colorDarkGrey;
-      }
-      ~ .content__dep {
+    .content__image {
+      max-width: rem(270);
+      max-height: rem(375);
+      @include dFlexColumn(center, center);
+      flex-wrap: nowrap;
+      position: relative;
+      &:hover .content__btn {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
       }
     }
+
+    .content__btn {
+      &.action {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-2em);
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+        margin: 0;
+      }
+      position: absolute;
+      bottom: 0;
+      &:hover {
+        .btn_action {
+          background-color: $colorDarkGrey;
+        }
+        ~ .content__dep {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
   }
 }
 
-.btn_action {
-}
 .content__dep {
   visibility: hidden;
   opacity: 0;
@@ -638,123 +574,42 @@
     transform: translateY(0);
   }
 }
-.dep {
-}
 .dep__title {
   &.text__link {
     color: $colorDarkGrey;
   }
 }
-
-.dep__text {
-}
-.dep__email {
-}
-.dep__phone {
-}
-.cards__btn {
-}
-.text {
-}
-.btn_more {
-}
-.icons {
-}
-.icon-arrow__link {
-}
-
-.magazines__footer {
-}
-
 // End Home Magazines section
 
 // Home News section
 
 .home__news {
-  &.news {
-    .container__fluid {
-    }
-    .news__title {
-    }
-    .title__subtitle {
-    }
-    .news__logo {
-    }
-    .logo {
-    }
-    .icon-burda_big {
-    }
-    .icon-media_big {
-    }
-    .news__cards {
-      @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
-    }
-    .cards {
-      gap: rem(2);
-    }
-    .cards__item {
-      @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
-      background-color: $colorBlack;
-      color: $colorHome;
-    }
-    .cards__item_big {
-    }
-    .swiper-slide {
-    }
-    .cards__data {
-      color: $colorGrey;
-    }
-    .title__card {
-    }
-    .cards__title {
-    }
-    .cards__text {
-    }
-    .cards__btn {
-      justify-self: start;
-    }
-    .more {
-    }
-    .text {
-    }
-    .btn_more {
-    }
-    .icons {
-    }
-    .icon-arrow__link {
-    }
-    .news__footer {
-    }
-    .action {
-    }
-    .btn_action {
-    }
+  .news__cards {
+    @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
+  }
+  .cards {
+    gap: rem(2);
+  }
+  .cards__item {
+    @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
+    background-color: $colorBlack;
+    color: $colorHome;
+  }
+  .cards__data {
+    color: $colorGrey;
+  }
+  .cards__btn {
+    justify-self: start;
   }
 }
-
 // End Home News section
 
-// End Home Reviews section
+// Home Reviews section
 .home__reviews {
   .container_fluid {
     background-color: $colorHome;
   }
 }
-.reviews {
-}
-.reviews__title {
-}
-.title__subtitle {
-}
-.reviews__logo {
-}
-.logo {
-}
-.icon-burda_big {
-}
-.icon-media_big {
-}
-
 .reviews__container {
   position: relative;
 }
@@ -763,12 +618,9 @@
     gap: rem(2);
   }
 }
-
 .reviews__item {
   &.swiper-slide {
     width: auto;
-  }
-  .card__title {
   }
   .cards__text {
     max-height: 100%;
@@ -796,17 +648,11 @@
       }
     }
   }
-  .more {
-  }
-  .text {
-  }
   .btn_more {
     color: $colorGrey;
   }
   .icons {
     transition: all 0.3s ease-in-out 0s;
-  }
-  .icon_arrow__link {
   }
 }
 
@@ -844,7 +690,8 @@
   }
 }
 // End Home Reviews section
-// Footer=========================================
+
+// Footer
 .footer {
   background-color: $colorBlack;
   color: $mainColor;
@@ -860,9 +707,6 @@
   @include adaptiveValue("padding-bottom", 40, 20, 2, 1920, 380);
   @include adaptiveValue("padding-left", 245, 20, 2, 1920, 380);
   gap: rem(30);
-  :only-child {
-    // flex: 100%;
-  }
 }
 
 .footer__menu {
@@ -877,10 +721,6 @@
     color: $colorGrey;
   }
 }
-
-.footer__mini_logo {
-}
-
 .footer__contacts {
   @include dFlexRow(normal, normal);
 }
@@ -894,9 +734,6 @@
       background-color: $colorBlue;
     }
   }
-}
-
-.footer__social-list {
 }
 
 .footer__nav {

@@ -1,20 +1,11 @@
-// const body = document.body;
-// if (
-//   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-//     navigator.userAgent
-//   )
-// ) {
-//   body.classList.add("mobile");
-// } else {
-//   body.classList.remove("mobile");
-// }
+
 
 window.addEventListener("load", init);
 const langLink = document.querySelectorAll(".lang__list .lang__link");
 
 function init() {
   burger.addEventListener("click", showMobileMenu);
-    search.addEventListener("click", showSearchInput);
+    searchIcon.addEventListener("click", showSearch);
     langLink.forEach((elem) => {
         elem.addEventListener("click", changeLanguage);;
     });
@@ -29,13 +20,14 @@ function showMobileMenu(e) {
   e.currentTarget.children[2].classList.toggle("burger-rotate-negative");
 }
 
-function showSearchInput(e) {
-  const searchInput = document.querySelector(".search_input");
-  searchInput.classList.toggle("active");
+function showSearch(e) {
+  const searchText = document.querySelector(".search__text");
+  const searchInput = document.querySelector(".search__input");
+  searchText.classList.toggle("active");
   searchInput.focus();
   searchInput.onblur = function () {
     this.value = "";
-    this.classList.remove("active");
+    searchText.classList.remove("active");
   };
 }
 
@@ -83,9 +75,6 @@ function showContainerElementByClassName(containerList, classNameCount, classNam
       showEl.addEventListener("click", function (e) { showMoreText(e, containerItem, showEl); });
     } else {
       showEl.classList.remove("show");  
-      // showEl.removeEventListener("click", function (e) {
-      //   showMoreText(e, containerItem, showEl);
-      // });
     }
   }
 }

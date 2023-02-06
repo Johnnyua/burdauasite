@@ -20,7 +20,6 @@ body {
   max-width: $maxWidth + px;
   width: 100%;
   overflow-x: hidden;
-  // padding: 0 15px;
 }
 
 .display-none {
@@ -129,6 +128,9 @@ body {
 }
 .c_grey {
   color: $colorGrey;
+}
+.c_dgrey {
+  color: $colorDarkGrey;
 }
 // End colors classes
 

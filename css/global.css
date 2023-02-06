@@ -315,6 +315,10 @@ body {
   color: #8B939A;
 }
 
+.c_dgrey {
+  color: #505356;
+}
+
 .menu,
 .content {
   display: flex;
