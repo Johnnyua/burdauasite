@@ -12,6 +12,13 @@
 /*Width ====================================================*/
 /*Break points*/
 /*End Width ====================================================*/
+/*Fonts ====================================================*/
+/*End Fonts ====================================================*/
+/*Colors ====================================================*/
+/*End Colors ====================================================*/
+/*Width ====================================================*/
+/*Break points*/
+/*End Width ====================================================*/
 .burger {
   position: relative;
   cursor: pointer;
@@ -401,4 +408,19 @@ body {
   margin-bottom: calc(
       50px + 40 * ((100vw - 380px) / 1560)
     );
-}/*# sourceMappingURL=global.css.map */
+}
+
+.projects__about .projects__cards.cards .cards__item {
+  padding-top: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 0;
+}
+.projects__about .projects__cards.cards .cards__title {
+  color: #28282C;
+}
+.projects__about .projects__cards.cards .cards__title::after {
+  background: #28282C;
+}/*# sourceMappingURL=projects.css.map */

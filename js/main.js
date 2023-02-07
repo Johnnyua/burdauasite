@@ -11,6 +11,10 @@ function init() {
     });
 }
 
+function menuActivate() {
+  const nav = document.querySelectorAll("");
+}
+
 function showMobileMenu(e) {
   const mobileNav = document.querySelector(".header__menu");
   mobileNav.classList.toggle("open");

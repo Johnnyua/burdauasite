@@ -1,4 +1,6 @@
 @import "null.css";
+@import "projects.css";
+
 .projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
@@ -236,7 +238,7 @@ body {
 }
 
 .card__title {
-  font-weight: 600;
+  font-weight: 700;
 }
 @media (max-width: 880px) {
   .card__title {
@@ -389,11 +391,11 @@ body {
   padding-left: calc(
       20px + 65 * ((100vw - 380px) / 1560)
     );
-  padding-bottom: calc(
-      20px + 20 * ((100vw - 380px) / 1560)
-    );
   padding-right: calc(
       20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
     );
 }
 .cards .cards__btn {
@@ -1174,14 +1176,21 @@ body {
 
 .reviews__cards_button-prev,
 .reviews__cards_button-next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
-.reviews__cards_button-prev.swiper-button-disabled,
-.reviews__cards_button-next.swiper-button-disabled {
   display: none;
+}
+@media (min-width: 43.75rem) {
+  .reviews__cards_button-prev,
+.reviews__cards_button-next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+  .reviews__cards_button-prev.swiper-button-disabled,
+.reviews__cards_button-next.swiper-button-disabled {
+    display: none;
+  }
 }
 
 .reviews__cards_button-prev {

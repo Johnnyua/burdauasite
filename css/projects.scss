@@ -1,0 +1,26 @@
+@import "extends.scss";
+@import "mixins.scss";
+@import "variable.scss";
+@import "function.scss";
+@import "global.scss";
+
+.projects__wrapper {
+}
+
+.projects__about {
+  .projects__cards.cards{
+      .cards__item {
+        @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
+        padding-left: rem(40);
+        padding-right: rem(40);
+        padding-bottom: 0;
+      }
+      .cards__title {
+        color: $colorBlack;
+        &::after {
+            background: $colorBlack;
+        }
+      }
+    }
+  }
+
