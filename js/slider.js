@@ -1,4 +1,5 @@
-new Swiper(".reviews-swiper-container", {
+new Swiper(".reviews-swiper-container",
+  {
   slidesPerView: 3,
   grid: {
     rows: 1,
@@ -25,4 +26,8 @@ new Swiper(".reviews-swiper-container", {
       slidesPerView: 3,
     },
   },
+});
+
+new Swiper(".projects__slides_swiper-conrainer", {
+  slidesPerView: 5,
 });

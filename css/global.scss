@@ -168,6 +168,7 @@ body {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
+    justify-items: start;
     @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
 
     @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);

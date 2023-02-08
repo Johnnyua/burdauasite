@@ -7,20 +7,40 @@
 .projects__wrapper {
 }
 
-.projects__about {
-  .projects__cards.cards{
-      .cards__item {
-        @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
-        padding-left: rem(40);
-        padding-right: rem(40);
-        padding-bottom: 0;
-      }
-      .cards__title {
-        color: $colorBlack;
-        &::after {
-            background: $colorBlack;
-        }
-      }
+.projects__slides__cards {
+  color: $mainColor;
+  .cards__item {
+    position: relative;
+    height: rem(120);
+
+    .cards__image {
+      object-position: top;
+      position: absolute;
+      z-index: -1;
+    }
+    .cards__content {
+      padding-top: rem(10);
+      @include adaptiveValue("padding-left", 40, 15, 0, $maxWidth, $minWidth);
     }
   }
+}
 
+.projects__about {
+  .projects__about__cards.cards {
+    .cards__item {
+      @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
+      padding-left: rem(40);
+      padding-right: rem(40);
+      padding-bottom: 0;
+    }
+    .cards__title {
+      display: inline-block;
+      &::after {
+        @include lineBeforeAfter(50%, 2px, $colorBlack);
+      }
+    }
+    .cards__text ul li {
+      list-style: initial;
+    }
+  }
+}
