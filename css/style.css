@@ -1,6 +1,5 @@
 @import "null.css";
 @import "projects.css";
-
 .projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
@@ -1028,22 +1027,6 @@ body {
 .projects__footer {
   position: relative;
   padding-top: 1.875rem;
-}
-
-.projects__cards_button-prev,
-.projects__cards_button-next {
-  position: absolute;
-}
-
-.projects__cards_button-prev {
-  left: 0;
-}
-.projects__cards_button-prev .icon-arrow__link {
-  transform: rotate(180deg);
-}
-
-.projects__cards_button-next {
-  right: 0;
 }
 
 .home__sites {

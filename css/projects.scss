@@ -7,7 +7,11 @@
 .projects__wrapper {
 }
 
-.projects__slides__cards {
+.projects__slides__preview_container {
+  position: relative;
+}
+
+.projects__slides__preview {
   color: $mainColor;
   .cards__item {
     position: relative;
@@ -23,6 +27,17 @@
       @include adaptiveValue("padding-left", 40, 15, 0, $maxWidth, $minWidth);
     }
   }
+}
+
+.projects__slides_button-prev,
+.projects__slides_button-next {
+  background-color: $mainColor;
+}
+.projects__slides_button-prev {
+  left: rem(20);
+}
+.projects__slides_button-next {
+  right: rem(20);
 }
 
 .projects__about {

@@ -485,21 +485,8 @@
   position: relative;
   padding-top: rem(30);
 }
-.projects__cards_pagination {
-}
-.projects__cards_button-prev,
-.projects__cards_button-next {
-  position: absolute;
-}
-.projects__cards_button-prev {
-  left: 0;
-  .icon-arrow__link {
-    transform: rotate(180deg);
-  }
-}
-.projects__cards_button-next {
-  right: 0;
-}
+
+
 // End Home Projects section
 
 //Home Sites section

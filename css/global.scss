@@ -164,7 +164,8 @@ body {
   @media (min-width: rem($bp3)) {
     grid-template-columns: repeat(3, 1fr);
   }
-  .cards__item {
+}
+.cards__item {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
@@ -187,8 +188,46 @@ body {
     @include dFlexRow(center, center);
     justify-self: center;
   }
-}
 
 .action {
   @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
+}
+
+// Slides
+.button-prev,
+.button-next {
+  display: none;
+  @media (min-width: rem($bp2)) {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+}
+
+.button-prev {
+  left: 0;
+  transform: rotate(180deg) translateY(50%);
+}
+.button-next {
+  right: 0;
+  transform: translateY(-50%);
+}
+.pagination {
+  margin: auto;
+  text-align: center;
+  .swiper-pagination-bullet {
+    width: rem(10);
+    height: rem(10);
+    margin: 0 rem(10) !important;
+    background-color: transparent;
+    border: 1px $colorDarkGrey solid;
+    &.swiper-pagination-bullet-active {
+      background-color: $colorDarkGrey;
+    }
+  }
 }
