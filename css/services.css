@@ -12,6 +12,13 @@
 /*Width ====================================================*/
 /*Break points*/
 /*End Width ====================================================*/
+/*Fonts ====================================================*/
+/*End Fonts ====================================================*/
+/*Colors ====================================================*/
+/*End Colors ====================================================*/
+/*Width ====================================================*/
+/*Break points*/
+/*End Width ====================================================*/
 .burger {
   position: relative;
   cursor: pointer;
@@ -473,4 +480,8 @@ body {
 }
 .pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #505356;
-}/*# sourceMappingURL=global.css.map */
+}
+
+.services__about {
+  background-color: #E3E3E3;
+}/*# sourceMappingURL=services.css.map */

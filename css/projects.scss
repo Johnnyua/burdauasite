@@ -4,9 +4,6 @@
 @import "function.scss";
 @import "global.scss";
 
-.projects__wrapper {
-}
-
 .projects__slides__preview_container,
 .projects__slides_container {
   position: relative;
@@ -19,6 +16,7 @@
     position: relative;
     opacity: 0.2;
     transition: opacity 0.3s ease 0s;
+    padding: 0;
     .cards__image {
       object-position: top;
       position: absolute;
@@ -99,6 +97,10 @@
   }
 }
 
+.projects__presentation {
+  margin: 0 0 rem(100) 0;
+}
+
 .projects__presentation__cards {
   &:nth-child(1) {
     background-color: $colorBlack;
@@ -120,6 +122,30 @@
 
   .card__title {
     font-size: rem(28);
-    font-weight: 800;
+    font-weight: 700;
+  }
+}
+
+.projects__smm__content {
+  @include adaptiveValue("column-gap", 60, 20, 0, $maxWidth, $minWidth);
+  row-gap: rem(50);
+  .content__item {
+    flex: 1 1 auto;
+    padding: 0;
+    .content__text {
+    font-size: rem(28);
+    padding: 0;
+  }
+  }
+  
+  .card__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    &::after {
+        @include lineBeforeAfter(50%, 2px, $colorBlack);
+      }
+  }  
+  .card__text {
+    font-weight: 600; 
   }
 }

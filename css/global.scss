@@ -150,6 +150,12 @@ body {
   .content__list {
     @include dFlexRow(center, center);
   }
+  .content__item {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr minmax(40px, auto) / 1fr;
+    justify-items: start;  
+  }
 }
 
 .sub__menu__list {
@@ -170,6 +176,10 @@ body {
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
   justify-items: start;
+  @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
   .cards__content {
     display: grid;

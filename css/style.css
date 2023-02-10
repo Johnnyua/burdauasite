@@ -1,5 +1,7 @@
 @import "null.css";
 @import "projects.css";
+@import "services.css";
+
 .projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
@@ -381,6 +383,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+.menu .content__item,
+.content .content__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto)/1fr;
+  justify-items: start;
+}
 
 .sub__menu__list {
   display: grid;
@@ -402,6 +411,18 @@ body {
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   justify-items: start;
+  padding-top: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
@@ -544,6 +565,7 @@ body {
 @media (max-width: 55rem) {
   .header__menu {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     z-index: 11;
     background: linear-gradient(168.68deg, rgba(250, 247, 244, 0.55) 3.67%, #faf7f5 95.19%);
@@ -557,6 +579,7 @@ body {
   }
   .header__menu.open {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     transition: transform 0.8s ease-in-out 0s;
   }
@@ -657,11 +680,13 @@ body {
 }
 .header__menu .submenu:hover .submenu__icon ~ .submenu__list {
   visibility: visible;
+  opacity: 1;
   transform: translateY(0);
   transition-delay: 0s, 0s;
 }
 .header__menu .submenu__list {
   visibility: hidden;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -739,6 +764,8 @@ body {
   gap: 20px;
 }
 .header__search .search__text {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -746,7 +773,6 @@ body {
   background-color: #faf7f5;
   border: 1px solid #28282C;
   border-radius: 50px;
-  opacity: 0;
   height: 2em;
   position: absolute;
   z-index: 5;
@@ -754,12 +780,13 @@ body {
   top: 0;
   left: 0;
   padding: 0.125rem 0.125rem 0.125rem 1.25rem;
-  transform: translate(-100%, 100%);
+  transform: translate(300%, 100%);
   transition: all 1s ease 0s;
 }
 .header__search .search__text.active {
+  visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 100%);
+  transform: translate(-100%, 100%);
   transition: all 1s ease 0s;
 }
 @media (max-width: 55rem) {

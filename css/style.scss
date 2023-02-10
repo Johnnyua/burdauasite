@@ -47,6 +47,7 @@
 .header__menu {
   @media (max-width: rem($bp1)) {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     z-index: 11;
     background: linear-gradient(
@@ -62,6 +63,7 @@
     transition: transform 0.5s ease-in-out 0s;
     &.open {
       opacity: 1;
+      visibility: visible;
       transform: translateY(0);
       transition: transform 0.8s ease-in-out 0s;
     }
@@ -132,6 +134,7 @@
         transition: all 0.3s ease-in-out 0s;
         ~ .submenu__list {
           visibility: visible;
+          opacity: 1;
           transform: translateY(0);
           transition-delay: 0s, 0s;
         }
@@ -141,6 +144,7 @@
 
   .submenu__list {
     visibility: hidden;
+    opacity: 0;
     @include dFlexColumn(flex-start, flex-start);
     flex-wrap: nowrap;
     gap: rem(10);
@@ -208,11 +212,12 @@
   position: relative;
   gap: 20px;
   .search__text {
+    visibility: hidden;
+    opacity: 0;
     @include dFlexRow(space-between, center);
     background-color: $colorHome;
     border: 1px solid $colorBlack;
     border-radius: 50px;
-    opacity: 0;
     height: 2em;
     position: absolute;
     z-index: 5;
@@ -220,15 +225,16 @@
     top: 0;
     left: 0;
     padding: rem(2) rem(2) rem(2) rem(20);
-    transform: translate(-100%, 100%);
+    transform: translate(300%, 100%);
     transition: all 1s ease 0s;
     &.active {
       @media (max-width: rem($bp1)) {
         transform: translate(0%, 100%);
         width: 70vw;
       }
+      visibility: visible;
       opacity: 1;
-      transform: translate(-50%, 100%);
+      transform: translate(-100%, 100%);
       transition: all 1s ease 0s;
     }
   }
