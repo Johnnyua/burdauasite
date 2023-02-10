@@ -53,7 +53,7 @@ body {
   }
 }
 
-.title__section {
+.section__title {
   @include adaptiveFont(46, 28, $maxWidth, $bp1);
   font-weight: 700;
   @media (max-width: $bp1 + px) {
@@ -78,7 +78,7 @@ body {
 }
 
 .main_title span,
-.title__section {
+.section__title {
   color: $colorBlue;
 }
 
@@ -109,7 +109,7 @@ body {
 }
 
 .title,
-.title__section,
+.section__title,
 .title__subtitle,
 .title__link {
   text-transform: uppercase;
@@ -166,28 +166,32 @@ body {
   }
 }
 .cards__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto) / 1fr;
+  justify-items: start;
+  @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
+  .cards__content {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
     justify-items: start;
-    @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
-
     @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
-    
   }
-  .cards__item_big {
-  }
-  .cards__title {
-  }
-  .cards__text {
-  }
-  .cards__btn {
-    @include dFlexRow(center, center);
-    justify-self: center;
-  }
+}
+.cards__item_big {
+}
+.cards__title {
+}
+.cards__text {
+}
+.cards__btn {
+  @include dFlexRow(center, center);
+  justify-self: center;
+}
 
 .action {
   @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);

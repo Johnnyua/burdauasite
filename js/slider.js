@@ -27,22 +27,29 @@ new Swiper(".reviews-swiper-container", {
   },
 });
 
-new Swiper(".projects__slides_container", {
+new Swiper(".projects__slides_max_container", {
   slidesPerView: 1,
   centeredSlides: true,
-  initialSlide: 2,
-  loop: true,
-  slideToClickedSlide: true,
+  watchSlidesVisibility: true,
+  // initialSlide: 2,
+  // slideToClickedSlide: true,
   loop: true,
   navigation: {
     nextEl: ".projects__slides_button-next",
     prevEl: ".projects__slides_button-prev",
   },
+  pagination: {
+    el: ".projects__slides_pagination",
+    type: "bullets",
+    clickable: true,
+    // dynamicBullets: true,
+  },
   thumbs: {
     swiper: {
       el: ".projects__slides__preview_container",
       centeredSlides: true,
-      initialSlide: 2,
+
+      // initialSlide: 2,
       loop: true,
       slideToClickedSlide: true,
       breakpoints: {

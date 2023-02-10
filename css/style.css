@@ -187,7 +187,7 @@ body {
 }
 @media (max-width: 55rem) {
   .container,
-.container_fluid {
+  .container_fluid {
     max-width: 880px;
   }
 }
@@ -217,21 +217,21 @@ body {
   color: #14276F;
 }
 
-.title__section {
+.section__title {
   font-weight: 700;
 }
 @media (max-width: 880px) {
-  .title__section {
+  .section__title {
     font-size: calc(1.75rem + 30.6 * ((100vw - 380px) / 1920));
   }
 }
 @media (min-width: 880px) {
-  .title__section {
+  .section__title {
     font-size: calc(1.75rem + 18 * (100vw / 1920));
   }
 }
 @media (max-width: 880px) {
-  .title__section {
+  .section__title {
     font-weight: 800;
   }
 }
@@ -275,7 +275,7 @@ body {
 }
 
 .main_title span,
-.title__section {
+.section__title {
   color: #14276F;
 }
 
@@ -330,7 +330,7 @@ body {
 }
 
 .title,
-.title__section,
+.section__title,
 .title__subtitle,
 .title__link {
   text-transform: uppercase;
@@ -396,7 +396,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.cards .cards__item {
+
+.cards__item {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
@@ -404,6 +405,12 @@ body {
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
+}
+.cards__item .cards__content {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto)/1fr;
+  justify-items: start;
   padding-top: calc(
       20px + 20 * ((100vw - 380px) / 1560)
     );
@@ -417,7 +424,8 @@ body {
       20px + 20 * ((100vw - 380px) / 1560)
     );
 }
-.cards .cards__btn {
+
+.cards__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,13 +439,56 @@ body {
     );
 }
 
+.button-prev,
+.button-next {
+  display: none;
+}
+@media (min-width: 43.75rem) {
+  .button-prev,
+  .button-next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+  .button-prev.swiper-button-disabled,
+  .button-next.swiper-button-disabled {
+    display: none;
+  }
+}
+
+.button-prev {
+  left: 0;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.button-next {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.pagination {
+  margin: auto;
+  text-align: center;
+}
+.pagination .swiper-pagination-bullet {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.625rem !important;
+  background-color: transparent;
+  border: 1px #505356 solid;
+}
+.pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #505356;
+}
+
 .path-name {
   fill: black;
 }
 
 .header {
   background-color: rgba(250, 247, 245, 0.91);
-  position: -webkit-sticky;
   position: sticky;
   z-index: 100;
   top: 0;
@@ -556,7 +607,7 @@ body {
 }
 @media (max-width: 55rem) {
   .header__menu .menu__item:hover,
-.header__menu .submenu__item:hover {
+  .header__menu .submenu__item:hover {
     background-color: #28282C;
   }
 }
@@ -568,13 +619,13 @@ body {
 }
 @media (min-width: 55rem) {
   .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after {
+  .header__menu .submenu__item.active::after {
     width: 50%;
   }
 }
 @media (max-width: 55rem) {
   .header__menu .menu__item,
-.header__menu .submenu__item {
+  .header__menu .submenu__item {
     background-color: #8B939A;
     color: #faf7f5;
     gap: 20px;
@@ -623,7 +674,6 @@ body {
   background-color: #faf7f5;
   top: 100%;
   left: 0;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   transform: translateY(-2em);
@@ -933,7 +983,6 @@ body {
   margin-right: 16px;
 }
 .home__content .description__number img {
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
@@ -1191,7 +1240,7 @@ body {
 }
 @media (min-width: 43.75rem) {
   .reviews__cards_button-prev,
-.reviews__cards_button-next {
+  .reviews__cards_button-next {
     display: block;
     cursor: pointer;
     position: absolute;
@@ -1199,7 +1248,7 @@ body {
     z-index: 1;
   }
   .reviews__cards_button-prev.swiper-button-disabled,
-.reviews__cards_button-next.swiper-button-disabled {
+  .reviews__cards_button-next.swiper-button-disabled {
     display: none;
   }
 }
@@ -1383,10 +1432,10 @@ body {
 }
 @media (max-width: 1920px) {
   .footer__nav,
-.footer__contacts,
-.footer__social-list,
-.footer__contacts-dep,
-.footer__copyright-text {
+  .footer__contacts,
+  .footer__social-list,
+  .footer__contacts-dep,
+  .footer__copyright-text {
     gap: calc(
         15px + 15 * ((100vw - 380px) / 1560)
       );

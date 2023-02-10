@@ -7,16 +7,18 @@
 .projects__wrapper {
 }
 
-.projects__slides__preview_container {
+.projects__slides__preview_container,
+.projects__slides_container {
   position: relative;
 }
 
 .projects__slides__preview {
   color: $mainColor;
   .cards__item {
-    position: relative;
     height: rem(120);
-
+    position: relative;
+    opacity: 0.2;
+    transition: opacity 0.3s ease 0s;
     .cards__image {
       object-position: top;
       position: absolute;
@@ -25,6 +27,36 @@
     .cards__content {
       padding-top: rem(10);
       @include adaptiveValue("padding-left", 40, 15, 0, $maxWidth, $minWidth);
+    }
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+.projects__slides_max {
+  color: $mainColor;
+  .cards__item {
+    height: auto;
+    position: relative;
+    padding-top: rem(20);
+    @include adaptiveValue("padding-left", 225, 40, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 150, 50, 0, $maxWidth, $minWidth);
+  }
+  .cards__image {
+    object-position: top;
+    position: absolute;
+    z-index: -1;
+  }
+  .cards__content {
+    gap: rem(20);
+  }
+  .cards__data {
+    color: $mainColor;
+  }
+  .cards__title {
+    &::after {
+      @include lineBeforeAfter(50%, 2px, $mainColor);
     }
   }
 }
@@ -38,6 +70,13 @@
 }
 .projects__slides_button-next {
   right: rem(20);
+}
+
+.projects__slides_pagination {
+  display: none;
+  @media (max-width: rem($bp2)) {
+    display: block;
+  }
 }
 
 .projects__about {
@@ -57,5 +96,30 @@
     .cards__text ul li {
       list-style: initial;
     }
+  }
+}
+
+.projects__presentation__cards {
+  &:nth-child(1) {
+    background-color: $colorBlack;
+    color: $mainColor;
+  }
+  .cards__item {
+    grid-template: auto 1fr / 1fr;
+    padding: 0 rem(40);
+    @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("min-height", 600, 245, 0, $maxWidth, $minWidth);
+    position: relative;
+    img {
+      position: absolute;
+    }
+    .cards__content {
+      padding: 0;  
+    }
+  }
+
+  .card__title {
+    font-size: rem(28);
+    font-weight: 800;
   }
 }
