@@ -43,12 +43,12 @@ function changeLanguage(e) {
   }
 }
 
-$("#menuServiceOpen").click(
-  function (event) {
-    event.stopPropagation();
-    $(".header__menu-services").toggleClass("active");
-  },
-);
+// $("#menuServiceOpen").click(
+//   function (event) {
+//     event.stopPropagation();
+//     $(".header__menu-services").toggleClass("active");
+//   },
+// );
 
 $("body").click(
   function() {

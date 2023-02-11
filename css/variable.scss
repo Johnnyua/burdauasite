@@ -3,7 +3,7 @@
 /*Fonts ====================================================*/
 $fontfamily: "Nunito Sans";
 $defaultFontSize: rem(18);
-$defaultLineHeight: calc(26 / 18);
+$defaultLineHeight: 1.35;
 $defaultFontWeight: 400;
 /*End Fonts ====================================================*/
 
@@ -26,11 +26,13 @@ $colorRed: #CB2026;
 /*Width ====================================================*/
 $minWidth: 380;
 $maxWidth: 1920;
-$maxWidthContainer: 1630;
 $maxWidthContainerFluid: 1860;
+$maxWidthContainer: 1630;
+$maxWidthContainerBlock: 1190;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 $containerWidthFluid: $maxWidthContainerFluid + $containerPadding;
+$containerWidthBlock: $maxWidthContainerBlock + $containerPadding;
 
 
 /*Break points*/

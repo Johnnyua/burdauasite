@@ -27,7 +27,8 @@ body {
 }
 // Container
 .container,
-.container_fluid {
+.container_fluid,
+.container_block {
   margin: 0 auto;
   @media (max-width: rem($bp1)) {
     max-width: $bp1 + px;
@@ -42,29 +43,33 @@ body {
 .container_fluid {
   max-width: rem($containerWidthFluid);
 }
+
+.container_block {
+  max-width: rem($containerWidthBlock);
+}
 // End container
 
 // Text
 .main__title {
   @include adaptiveFont(75, 34, $maxWidth, $bp1);
   font-weight: 800;
-  span {
-    color: $colorBlue;
-  }
 }
 
 .section__title {
   @include adaptiveFont(46, 28, $maxWidth, $bp1);
   font-weight: 700;
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     font-weight: 800;
   }
 }
-
+.section__subtitle {
+  @include adaptiveFont(46, 18, $maxWidth, $bp1);
+  font-weight: 800;
+}
 .card__title {
   @include adaptiveFont(28, 18, $maxWidth, $bp1);
   font-weight: 700;
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     font-weight: 800;
   }
 }
@@ -72,14 +77,17 @@ body {
 .card__text {
   @include adaptiveFont(28, 14, $maxWidth, $bp1);
   font-weight: 600;
-  @media (max-width: $bp1 + px) {
+  @media (max-width: rem($bp1)) {
     font-weight: 700;
   }
 }
 
-.main_title span,
-.section__title {
-  color: $colorBlue;
+.content__text {
+  @include adaptiveFont(28, 18, $maxWidth, $bp1);
+  font-weight: 600;
+  @media (max-width: rem($bp1)) {
+    font-weight: 400;
+  }
 }
 
 .title__subtitle {
@@ -108,8 +116,9 @@ body {
   }
 }
 
-.title,
+.main__title,
 .section__title,
+.section__subtitle,
 .title__subtitle,
 .title__link {
   text-transform: uppercase;
@@ -156,6 +165,9 @@ body {
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
     justify-items: start;  
   }
+  .item {
+    @include dFlexRow(space-between, center);
+  }
 }
 
 .sub__menu__list {
@@ -192,12 +204,7 @@ body {
     @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   }
 }
-.cards__item_big {
-}
-.cards__title {
-}
-.cards__text {
-}
+
 .cards__btn {
   @include dFlexRow(center, center);
   justify-self: center;

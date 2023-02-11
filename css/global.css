@@ -135,7 +135,7 @@ body {
   color: #28282C;
   font-family: "Nunito Sans";
   font-size: 1.125rem;
-  line-height: 1.4444444444;
+  line-height: 1.35;
   font-weight: 400;
 }
 
@@ -153,14 +153,16 @@ body {
 }
 
 .container,
-.container_fluid {
+.container_fluid,
+.container_block {
   margin: 0 auto;
   height: 100%;
   padding: 0 0.9375rem;
 }
 @media (max-width: 55rem) {
   .container,
-  .container_fluid {
+  .container_fluid,
+  .container_block {
     max-width: 880px;
   }
 }
@@ -171,6 +173,10 @@ body {
 
 .container_fluid {
   max-width: 118.125rem;
+}
+
+.container_block {
+  max-width: 76.25rem;
 }
 
 .main__title {
@@ -186,9 +192,6 @@ body {
     font-size: calc(2.125rem + 41 * (100vw / 1920));
   }
 }
-.main__title span {
-  color: #14276F;
-}
 
 .section__title {
   font-weight: 700;
@@ -203,9 +206,23 @@ body {
     font-size: calc(1.75rem + 18 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .section__title {
     font-weight: 800;
+  }
+}
+
+.section__subtitle {
+  font-weight: 800;
+}
+@media (max-width: 880px) {
+  .section__subtitle {
+    font-size: calc(1.125rem + 47.6 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .section__subtitle {
+    font-size: calc(1.125rem + 28 * (100vw / 1920));
   }
 }
 
@@ -222,7 +239,7 @@ body {
     font-size: calc(1.125rem + 10 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .card__title {
     font-weight: 800;
   }
@@ -241,15 +258,29 @@ body {
     font-size: calc(0.875rem + 14 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .card__text {
     font-weight: 700;
   }
 }
 
-.main_title span,
-.section__title {
-  color: #14276F;
+.content__text {
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  .content__text {
+    font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .content__text {
+    font-size: calc(1.125rem + 10 * (100vw / 1920));
+  }
+}
+@media (max-width: 55rem) {
+  .content__text {
+    font-weight: 400;
+  }
 }
 
 .title__subtitle {
@@ -302,8 +333,9 @@ body {
   }
 }
 
-.title,
+.main__title,
 .section__title,
+.section__subtitle,
 .title__subtitle,
 .title__link {
   text-transform: uppercase;
@@ -360,6 +392,13 @@ body {
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   justify-items: start;
+}
+.menu .item,
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .sub__menu__list {

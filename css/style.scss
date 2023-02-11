@@ -5,6 +5,7 @@
 @import "global.scss";
 @import "null.css";
 @import "projects.css";
+@import "services.css";
 
 .path-name {
   fill: black;
@@ -164,10 +165,12 @@
   }
 }
 
+
+
 .header__menu-services {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-2em);
+  transform: translateY(2em);
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
   background: linear-gradient(
     168.68deg,
@@ -177,16 +180,10 @@
   backdrop-filter: blur(5.15455px);
   position: absolute;
   z-index: 99;
-  top: 100%;
+  top: 80%;
   left: 0;
   min-height: rem(70);
   width: 100%;
-  &.active {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.5s ease-in-out 0s, visibility 0s linear;
-  }
   .menu__list {
     @include adaptiveValue("gap", 100, 20, 2, $maxWidth, $bp1);
   }
@@ -200,6 +197,14 @@
   }
   .text__title {
     color: $colorGrey;
+  }
+}
+#menuServiceOpen {
+  &:hover  .header__menu-services {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out 0.5s, visibility 0s linear;
   }
 }
 
@@ -347,7 +352,10 @@
 
   .content__title {
     font-weight: 800;
-    flex-direction: column;
+    text-align: left;
+    > span {
+      color: $colorBlue;
+    }
   }
   .content__about {
     display: grid;
@@ -396,7 +404,9 @@
       max-width: fit-content;
     }
   }
-
+.section__title {
+      color: $colorBlue;
+    }
   .action {
     margin: 0;
   }
@@ -442,9 +452,7 @@
     background-color: $colorHome;
     gap: rem(1);
   }
-  .text__title {
-  }
-  .sub__menu__item {
+   .sub__menu__item {
     background-color: $colorBlack;
     padding: rem(11) 0;
     text-align: center;
@@ -455,8 +463,6 @@
 }
 
 .projects__cards {
-  .cards {
-  }
   .cards__item {
     justify-items: start;
     position: relative;
@@ -515,8 +521,6 @@
       @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
       @include adaptiveValue("row-gap", 60, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
-    }
-    .content__item {
     }
     .content__image {
       max-width: rem(270);

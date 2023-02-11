@@ -2,8 +2,57 @@
 @import "mixins.scss";
 @import "variable.scss";
 @import "function.scss";
-@import "global.scss";
 
 .services__about {
   background-color: $colorLightGrey;
+  .services__submenu {
+    @include adaptiveValue("margin-bottom", 100, 60, 0, $maxWidth, $minWidth);
+    padding: rem(30) 0 0 0;
+  }
+  .menu__list {
+    @include adaptiveValue("column-gap", 60, 20, 0, $maxWidth, $minWidth);
+    row-gap: rem(30);
+    .menu__item {
+      transition: transform 0.3s ease-in-out 0s;
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out 0s;
+      }
+    }
+  }
+  .main__title {
+    line-height: 1;
+  }
+}
+
+.services__about__content {
+  @include adaptiveValue("row-gap", 50, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-bottom", 50, 30, 0, $maxWidth, $minWidth);
+  .content__subtitle,
+  .content__text {
+    color: $colorDarkGrey;
+  }
+  .content__text {
+    p {
+      margin-bottom: rem(20);
+    }
+  }
+}
+
+.services__description__content {
+  flex-direction: column;
+  .content__item {
+    flex-direction: column;
+  }
+  .item__text {
+    @include dFlexRow(space-between, center);
+  }
+  ul {
+    li {
+      border: 1px $colorBlue solid;
+    }
+  }
+}
+.services__description__concept .cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }

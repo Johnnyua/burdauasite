@@ -1,7 +1,6 @@
 @import "null.css";
 @import "projects.css";
 @import "services.css";
-
 .projects__cards .cards__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after {
   content: "";
@@ -164,7 +163,7 @@ body {
   color: #28282C;
   font-family: "Nunito Sans";
   font-size: 1.125rem;
-  line-height: 1.4444444444;
+  line-height: 1.35;
   font-weight: 400;
 }
 
@@ -182,14 +181,16 @@ body {
 }
 
 .container,
-.container_fluid {
+.container_fluid,
+.container_block {
   margin: 0 auto;
   height: 100%;
   padding: 0 0.9375rem;
 }
 @media (max-width: 55rem) {
   .container,
-  .container_fluid {
+  .container_fluid,
+  .container_block {
     max-width: 880px;
   }
 }
@@ -200,6 +201,10 @@ body {
 
 .container_fluid {
   max-width: 118.125rem;
+}
+
+.container_block {
+  max-width: 76.25rem;
 }
 
 .main__title {
@@ -215,9 +220,6 @@ body {
     font-size: calc(2.125rem + 41 * (100vw / 1920));
   }
 }
-.main__title span {
-  color: #14276F;
-}
 
 .section__title {
   font-weight: 700;
@@ -232,9 +234,23 @@ body {
     font-size: calc(1.75rem + 18 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .section__title {
     font-weight: 800;
+  }
+}
+
+.section__subtitle {
+  font-weight: 800;
+}
+@media (max-width: 880px) {
+  .section__subtitle {
+    font-size: calc(1.125rem + 47.6 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .section__subtitle {
+    font-size: calc(1.125rem + 28 * (100vw / 1920));
   }
 }
 
@@ -251,7 +267,7 @@ body {
     font-size: calc(1.125rem + 10 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .card__title {
     font-weight: 800;
   }
@@ -270,15 +286,29 @@ body {
     font-size: calc(0.875rem + 14 * (100vw / 1920));
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 55rem) {
   .card__text {
     font-weight: 700;
   }
 }
 
-.main_title span,
-.section__title {
-  color: #14276F;
+.content__text {
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  .content__text {
+    font-size: calc(1.125rem + 17 * ((100vw - 380px) / 1920));
+  }
+}
+@media (min-width: 880px) {
+  .content__text {
+    font-size: calc(1.125rem + 10 * (100vw / 1920));
+  }
+}
+@media (max-width: 55rem) {
+  .content__text {
+    font-weight: 400;
+  }
 }
 
 .title__subtitle {
@@ -331,8 +361,9 @@ body {
   }
 }
 
-.title,
+.main__title,
 .section__title,
+.section__subtitle,
 .title__subtitle,
 .title__link {
   text-transform: uppercase;
@@ -389,6 +420,13 @@ body {
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   justify-items: start;
+}
+.menu .item,
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .sub__menu__list {
@@ -713,23 +751,17 @@ body {
 .header__menu-services {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-2em);
+  transform: translateY(2em);
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
   background: linear-gradient(168.68deg, rgba(250, 247, 244, 0.55) 3.67%, #faf7f5 95.19%);
   -webkit-backdrop-filter: blur(5.15455px);
           backdrop-filter: blur(5.15455px);
   position: absolute;
   z-index: 99;
-  top: 100%;
+  top: 80%;
   left: 0;
   min-height: 4.375rem;
   width: 100%;
-}
-.header__menu-services.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease-in-out 0s, visibility 0s linear;
 }
 .header__menu-services .menu__list {
   gap: 6.25rem;
@@ -749,6 +781,13 @@ body {
 }
 .header__menu-services .text__title {
   color: #8B939A;
+}
+
+#menuServiceOpen:hover .header__menu-services {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-in-out 0.5s, visibility 0s linear;
 }
 
 .burger_search {
@@ -935,7 +974,10 @@ body {
 }
 .home__content .content__title {
   font-weight: 800;
-  flex-direction: column;
+  text-align: left;
+}
+.home__content .content__title > span {
+  color: #14276F;
 }
 .home__content .content__about {
   display: grid;
@@ -1012,6 +1054,9 @@ body {
 .home__content .description__number img {
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+.home__content .section__title {
+  color: #14276F;
 }
 .home__content .action {
   margin: 0;
