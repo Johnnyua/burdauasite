@@ -39,20 +39,116 @@
   }
 }
 
+.services__description {
+  @include adaptiveValue("margin-bottom", 100, 50, 0, $maxWidth, $minWidth);
+}
+
 .services__description__content {
   flex-direction: column;
-  .content__item {
-    flex-direction: column;
+  @include adaptiveValue("row-gap", 100, 50, 0, $maxWidth, $minWidth);
+  &.content {
+    .content__item {
+      justify-content: center;
+      @include adaptiveValue("row-gap", 40, 20, 0, $maxWidth, $minWidth);
+    }
   }
+
   .item__text {
     @include dFlexRow(space-between, center);
   }
   ul {
     li {
-      border: 1px $colorBlue solid;
+      border: 2px $colorBlue solid;
     }
   }
 }
-.services__description__concept .cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.services__description__concept,
+.services__description__achievements,
+.services__description__solutions {
+  width: 100%;
+  .content {
+    gap: rem(10);
+    @media (min-width: rem($bp1)) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .content__item {
+      color: $colorBlue;
+      grid-template: 1fr / 1fr;
+      text-align: center;
+      justify-items: center;
+      align-items: center;
+      padding: rem(15) rem(20);
+      min-height: rem(150);
+      width: 100%;
+      @media (min-width: rem($bp6)) {
+        max-width: rem(200);
+      }
+    }
+  }
+}
+
+.services__description__strategy {
+  .item__title {
+    &::after {
+      @include lineBeforeAfter(rem(80), 2px, $colorBlack);
+      margin: rem(20) 0 0 0;
+    }
+  }
+  .item__text {
+    align-self: flex-start;
+  }
+  .content {
+    justify-self: flex-start;
+    gap: rem(10) rem(20);
+    li {
+      border: none;
+    }
+  }
+}
+
+.services__description__achievements {
+  .item__text {
+    .content {
+      gap: rem(10) rem(20);
+    }
+    .content__item {
+      display: block;
+      max-width: rem(580);
+    }
+    .text__link {
+      color: $colorBlue;
+      font-size: rem(28);
+      font-weight: 600;
+      span {
+        font-size: rem(46);
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+.services__description__solutions {
+  &.cards {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  justify-content: center;
+  gap: rem(10) rem(20);
+  }
+  
+  .item__text {
+    display: block;
+    background-color: $colorLightGrey;
+    max-width: rem(580);
+    padding: rem(30) 0;
+  }
+  .item__text__title {
+    font-size: rem(28);
+    font-weight: 600;
+    &::after {
+      @include lineBeforeAfter(rem(80), 2px, $colorBlack);
+      margin: rem(10) 0 rem(10) 0;
+    }
+  }
+  .item__text__text {
+    font-weight: 800;
+  }
 }
