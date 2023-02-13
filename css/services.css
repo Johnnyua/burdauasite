@@ -153,6 +153,7 @@
 }
 .services__description__achievements.cards .cards__item {
   border: 2px #14276F solid;
+  grid-template: 1fr/1fr;
   padding-top: calc(
       2px + 28 * ((100vw - 380px) / 1560)
     );

@@ -116,6 +116,7 @@
     gap: rem(10) rem(20);
     .cards__item {
       border: 2px $colorBlue solid;
+      grid-template: 1fr/1fr;
       @include adaptiveValue("padding-top", 30, 2, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-left", 50, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-right", 50, 20, 0, $maxWidth, $minWidth);
