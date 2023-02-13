@@ -1,4 +1,4 @@
-.services__description__solutions .item__title::after, .services__description__strategy .item__title::after {
+.services__description__solutions.cards .cards__item .item__title::after, .services__description__strategy .item__title::after {
   content: "";
   display: block;
 }
@@ -183,16 +183,19 @@
   justify-content: center;
   gap: 0.625rem 1.25rem;
 }
-.services__description__solutions .item__title {
+.services__description__solutions.cards .cards__item {
+  grid-template: 1fr auto/1fr;
+}
+.services__description__solutions.cards .cards__item .item__title {
   font-size: 1.75rem;
   font-weight: 600;
 }
-.services__description__solutions .item__title::after {
+.services__description__solutions.cards .cards__item .item__title::after {
   width: 5rem;
   height: 2px;
   background: #28282C;
-  margin: 0.625rem 0 0.625rem 0;
+  margin: 0.625rem 0 0 0;
 }
-.services__description__solutions .item__text__text {
+.services__description__solutions.cards .cards__item .item__text__text {
   font-weight: 800;
 }/*# sourceMappingURL=services.css.map */
