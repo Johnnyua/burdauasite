@@ -1,4 +1,4 @@
-.services__description__solutions .item__text__title::after, .services__description__strategy .item__title::after {
+.services__description__solutions .item__title::after, .services__description__strategy .item__title::after {
   content: "";
   display: block;
 }
@@ -37,6 +37,7 @@
 }
 .services__about .main__title {
   line-height: 1;
+  text-align: start;
 }
 
 .services__about__content {
@@ -120,56 +121,72 @@
   }
 }
 
+.services__description__strategy {
+  margin-bottom: calc(
+      50px + 50 * ((100vw - 380px) / 1560)
+    );
+}
+.services__description__strategy .content__item.item {
+  flex-direction: column;
+  align-items: flex-start;
+}
 .services__description__strategy .item__title::after {
   width: 5rem;
   height: 2px;
   background: #28282C;
   margin: 1.25rem 0 0 0;
 }
-.services__description__strategy .item__text {
-  align-self: flex-start;
-}
-.services__description__strategy .content {
+.services__description__strategy .content__list {
   justify-self: flex-start;
   gap: 0.625rem 1.25rem;
 }
-.services__description__strategy .content li {
+.services__description__strategy .content__list li {
   border: none;
 }
 
-.services__description__achievements .item__text .content {
+.services__description__achievements {
+  margin: 0 0 3.125rem 0;
+}
+.services__description__achievements.cards {
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   gap: 0.625rem 1.25rem;
 }
-.services__description__achievements .item__text .content__item {
-  display: block;
-  max-width: 36.25rem;
+.services__description__achievements.cards .cards__item {
+  border: 2px #14276F solid;
+  padding-top: calc(
+      2px + 28 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      20px + 30 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      2px + 28 * ((100vw - 380px) / 1560)
+    );
 }
-.services__description__achievements .item__text .text__link {
+.services__description__achievements.cards .text__link {
   color: #14276F;
   font-size: 1.75rem;
   font-weight: 600;
 }
-.services__description__achievements .item__text .text__link span {
+.services__description__achievements.cards .text__link span {
   font-size: 2.875rem;
   font-weight: 800;
 }
 
 .services__description__solutions.cards {
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  background-color: #E3E3E3;
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   justify-content: center;
   gap: 0.625rem 1.25rem;
 }
-.services__description__solutions .item__text {
-  display: block;
-  background-color: #E3E3E3;
-  max-width: 36.25rem;
-  padding: 1.875rem 0;
-}
-.services__description__solutions .item__text__title {
+.services__description__solutions .item__title {
   font-size: 1.75rem;
   font-weight: 600;
 }
-.services__description__solutions .item__text__title::after {
+.services__description__solutions .item__title::after {
   width: 5rem;
   height: 2px;
   background: #28282C;

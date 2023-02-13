@@ -22,6 +22,7 @@
   }
   .main__title {
     line-height: 1;
+    text-align: start;
   }
 }
 
@@ -88,16 +89,18 @@
 }
 
 .services__description__strategy {
+  @include adaptiveValue("margin-bottom", 100, 50, 0, $maxWidth, $minWidth);
+  .content__item.item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .item__title {
     &::after {
       @include lineBeforeAfter(rem(80), 2px, $colorBlack);
       margin: rem(20) 0 0 0;
     }
   }
-  .item__text {
-    align-self: flex-start;
-  }
-  .content {
+  .content__list {
     justify-self: flex-start;
     gap: rem(10) rem(20);
     li {
@@ -107,14 +110,18 @@
 }
 
 .services__description__achievements {
-  .item__text {
-    .content {
-      gap: rem(10) rem(20);
+  margin: 0 0 rem(50) 0;
+  &.cards {
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+    gap: rem(10) rem(20);
+    .cards__item {
+      border: 2px $colorBlue solid;
+      @include adaptiveValue("padding-top", 30, 2, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 50, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 50, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-bottom", 30, 2, 0, $maxWidth, $minWidth);
     }
-    .content__item {
-      display: block;
-      max-width: rem(580);
-    }
+
     .text__link {
       color: $colorBlue;
       font-size: rem(28);
@@ -129,18 +136,13 @@
 
 .services__description__solutions {
   &.cards {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  justify-content: center;
-  gap: rem(10) rem(20);
-  }
-  
-  .item__text {
-    display: block;
     background-color: $colorLightGrey;
-    max-width: rem(580);
-    padding: rem(30) 0;
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+    justify-content: center;
+    gap: rem(10) rem(20);
   }
-  .item__text__title {
+
+  .item__title {
     font-size: rem(28);
     font-weight: 600;
     &::after {

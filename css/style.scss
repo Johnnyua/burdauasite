@@ -517,25 +517,28 @@
 // Home Magazines section
 .home__magazines {
   .magazines__content {
-    .content__list {
+    .cards__list {
       @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
       @include adaptiveValue("row-gap", 60, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
     }
-    .content__image {
+    .cards__item {
+      padding: 0;
+    }
+    .cards__image {
       max-width: rem(270);
       max-height: rem(375);
       @include dFlexColumn(center, center);
       flex-wrap: nowrap;
       position: relative;
-      &:hover .content__btn {
+      &:hover .cards__btn {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .content__btn {
+    .cards__btn {
       &.action {
         visibility: hidden;
         opacity: 0;
@@ -549,7 +552,7 @@
         .btn_action {
           background-color: $colorDarkGrey;
         }
-        ~ .content__dep {
+        ~ .cards__dep {
           visibility: visible;
           opacity: 1;
           transform: translateY(0);
@@ -559,7 +562,7 @@
   }
 }
 
-.content__dep {
+.cards__dep {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -590,14 +593,16 @@
   .news__cards {
     @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
   }
-  .cards {
+  .cards__slides {
     gap: rem(2);
-  }
-  .cards__item {
+    .cards__item {
+    grid-template: auto 1fr 1fr minmax(40px, auto)/1fr;
     @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
     background-color: $colorBlack;
     color: $colorHome;
   }
+  }
+  
   .cards__data {
     color: $colorGrey;
   }
@@ -617,7 +622,7 @@
   position: relative;
 }
 .reviews__content {
-  &.cards {
+  &.cards__slides {
     gap: rem(2);
   }
 }

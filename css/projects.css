@@ -1,4 +1,4 @@
-.projects__smm__content .card__title::after, .projects__about .projects__about__cards.cards .cards__title::after, .projects__slides_max .cards__title::after {
+.projects__smm__cards .cards__item .item__title::after, .projects__about .projects__about__cards.cards .cards__title::after, .projects__slides_max .cards__title::after {
   content: "";
   display: block;
 }
@@ -145,7 +145,7 @@
   font-weight: 700;
 }
 
-.projects__smm__content {
+.projects__smm__cards {
   -moz-column-gap: calc(
       20px + 40 * ((100vw - 380px) / 1560)
     );
@@ -154,23 +154,25 @@
     );
   row-gap: 3.125rem;
 }
-.projects__smm__content .content__item {
-  flex: 1 1 auto;
+.projects__smm__cards .cards__item {
+  grid-template: 1fr auto/1fr;
   padding: 0;
 }
-.projects__smm__content .content__item .content__text {
+.projects__smm__cards .cards__item .item__text {
   font-size: 1.75rem;
   padding: 0;
 }
-.projects__smm__content .card__title {
+.projects__smm__cards .cards__item .item__title {
+  font-size: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-.projects__smm__content .card__title::after {
+.projects__smm__cards .cards__item .item__title::after {
   width: 50%;
   height: 2px;
   background: #28282C;
+  margin: 0.625rem 0 0 0;
 }
-.projects__smm__content .card__text {
+.projects__smm__cards .card__text {
   font-weight: 600;
 }/*# sourceMappingURL=projects.css.map */

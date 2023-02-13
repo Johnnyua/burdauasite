@@ -160,14 +160,15 @@ body {
     @include dFlexRow(center, center);
   }
   .content__item {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template: auto 1fr minmax(40px, auto) / 1fr;
-    justify-items: start;  
-  }
-  .item {
     @include dFlexRow(space-between, center);
+    // display: grid;
+    // grid-auto-flow: row;
+    // grid-template: auto 1fr minmax(40px, auto) / 1fr;
+    // justify-items: start;  
   }
+  // .item {
+  //   @include dFlexRow(space-between, center);
+  // }
 }
 
 .sub__menu__list {
@@ -177,6 +178,10 @@ body {
 //End menu
 
 .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+.cards__slides {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   @media (min-width: rem($bp3)) {
@@ -204,6 +209,9 @@ body {
     @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   }
 }
+.cards__list {
+    @include dFlexRow(center, center);
+  }
 
 .cards__btn {
   @include dFlexRow(center, center);
