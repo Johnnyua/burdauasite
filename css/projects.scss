@@ -126,7 +126,7 @@
   }
 }
 
-.projects__smm__cards {
+.projects__indicators__cards {
   @include adaptiveValue("column-gap", 60, 20, 0, $maxWidth, $minWidth);
   row-gap: rem(50);
   .cards__item {
@@ -137,12 +137,14 @@
     padding: 0;
   }
   .item__title {
+    position: relative;
     font-size: rem(28);
     font-weight: 700;
     text-transform: uppercase;
     &::after {
         @include lineBeforeAfter(50%, 2px, $colorBlack);
-        margin: rem(10) 0 0 0;
+        position: absolute;
+        top: 100%;
       }
   } 
   }

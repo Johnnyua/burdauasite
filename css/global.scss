@@ -151,32 +151,27 @@ body {
 }
 // End colors classes
 
-// Menu
+// Flex
 .menu,
 .content {
   @include dFlexRow(center, center);
-  .menu__list,
-  .content__list {
-    @include dFlexRow(center, center);
-  }
-  .content__item {
-    @include dFlexRow(space-between, center);
-    // display: grid;
-    // grid-auto-flow: row;
-    // grid-template: auto 1fr minmax(40px, auto) / 1fr;
-    // justify-items: start;  
-  }
-  // .item {
-  //   @include dFlexRow(space-between, center);
-  // }
 }
+.menu__list,
+.content__list {
+  @include dFlexRow(center, center);
+}
+.content__item {
+    @include dFlexRow(space-between, center);
+  }
 
 .sub__menu__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
 }
-//End menu
+//End flex
 
+
+// Grid
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -188,15 +183,27 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.cards__item {
+
+.cards__slides__item {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
   justify-items: start;
-  @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
+}
+.cards__item {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: max-content 1fr auto / 1fr;
+  justify-items: start;
+  // @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
   .cards__content {
     display: grid;
@@ -210,8 +217,8 @@ body {
   }
 }
 .cards__list {
-    @include dFlexRow(center, center);
-  }
+  @include dFlexRow(center, center);
+}
 
 .cards__btn {
   @include dFlexRow(center, center);

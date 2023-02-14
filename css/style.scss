@@ -165,8 +165,6 @@
   }
 }
 
-
-
 .header__menu-services {
   visibility: hidden;
   opacity: 0;
@@ -200,7 +198,7 @@
   }
 }
 #menuServiceOpen {
-  &:hover  .header__menu-services {
+  &:hover .header__menu-services {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
@@ -404,9 +402,9 @@
       max-width: fit-content;
     }
   }
-.section__title {
-      color: $colorBlue;
-    }
+  .section__title {
+    color: $colorBlue;
+  }
   .action {
     margin: 0;
   }
@@ -429,7 +427,7 @@
 .services__content {
   background-color: $mainColor;
   gap: rem(2);
-  .cards__item {
+  .cards__slides__item {
     background-color: $colorLightGrey;
     @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
@@ -452,7 +450,7 @@
     background-color: $colorHome;
     gap: rem(1);
   }
-   .sub__menu__item {
+  .sub__menu__item {
     background-color: $colorBlack;
     padding: rem(11) 0;
     text-align: center;
@@ -463,7 +461,11 @@
 }
 
 .projects__cards {
-  .cards__item {
+  .cards__slides__item {
+    @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
     justify-items: start;
     position: relative;
     &:hover .cards__image {
@@ -497,7 +499,6 @@
   position: relative;
   padding-top: rem(30);
 }
-
 
 // End Home Projects section
 
@@ -595,14 +596,18 @@
   }
   .cards__slides {
     gap: rem(2);
-    .cards__item {
-    grid-template: auto 1fr 1fr minmax(40px, auto)/1fr;
-    @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
-    background-color: $colorBlack;
-    color: $colorHome;
+    .cards__slides__item {
+      grid-template: auto 1fr 1fr minmax(40px, auto) / 1fr;
+      @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+      background-color: $colorBlack;
+      color: $colorHome;
+    }
   }
-  }
-  
+
   .cards__data {
     color: $colorGrey;
   }
@@ -624,6 +629,12 @@
 .reviews__content {
   &.cards__slides {
     gap: rem(2);
+    .cards__slides__item {
+      @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+    }
   }
 }
 .reviews__item {
