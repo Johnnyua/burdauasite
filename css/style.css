@@ -360,12 +360,12 @@ body {
   }
 }
 
-.text {
+.text__bold {
   font-size: 1.125rem;
   font-weight: 800;
 }
 @media (max-width: 55rem) {
-  .text {
+  .text__bold {
     font-weight: 700;
   }
 }
