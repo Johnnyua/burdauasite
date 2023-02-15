@@ -2,8 +2,8 @@
 @import "null.css";
 @import "projects.css";
 @import "services.css";
-.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after {
+.header__menu .menu__item.active::after,
+.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
 }
@@ -24,8 +24,8 @@ Now let’s see some common breakpoints for widths of devices:
 1201px and more —  Extra large screens, TV
 */
 /*End Width ====================================================*/
-.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after {
+.header__menu .menu__item.active::after,
+.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
 }
@@ -46,8 +46,8 @@ Now let’s see some common breakpoints for widths of devices:
 1201px and more —  Extra large screens, TV
 */
 /*End Width ====================================================*/
-.projects__cards .cards__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after {
+.header__menu .menu__item.active::after,
+.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
 }
@@ -473,10 +473,30 @@ body {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
+  row-gap: 1.25rem;
   justify-items: start;
-  row-gap: calc(
-      10px + 20 * ((100vw - 380px) / 1560)
-    );
+  position: relative;
+}
+@media (min-width: 55rem) {
+  .cards__slides__item.item_big {
+    grid-column: span 2;
+  }
+}
+.cards__slides__item .item__image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.cards__slides__item .item__title {
+  color: #faf7f5;
+}
+.cards__slides__item .item__title::after {
+  width: 50%;
+  height: 2px;
+  background: #faf7f5;
+}
+.cards__slides__item .item__btn {
+  justify-self: start;
 }
 
 .cards__item {
@@ -1158,33 +1178,12 @@ body {
   padding-bottom: calc(
       20px + 20 * ((100vw - 380px) / 1560)
     );
-  justify-items: start;
-  position: relative;
 }
-.projects__cards .cards__slides__item:hover .cards__image {
+.projects__cards .cards__slides__item:hover .item__image {
   opacity: 1;
 }
-@media (min-width: 55rem) {
-  .projects__cards .cards__item_big {
-    grid-column: span 2;
-  }
-}
-.projects__cards .cards__image {
-  position: absolute;
+.projects__cards .cards__slides__item .item__image {
   opacity: 0.5;
-  width: 100%;
-  z-index: -1;
-}
-.projects__cards .cards__title {
-  color: #faf7f5;
-}
-.projects__cards .cards__title::after {
-  width: 50%;
-  height: 2px;
-  background: #faf7f5;
-}
-.projects__cards .cards__btn {
-  justify-self: start;
 }
 
 .projects__footer {

@@ -466,32 +466,12 @@
     @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
-    justify-items: start;
-    position: relative;
-    &:hover .cards__image {
+    &:hover .item__image {
       opacity: 1;
     }
-  }
-  .cards__item_big {
-    @media (min-width: rem($bp1)) {
-      grid-column: span 2;
+    .item__image {
+      opacity: 0.5;
     }
-  }
-
-  .cards__image {
-    position: absolute;
-    opacity: 0.5;
-    width: 100%;
-    z-index: -1;
-  }
-  .cards__title {
-    color: $colorHome;
-    &::after {
-      @include lineBeforeAfter(50%, 2px, $colorHome);
-    }
-  }
-  .cards__btn {
-    justify-self: start;
   }
 }
 

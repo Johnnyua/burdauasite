@@ -100,7 +100,7 @@ body {
   }
 }
 
-.text {
+.text__bold {
   font-size: rem(18);
   font-weight: 800;
   @media (max-width: rem($bp1)) {
@@ -161,15 +161,14 @@ body {
   @include dFlexRow(center, center);
 }
 .content__item {
-    @include dFlexRow(space-between, center);
-  }
+  @include dFlexRow(space-between, center);
+}
 
 .sub__menu__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
 }
 //End flex
-
 
 // Grid
 .cards {
@@ -188,13 +187,34 @@ body {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
+  row-gap: rem(20);
   justify-items: start;
   // @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("row-gap", 30, 10, 0, $maxWidth, $minWidth);
+  position: relative;
+  &.item_big {
+    @media (min-width: rem($bp1)) {
+      grid-column: span 2;
+    }
+  }
+  .item__image {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  .item__title {
+    color: $colorHome;
+    &::after {
+      @include lineBeforeAfter(50%, 2px, $colorHome);
+    }
+  }
+  .item__btn {
+    justify-self: start;
+  }
 }
+
 .cards__item {
   display: grid;
   grid-auto-flow: row;
