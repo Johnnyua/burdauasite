@@ -50,6 +50,11 @@ body {
 // End container
 
 // Text
+.text__default {
+  font-size: $defaultFontSize;
+  line-height: $defaultLineHeight;
+  font-weight: $defaultFontWeight;
+}
 .main__title {
   @include adaptiveFont(75, 34, $maxWidth, $bp1);
   font-weight: 800;
@@ -62,6 +67,10 @@ body {
     font-weight: 800;
   }
 }
+.section__title_bold {
+  font-size: rem(46);
+  font-weight: 800;
+}
 .section__subtitle {
   @include adaptiveFont(46, 18, $maxWidth, $bp1);
   font-weight: 800;
@@ -73,7 +82,11 @@ body {
     font-weight: 800;
   }
 }
-
+.card__title_bold {
+  font-size: rem(28);
+  font-weight: 600;
+  text-transform: uppercase;
+}
 .card__text {
   @include adaptiveFont(28, 14, $maxWidth, $bp1);
   font-weight: 600;
@@ -173,11 +186,11 @@ body {
 // Grid
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 }
 .cards__slides {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
   @media (min-width: rem($bp3)) {
     grid-template-columns: repeat(3, 1fr);
   }

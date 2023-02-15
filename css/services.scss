@@ -85,25 +85,6 @@
 .services__description__objective,
 .services__description__progress {
   width: 100%;
-  .content__list {
-    gap: rem(10);
-    @media (min-width: rem($bp1)) {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .content__item {
-      color: $colorBlue;
-      grid-template: 1fr / 1fr;
-      text-align: center;
-      justify-items: center;
-      align-items: center;
-      padding: rem(15) rem(20);
-      min-height: rem(150);
-      width: 100%;
-      @media (min-width: rem($bp6)) {
-        max-width: rem(200);
-      }
-    }
-  }
 }
 
 .services__description__categories {
@@ -156,7 +137,7 @@
 .services__description__solutions {
   &.cards {
     background-color: $colorLightGrey;
-    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
     justify-content: center;
     gap: rem(30) rem(20);
     .cards__item {
@@ -176,9 +157,30 @@
   }
 }
 
-// DIGITAL
+// Global components
 
 /*==========================================*/
+.objective {
+  .objective__item {
+    .item__list {
+      gap: rem(10);
+      .list__item {
+        color: $colorBlue;
+        grid-template: 1fr / 1fr;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        padding: rem(15) rem(20);
+        min-height: rem(150);
+        width: 100%;
+        @media (min-width: rem($bp6)) {
+          max-width: rem(200);
+        }
+      }
+    }
+  }
+}
+
 .indicators {
   width: 100%;
 
@@ -190,24 +192,15 @@
     }
   }
   .cards {
-    gap: rem(50) rem(60);
+    gap: rem(50) rem(50);
   }
   .cards__item {
     gap: rem(10);
-    .main__title {
-      text-align: start;
-    }
     .item__title {
-      font-size: rem(28);
-      font-weight: 700;
       &::after {
         @include lineBeforeAfter(rem(80), 2px, $colorBlack);
         margin: rem(10) 0 0 0;
       }
-    }
-    .card__text {
-      font-size: rem(28);
-      font-weight: 600;
     }
   }
 }

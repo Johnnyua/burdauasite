@@ -108,33 +108,6 @@ Now let’s see some common breakpoints for widths of devices:
 .services__description__progress {
   width: 100%;
 }
-.services__description__objective .content__list,
-.services__description__progress .content__list {
-  gap: 0.625rem;
-}
-@media (min-width: 55rem) {
-  .services__description__objective .content__list,
-  .services__description__progress .content__list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-.services__description__objective .content__list .content__item,
-.services__description__progress .content__list .content__item {
-  color: #14276F;
-  grid-template: 1fr/1fr;
-  text-align: center;
-  justify-items: center;
-  align-items: center;
-  padding: 0.9375rem 1.25rem;
-  min-height: 9.375rem;
-  width: 100%;
-}
-@media (min-width: 30rem) {
-  .services__description__objective .content__list .content__item,
-  .services__description__progress .content__list .content__item {
-    max-width: 12.5rem;
-  }
-}
 
 .services__description__categories {
   margin-bottom: calc(
@@ -194,7 +167,6 @@ Now let’s see some common breakpoints for widths of devices:
 
 .services__description__solutions.cards {
   background-color: #E3E3E3;
-  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
   justify-content: center;
   gap: 1.875rem 1.25rem;
 }
@@ -218,6 +190,25 @@ Now let’s see some common breakpoints for widths of devices:
 }
 
 /*==========================================*/
+.objective .objective__item .item__list {
+  gap: 0.625rem;
+}
+.objective .objective__item .item__list .list__item {
+  color: #14276F;
+  grid-template: 1fr/1fr;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0.9375rem 1.25rem;
+  min-height: 9.375rem;
+  width: 100%;
+}
+@media (min-width: 30rem) {
+  .objective .objective__item .item__list .list__item {
+    max-width: 12.5rem;
+  }
+}
+
 .indicators {
   width: 100%;
 }
@@ -229,27 +220,16 @@ Now let’s see some common breakpoints for widths of devices:
   font-weight: 700;
 }
 .indicators .cards {
-  gap: 3.125rem 3.75rem;
+  gap: 3.125rem 3.125rem;
 }
 .indicators .cards__item {
   gap: 0.625rem;
-}
-.indicators .cards__item .main__title {
-  text-align: start;
-}
-.indicators .cards__item .item__title {
-  font-size: 1.75rem;
-  font-weight: 700;
 }
 .indicators .cards__item .item__title::after {
   width: 5rem;
   height: 2px;
   background: #28282C;
   margin: 0.625rem 0 0 0;
-}
-.indicators .cards__item .card__text {
-  font-size: 1.75rem;
-  font-weight: 600;
 }
 
 .services__description__indicators .indicators__title {

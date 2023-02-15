@@ -235,6 +235,12 @@ body {
   max-width: 76.25rem;
 }
 
+.text__default {
+  font-size: 1.125rem;
+  line-height: 1.44;
+  font-weight: 400;
+}
+
 .main__title {
   font-weight: 800;
 }
@@ -268,6 +274,11 @@ body {
   }
 }
 
+.section__title_bold {
+  font-size: 2.875rem;
+  font-weight: 800;
+}
+
 .section__subtitle {
   font-weight: 800;
 }
@@ -299,6 +310,12 @@ body {
   .card__title {
     font-weight: 800;
   }
+}
+
+.card__title_bold {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .card__text {
@@ -456,12 +473,12 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
 }
 
 .cards__slides {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
 }
 @media (min-width: 90rem) {
   .cards__slides {
