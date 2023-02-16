@@ -67,7 +67,7 @@ body {
     font-weight: 800;
   }
 }
-.section__title_bold {
+.section__title_extrabold {
   font-size: rem(46);
   font-weight: 800;
 }
@@ -82,11 +82,17 @@ body {
     font-weight: 800;
   }
 }
-.card__title_bold {
+.card__title_semibold {
   font-size: rem(28);
   font-weight: 600;
   text-transform: uppercase;
 }
+.card__title_bold {
+  font-size: rem(28);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .card__text {
   @include adaptiveFont(28, 14, $maxWidth, $bp1);
   font-weight: 600;

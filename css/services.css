@@ -189,11 +189,43 @@ Now let’s see some common breakpoints for widths of devices:
   font-weight: 800;
 }
 
+.services__description__partners .indicators__cards__container {
+  background-color: #E3E3E3;
+  padding: calc(
+      0px + 30 * ((100vw - 380px) / 1560)
+    );
+}
+.services__description__partners .indicators__title {
+  margin: 0 0 1.875rem 0;
+}
+.services__description__partners .indicators__cards.cards {
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  width: 100%;
+}
+.services__description__partners .cards__item {
+  padding: 0.625rem;
+}
+.services__description__partners .item__text .text__title {
+  text-align: start;
+}
+.services__description__partners .item__text .text__list {
+  margin: 0 0 0 0.625rem;
+}
+.services__description__partners .item__text .list__item {
+  border: none;
+  list-style: disc;
+  margin: 0 0 0 0.625rem;
+}
+
 /*==========================================*/
 .objective .objective__item .item__list {
   gap: 0.625rem;
 }
 .objective .objective__item .item__list .list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   color: #14276F;
   grid-template: 1fr/1fr;
   text-align: center;
@@ -230,6 +262,9 @@ Now let’s see some common breakpoints for widths of devices:
   height: 2px;
   background: #28282C;
   margin: 0.625rem 0 0 0;
+}
+.indicators .cards__item .text__text {
+  text-align: start;
 }
 
 .services__description__indicators .indicators__title {
