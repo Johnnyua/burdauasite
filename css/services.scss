@@ -323,3 +323,16 @@
     }
   }
 }
+
+.portfolio {
+  @include adaptiveValue("padding", 100, 0, 0, $maxWidth, $minWidth);
+  padding-top: 0;
+  .portfolio__content {
+    gap: rem(20);
+  }
+  .content__item {
+    img {
+      @include adaptiveValue("max-width", 170, 70, 0, $maxWidth, $minWidth);
+    }
+  }
+}

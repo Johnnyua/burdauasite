@@ -360,4 +360,19 @@ Now let’s see some common breakpoints for widths of devices:
 }
 .services__cards .cards__slides__item .item__image {
   opacity: 0.5;
+}
+
+.portfolio {
+  padding: calc(
+      0px + 100 * ((100vw - 380px) / 1560)
+    );
+  padding-top: 0;
+}
+.portfolio .portfolio__content {
+  gap: 1.25rem;
+}
+.portfolio .content__item img {
+  max-width: calc(
+      70px + 100 * ((100vw - 380px) / 1560)
+    );
 }/*# sourceMappingURL=services.css.map */
