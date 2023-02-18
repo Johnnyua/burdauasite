@@ -327,6 +327,7 @@
 .portfolio {
   @include adaptiveValue("padding", 100, 0, 0, $maxWidth, $minWidth);
   padding-top: 0;
+  gap: rem(20);
   .portfolio__content {
     gap: rem(20);
   }

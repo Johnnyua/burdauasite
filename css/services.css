@@ -367,6 +367,7 @@ Now let’s see some common breakpoints for widths of devices:
       0px + 100 * ((100vw - 380px) / 1560)
     );
   padding-top: 0;
+  gap: 1.25rem;
 }
 .portfolio .portfolio__content {
   gap: 1.25rem;
