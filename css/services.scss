@@ -45,6 +45,7 @@
         text-transform: uppercase;
       }
       .text__list {
+        margin: 0 0 0 rem(20);
         .list__item {
           list-style: disc;
         }
@@ -244,6 +245,34 @@
 .services__description__indicators {
   .indicators__title {
     @include adaptiveValue("margin-bottom", 100, 50, 0, $maxWidth, $minWidth);
+  }
+}
+
+.services__description__activites {
+  .item__text {
+    @include dFlexRow(flex-start, flex-start);
+    gap: rem(20);
+    text-transform: uppercase;
+  }
+  .places {
+    .item__text {
+      flex-direction: column;
+    }
+    .icons__item {
+      background-color: $colorDarkGrey;
+      border: none;
+      &:hover {
+        background-color: $colorLightGrey;
+        transition: all 0.3s ease 0s;
+        .icons__link {
+          color: $colorBlue;
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
+    .icons__link {
+      color: $mainColor;
+    }
   }
 }
 /*==========================================*/

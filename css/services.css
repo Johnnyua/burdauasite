@@ -68,6 +68,9 @@ Now let’s see some common breakpoints for widths of devices:
   font-weight: 700;
   text-transform: uppercase;
 }
+.services__about .about .text .text__list {
+  margin: 0 0 0 1.25rem;
+}
 .services__about .about .text .text__list .list__item {
   list-style: disc;
 }
@@ -271,6 +274,33 @@ Now let’s see some common breakpoints for widths of devices:
   margin-bottom: calc(
       50px + 50 * ((100vw - 380px) / 1560)
     );
+}
+
+.services__description__activites .item__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  text-transform: uppercase;
+}
+.services__description__activites .places .item__text {
+  flex-direction: column;
+}
+.services__description__activites .places .icons__item {
+  background-color: #505356;
+  border: none;
+}
+.services__description__activites .places .icons__item:hover {
+  background-color: #E3E3E3;
+  transition: all 0.3s ease 0s;
+}
+.services__description__activites .places .icons__item:hover .icons__link {
+  color: #14276F;
+  transition: all 0.3s ease 0s;
+}
+.services__description__activites .places .icons__link {
+  color: #fff;
 }
 
 /*==========================================*/
