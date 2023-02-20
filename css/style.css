@@ -1453,6 +1453,12 @@ body {
   background-color: #505356;
 }
 
+.cinnosti__about__content .text__title {
+  text-align: start;
+}
+.cinnosti__about__content.content {
+  justify-content: flex-start;
+}
 .footer {
   background-color: #28282C;
   color: #fff;

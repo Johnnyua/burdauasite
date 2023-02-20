@@ -35,9 +35,6 @@ Now let’s see some common breakpoints for widths of devices:
   color: #505356;
 }
 .services__about .services__submenu {
-  margin-bottom: calc(
-      60px + 40 * ((100vw - 380px) / 1560)
-    );
   padding: 1.875rem 0 0 0;
 }
 .services__about .menu__list {
@@ -60,27 +57,10 @@ Now let’s see some common breakpoints for widths of devices:
   line-height: 1;
   text-align: start;
 }
-.services__about .about .text .text__content:not(:last-child) {
-  padding: 0 0 1.25rem 0;
-}
-.services__about .about .text .text__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.services__about .about .text .text__list {
-  margin: 0 0 0 1.25rem;
-}
-.services__about .about .text .text__list .list__item {
-  list-style: disc;
-}
 
 .services__about__content {
   row-gap: calc(
       20px + 30 * ((100vw - 380px) / 1560)
-    );
-  padding-bottom: calc(
-      30px + 20 * ((100vw - 380px) / 1560)
     );
 }
 .services__about__content .content__subtitle,
@@ -221,6 +201,29 @@ Now let’s see some common breakpoints for widths of devices:
 }
 
 /*==========================================*/
+.about {
+  padding-top: calc(
+      60px + 40 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      30px + 20 * ((100vw - 380px) / 1560)
+    );
+}
+.about .text .text__content:not(:last-child) {
+  padding: 0 0 1.25rem 0;
+}
+.about .text .text__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about .text .text__list {
+  margin: 0 0 0 1.25rem;
+}
+.about .text .text__list .list__item {
+  list-style: disc;
+}
+
 .objective .objective__item .item__list {
   gap: 0.625rem;
 }

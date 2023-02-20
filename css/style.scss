@@ -706,6 +706,18 @@
 }
 // End Home Reviews section
 
+.cinnosti__about__content {
+  .text__title {
+     text-align: start;
+  }
+  &.content {
+    justify-content: flex-start;
+  }
+  .text__list {
+    
+  }
+}
+
 // Footer
 .footer {
   background-color: $colorBlack;
