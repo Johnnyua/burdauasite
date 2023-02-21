@@ -706,15 +706,30 @@
 }
 // End Home Reviews section
 
+// About pages
 .cinnosti__about__content {
   .text__title {
-     text-align: start;
+    text-align: start;
   }
   &.content {
     justify-content: flex-start;
   }
-  .text__list {
-    
+}
+
+.vacancii__about__content {
+  .about__text {
+    .text__content {
+      margin: 0 0 rem(20) 0;
+    }
+    .text__date {
+      color: $colorGrey;
+    }
+    .text__title {
+      text-align: start;
+    }
+    .text__btn {
+      text-align: start;
+    }
   }
 }
 

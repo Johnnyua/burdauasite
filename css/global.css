@@ -337,8 +337,7 @@ body {
 
 .title__subtitle {
   font-weight: 800;
-  margin: 0 0 0.625rem 0;
-  padding: 0.625rem 1.875rem;
+  padding: 0.625rem 0;
 }
 @media (max-width: 880px) {
   .title__subtitle {

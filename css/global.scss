@@ -112,8 +112,8 @@ body {
 .title__subtitle {
   @include adaptiveFont(28, 18, $maxWidth, $bp1);
   font-weight: 800;
-  margin: 0 0 rem(10) 0;
-  padding: rem(10) rem(30);
+  // margin: 0 0 rem(10) 0;
+  padding: rem(10) 0;
   @media (max-width: rem($bp1)) {
     font-weight: 700;
   }

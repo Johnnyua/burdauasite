@@ -364,8 +364,7 @@ body {
 
 .title__subtitle {
   font-weight: 800;
-  margin: 0 0 0.625rem 0;
-  padding: 0.625rem 1.875rem;
+  padding: 0.625rem 0;
 }
 @media (max-width: 880px) {
   .title__subtitle {
@@ -1459,6 +1458,20 @@ body {
 .cinnosti__about__content.content {
   justify-content: flex-start;
 }
+
+.vacancii__about__content .about__text .text__content {
+  margin: 0 0 1.25rem 0;
+}
+.vacancii__about__content .about__text .text__date {
+  color: #8B939A;
+}
+.vacancii__about__content .about__text .text__title {
+  text-align: start;
+}
+.vacancii__about__content .about__text .text__btn {
+  text-align: start;
+}
+
 .footer {
   background-color: #28282C;
   color: #fff;
