@@ -716,7 +716,11 @@
   }
 }
 
-.vacancii__about__content {
+.vacancii__about__content,
+.newsid__about__content {
+    .about__date {
+      color: $colorGrey;
+    }
   .about__text {
     .text__content {
       margin: 0 0 rem(20) 0;
