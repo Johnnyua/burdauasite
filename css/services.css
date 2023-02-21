@@ -35,9 +35,6 @@ Now let’s see some common breakpoints for widths of devices:
   color: #505356;
 }
 .services__about .services__submenu {
-  margin-bottom: calc(
-      60px + 40 * ((100vw - 380px) / 1560)
-    );
   padding: 1.875rem 0 0 0;
 }
 .services__about .menu__list {
@@ -60,24 +57,10 @@ Now let’s see some common breakpoints for widths of devices:
   line-height: 1;
   text-align: start;
 }
-.services__about .about .text .text__content:not(:last-child) {
-  padding: 0 0 1.25rem 0;
-}
-.services__about .about .text .text__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.services__about .about .text .text__list .list__item {
-  list-style: disc;
-}
 
 .services__about__content {
   row-gap: calc(
       20px + 30 * ((100vw - 380px) / 1560)
-    );
-  padding-bottom: calc(
-      30px + 20 * ((100vw - 380px) / 1560)
     );
 }
 .services__about__content .content__subtitle,
@@ -218,6 +201,32 @@ Now let’s see some common breakpoints for widths of devices:
 }
 
 /*==========================================*/
+.about {
+  padding-top: calc(
+      60px + 40 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      30px + 20 * ((100vw - 380px) / 1560)
+    );
+}
+.about .about__title {
+  margin: 0 0 1.25rem 0;
+}
+.about .text .text__content:not(:last-child) {
+  padding: 0 0 1.25rem 0;
+}
+.about .text .text__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about .text .text__list {
+  margin: 0 0 0 1.25rem;
+}
+.about .text .text__list .list__item {
+  list-style: disc;
+}
+
 .objective .objective__item .item__list {
   gap: 0.625rem;
 }
@@ -271,6 +280,34 @@ Now let’s see some common breakpoints for widths of devices:
   margin-bottom: calc(
       50px + 50 * ((100vw - 380px) / 1560)
     );
+}
+
+.services__description__activites .item__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  text-transform: uppercase;
+}
+.services__description__activites .places .item__text {
+  flex-direction: column;
+}
+.services__description__activites .places .icons__item {
+  background-color: #505356;
+  border: none;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.services__description__activites .places .icons__item:hover {
+  background-color: #E3E3E3;
+  transition: all 0.3s ease 0s;
+}
+.services__description__activites .places .icons__item:hover .icons__link {
+  color: #14276F;
+}
+.services__description__activites .places .icons__link {
+  color: #fff;
+  transition: all 0.3s ease-in-out 0.1s;
 }
 
 /*==========================================*/

@@ -34,43 +34,43 @@
                             <li class="menu__item">
                                 <a class="menu__link" href="index.html">Головна</a>
                             </li>
-                            <li class="menu__item active">
+                            <li id="menuServiceOpen" class="menu__item active">
                                 <a class="menu__link" href="#">Сервіси</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Журнали</a>
+                                <a class="menu__link" href="magazines.html">Журнали</a>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="projects.html">Проекти</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Новини</a>
+                                <a class="menu__link" href="news.html">Новини</a>
                             </li>
                             <div class="menu__submenu">
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">Наші цінності</a>
+                                    <a class="menu__link" href="cinnosti.html">Наші цінності</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">Сталий розвиток</a>
+                                    <a class="menu__link" href="rozvytok.html">Сталий розвиток</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#">Вакансії</a>
+                                    <a class="menu__link" href="vacancii.html">Вакансії</a>
                                 </li>
                             </div>
                             <li id="headerSubOpen" class="submenu">
-                                <a class="menu__link" href="">Про нас</a>
+                                <a class="menu__link" href="#">Про нас</a>
                                 <div class="submenu__icon icons">
                                     <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
                                 </div>
                                 <ul class="submenu__list">
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Наші цінності</a>
+                                        <a class="menu__link" href="cinnosti.html">Наші цінності</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Сталий розвиток</a>
+                                        <a class="menu__link" href="rozvytok.html">Сталий розвиток</a>
                                     </li>
                                     <li class="menu__item">
-                                        <a class="menu__link" href="#">Вакансії</a>
+                                        <a class="menu__link" href="vacancii.html">Вакансії</a>
                                     </li>
                                 </ul>
                             </li>
@@ -126,7 +126,7 @@
                                             <span class="icon-media_big"></span>
                                         </span>
                                         <div class="c_purpule">
-                                            <h2 class="text">INFLUENCER</h2>
+                                            <h1 class="text__bold">INFLUENCER</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -137,7 +137,7 @@
                                             <span class="icon-media_big"></span>
                                         </span>
                                         <div class="c_green">
-                                            <h2 class="text">DIGITAL</h2>
+                                            <h2 class="text__bold">DIGITAL</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -148,7 +148,7 @@
                                             <span class="icon-media_big"></span>
                                         </span>
                                         <div class="c_orange">
-                                            <h2 class="text">MAGAZINES</h2>
+                                            <h2 class="text__bold">MAGAZINES</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -159,7 +159,7 @@
                                             <span class="icon-media_big"></span>
                                         </span>
                                         <div class="c_cyan">
-                                            <h2 class="text">CREATIVE</h2>
+                                            <h2 class="text__bold">CREATIVE</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -170,7 +170,7 @@
                                             <span class="icon-media_big"></span>
                                         </span>
                                         <div class="c_red">
-                                            <h2 class="text">EVENTS</h2>
+                                            <h2 class="text__bold">EVENTS</h2>
                                         </div>
                                     </a>
                                 </li>
@@ -180,15 +180,15 @@
                                             <span class="icon-burda_big"></span>
                                             <span class="icon-media_big"></span>
                                         </span>
-                                        <div class="c_dgrey">
-                                            <h2 class="text">DISTRIBUTION</h2>
+                                        <div class="c_grey">
+                                            <h2 class="text__bold">DISTRIBUTION</h2>
                                         </div>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="services__about__content content">
-                            <div class="content__title main__title">
+                        <div class="services__about__content content about">
+                            <div class="about__title main__title">
                                 <span class="logo">
                                     <span class="icon-burda_big"></span>
                                     <span class="icon-media_big"></span>
@@ -197,30 +197,73 @@
                                     <h2 class="main__title">EVENTS</h2>
                                 </div>
                             </div>
-                            <h5 class="content__subtitle section__subtitle">
-                                сильна команда, яка продає і просуває
-                                власний та партнерський контент
+                            <h5 class="about__subtitle section__subtitle">
+                                Від 25 Івентів “під ключ” щорічно охопленням більш ніж 30 000 учасників
                             </h5>
-                            <div class="content__text">
-                                <p>
-                                    Створення контенту, який працює на ваш бренд Креативні маркетингові рішення
-                                    Агентство тематичних маркетингових рішень.
-                                </p>
-                                <p>
-                                    Ми вирішуємо як ситуативні, так і стратегічні завдання клієнтів: від розробки
-                                    комунікаційної стратегії до реалізації
-                                    точкових рекламних або PR-кампаній. Створюємо будь-які види контенту для різних
-                                    каналів комунікації: соціальних мереж,
-                                    сайтів, друкованих видань.
-                                </p>
-                                <p>
-                                    Наша команда - експерт у виробництві рекламно-маркетингових продуктів - від нішевих
-                                    видань книг до настільних ігор.
-                                </p>
+                            <div class="about__text text">
+                                <div class="text__content">
+                                    <p class="text__text">
+                                        Живий Діалог з вашою Аудиторією. Агенція, яке вже багато років розробляє і
+                                        реалізує "під ключ" івенти різноманітних
+                                        масштабів: від фестивалів до майстер-класів - як для власних брендів, так для
+                                        партнерів.
+                                    </p>
+                                </div>
+                                <div class="text__content">
+                                    <h6 class="text__title">ПРОЄКТИ ВЛАСНІ</h6>
+                                    <p class="text__text">
+                                        На нашому рахунку безліч реалізованих заходів, які добре відомі за межами
+                                        читацької аудиторії наших видань: це і
+                                        легендарні нагородження дівчини року від Playboy, зіркові вечірки від "Отдохни",
+                                        вишукані заходи від Marie Claire - як
+                                        офлайн, так і онлайн, тренінги, вебінари та фестивалі. Наша команда щорічно
+                                        проводить понад 20 масштабних заходів для
+                                        різних аудиторій, які перетворюються на місце, де бренди зустрічаються зі своїм
+                                        споживачем.
+                                    </p>
+                                </div>
+                                <div class="text__content">
+                                    <h6 class="text__title">ПІД ЗАПИТ ПАРТНЕРА</h6>
+                                    <p class="text__text">
+                                        Для нас івенти - це не емоції, а ефективний маркетинговий інструмент зі своїми
+                                        цілями та результатами. Цим принципом ми
+                                        керуємося при розробці й проведенні івентів для наших клієнтів. І робимо все,
+                                        щоб і обраний формат, і запрошені зірки і
+                                        медійний супровід (якщо подібне передбачається) працювали виключно на досягнення
+                                        мети.
+                                    </p>
+                                </div>
+                                <div class="text__content">
+                                    <h6 class="text__title">ДЛЯ ПАРТНЕРІВ МИ</h6>
+                                    <p class="text__text">
+                                    <ul class="text__list list">
+                                        Розробляємо ідеї маркетингових заходів:
+                                        <li class="list__item">
+                                            від фестивалів до закритих презентацій;
+                                        </li>
+                                        <li class="list__item">
+                                            налагоджуємо комунікацію брендів з тими інфлюенсерами,
+                                            чия аудиторія
+                                            і принципи максимально збігаються з ідеологією нашого клієнта і його
+                                            цільової аудиторії;
+                                        </li>
+                                        <li class="list__item">
+                                            беремо на себе реалізацію затвердженої ідеї "під ключ;
+                                        </li>
+                                        <li class="list__item">
+                                            забезпечуємо інтеграцію бренду в наші власні заходи;
+                                        </li>
+                                        <li class="list__item">
+                                            гарантуємо масштабне анонсування та медійне висвітлення, якщо таке
+                                            передбачається.
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-
                 </section>
                 <section class="services__description">
                     <div class="container">
@@ -230,309 +273,264 @@
                             </a>
                         </div>
                         <div class="services__description__content content">
-                            <div class="services__description__concept content__item item">
-                                <h3 class="item__title card__title">
-                                    7 ПРИНЦИПІВ ЕФЕКТИВНОГО
-                                    КОНТЕНТНОГО МАРКЕТИНГУ:
-                                </h3>
-                                <div class="item__text">
-                                    <ul class="content">
-                                        <li class="content__item text">Ефект концептуальної несподіванки</li>
-                                        <li class="content__item text">Потрапити в емоцію</li>
-                                        <li class="content__item text">Все заради картинки, все заради цитати</li>
-                                        <li class="content__item text">Не потрібно багато – потрібно яскраво</li>
-                                        <li class="content__item text">Сюрпризи краще обіцянок</li>
-                                        <li class="content__item text"> Шукайте підтримку де тільки можна</li>
-                                        <li class="content__item text">Один проєкт – одна ідея</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="container_block">
-                                <div class="services__description__strategy ">
-                                    <div class="content__item item">
-                                        <div class="item__title card__title">
-                                            КОНТЕНТ-МАРКЕТИНГОВА СТРАТЕГІЯ
-                                            ОБ'ЄДНУЄ МОЖЛИВОСТІ
-                                            ВСІХ КАНАЛІВ <br />
-                                            КОМУНІКАЦІЇ
-                                            ТА ВСІХ ФОРМАТІВ ПОДАЧІ
-                                            ІНФОРМАЦІЇ:
-                                        </div>
-                                        <div class="item__text">
-                                            <ul class="content__list text__link">
-                                                <li>ТЕКСТОВИХ</li>
-                                                <li>АУДІО</li>
-                                                <li>ВІДЕО</li>
-                                                <li>ВІЗУАЛЬНИХ</li>
-                                                <li>ДОПОВНЕНОЇ РЕАЛЬНОСТІ</li>
+                            <article class="services__description__objective objective content__item">
+                                <h4 class="objective__title card__title">
+                                    Ми вирішуємо цілі вашої компанії
+                                    </h3>
+                                    <div iv class="objective__item item">
+                                        <div class="item__content">
+                                            <ul class="item__list text__bold content__list list">
+                                                <li class="list__item">Взаємодіяти з аудиторією безпосередньо</li>
+                                                <li class="list__item">Збільшити охоплення аудиторії</li>
+                                                <li class="list__item">Створити позитивний імідж компанії</li>
+                                                <li class="list__item">Збільшити впізнаваність бренду</li>
+                                                <li class="list__item">Зібрати аудиторію зацікавлену у продукті</li>
+                                                <li class="list__item">Просувати та популяризувати бренд на ринку</li>
+                                                <li class="list__item">Здійснити пошук ідей та рішення для бізнесу</li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="services__description__achievements cards">
-                                    <div class="cards__item item">
-                                        <div class="item__text text__link">
-                                        <p>
-                                            Понад <span>10</span> років роботи
-                                            по створенню якісного
-                                            авторського контенту
-                                            B2B та В2С
-                                        </p>
+                            </article>
+                            <article class="services__description__activites indicators">
+                                <div class="container_block">
+                                    <div class="indicators__cards cards">
+                                        <div class="cards__item item">
+                                            <h4 class="item__title card__title_semibold">
+                                                СФЕРИ АКТИВНОСТЕЙ
+                                            </h4>
+                                            <div class="item__text text__bold">
+                                                <span>СІМЕЙНІ ФЕСТИВАЛІ</span>
+                                                <span>ЗАХОДИ З ІНФЛЮЕНСЕРАМИ</span>
+                                                <span>INSPIRSTION AWARDS</span>
+                                                <span>БІЗНЕС КОНФЕРЕНЦІЇ</span>
+                                                <span>ПРЕЗЕНТАЦІЇ</span>
+                                                <span>ЗАХОДИ ПІД КЛЮЧ</span>
+                                                <span>КОНФЕРЕНЦІЇ ДЛЯ БАТЬКІВ</span>
+                                                <span>ПРЕС-ТУРИ</span>
+                                                <span>ОЛНАЙН ЗАХОДИ</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="cards__item item">
-                                    <div class="item__text text__link">
-                                        <p>
-                                            До <span>20</span> індивідуальних,
-                                            створених під клієнта,
-                                            проектів на рік у різних нішах
-                                            українського ринку
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="services__description__solutions cards">
-                                <div class="cards__item item">
-                                    <div class="item__title card__title">
-                                        ТОЧКОВІ РІШЕННЯ
-                                    </div>
-                                    <div class="item__text">
-                                        <p>
-                                            На підтримку
-                                            стратегії
-                                            просування продукту
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="cards__item item">
-                                    <div class="item__title card__title">
-                                        КОМПЛЕКСНІ РІШЕННЯ
-                                    </div>
-                                    <div class="item__text">
-                                        <p>
-                                            «Під ключ» на ваш запит
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-            </div>
-            </section>
-            <section class="services__slides">
-                <div class="projects__cards_container container_fluid">
-                    <div class="projects__cards cards__slides">
-                        <article class="cards__item cards__item_big">
-                            <img class="cards__image" src="images/Cards/Frame 12.jpg" alt="home image" />
-                            <div class="cards__data main__title">07.07</div>
-                            <h2 class="cards__title section__title">OPTIMEAL</h2>
-                            <div class="cards__text">
-                                <p>
-                                    Міжнародні проекти з блогерами
-                                </p>
-                            </div>
-                            <div class="cards__btn text">
-                                <a class="btn_more" href="#">Більше
-                                    <span class="icons">
-                                        <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                                    </span>
-                                </a>
-                            </div>
-                        </article>
-                        <article class="cards__item swiper-slide">
-                            <img class="cards__image" src="images/Cards/Frame 8.jpg" alt="home image" />
-                            <div class="cards__data main__title">05.06</div>
-                            <h2 class="cards__title section__title">ПУМБ</h2>
-                            <div class="cards__text">
-                                <p>
-                                    Проекти з блогерами
-                                </p>
-                            </div>
-                            <div class="cards__btn text">
-                                <a class="btn_more" href="#">Більше
-                                    <span class="icons">
-                                        <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                                    </span>
-                                </a>
-                            </div>
-                        </article>
-                        <article class="cards__item swiper-slide">
-                            <img class="cards__image" src="images/Cards/Frame 11.png" alt="home image" />
-                            <div class="cards__data main__title">08.04</div>
-                            <h2 class="cards__title section__title">TRESEMMÉ</h2>
-                            <div class="cards__text">
-                                <p>
-                                    STYLE-КЕЙС
-                                </p>
-                            </div>
-                            <div class="cards__btn text">
-                                <a class="btn_more" href="#">Більше
-                                    <span class="icons">
-                                        <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                                    </span>
-                                </a>
-                            </div>
-                        </article>
-                        <article class="cards__item swiper-slide">
-                            <img class="cards__image" src="images/Cards/Frame 10.jpg" alt="home image" />
-                            <div class="cards__data main__title">09.03</div>
-                            <h2 class="cards__title section__title">СИЛА ЖІНКИ</h2>
-                            <div class="cards__text">
-                                <p>
-                                    Проекти з блогерами
-                                </p>
-                            </div>
-                            <div class="cards__btn text">
-                                <a class="btn_more" href="#">Більше
-                                    <span class="icons">
-                                        <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                                    </span>
-                                </a>
-                            </div>
-                        </article>
-                        <article class="cards__item swiper-slide">
-                            <img class="cards__image" src="images/Cards/Frame 9.jpg" alt="home image" />
-                            <div class="cards__data main__title">04.02</div>
-                            <h2 class="cards__title section__title">GIRLS-PARTY</h2>
-                            <div class="cards__text">
-                                <p>
-                                    Проекти з блогерами
-                                </p>
-                            </div>
-                            <div class="cards__btn text">
-                                <a class="btn_more" href="#">Більше
-                                    <span class="icons">
-                                        <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                                    </span>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-    </div>
-    <div class="projects__footer action text__link">
-        <a class="btn_action" href="#">
-            Обговорити проект
-        </a>
-    </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__logo logo">
-                    <a class="logo__link" href="#">
-                        <div>
-                            <span class="icon-burda_big"></span>
-                            <span class="icon-media_big"></span>
+                            </article>
                         </div>
-                        <span class="icon-ukraine"></span>
+                    </div>
+                </section>
+                <section class="services__slides">
+                    <div class="services__cards_container container_fluid">
+                        <div class="services__cards cards__slides">
+                            <article class="cards__slides__item item_big item">
+                                <img class="item__image" src="images/Cards/Frame 12.jpg" alt="home image" />
+                                <div class="item__data main__title">07.07</div>
+                                <h2 class="item__title section__title">OPTIMEAL</h2>
+                                <div class="item__text">
+                                    <p>
+                                        Міжнародні проекти з блогерами
+                                    </p>
+                                </div>
+                                <div class="item__btn text__bold">
+                                    <a class="btn_more" href="#">Більше
+                                        <span class="icons">
+                                            <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="cards__slides__item swiper-slide item">
+                                <img class="item__image" src="images/Cards/Frame 8.jpg" alt="home image" />
+                                <div class="item__data main__title">05.06</div>
+                                <h2 class="item__title section__title">ПУМБ</h2>
+                                <div class="item__text">
+                                    <p>
+                                        Проекти з блогерами
+                                    </p>
+                                </div>
+                                <div class="item__btn text__bold">
+                                    <a class="btn_more" href="#">Більше
+                                        <span class="icons">
+                                            <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="cards__slides__item swiper-slide item">
+                                <img class="item__image" src="images/Cards/Frame 11.png" alt="home image" />
+                                <div class="item__data main__title">08.04</div>
+                                <h2 class="item__title section__title">TRESEMMÉ</h2>
+                                <div class="item__text">
+                                    <p>
+                                        STYLE-КЕЙС
+                                    </p>
+                                </div>
+                                <div class="item__btn text__bold">
+                                    <a class="btn_more" href="#">Більше
+                                        <span class="icons">
+                                            <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="cards__slides__item swiper-slide item">
+                                <img class="item__image" src="images/Cards/Frame 10.jpg" alt="home image" />
+                                <div class="item__data main__title">09.03</div>
+                                <h2 class="item__title section__title">СИЛА ЖІНКИ</h2>
+                                <div class="item__text">
+                                    <p>
+                                        Проекти з блогерами
+                                    </p>
+                                </div>
+                                <div class="item__btn text__bold">
+                                    <a class="btn_more" href="#">Більше
+                                        <span class="icons">
+                                            <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                            <article class="cards__slides__item swiper-slide item">
+                                <img class="item__image" src="images/Cards/Frame 9.jpg" alt="home image" />
+                                <div class="item__data main__title">04.02</div>
+                                <h2 class="item__title section__title">GIRLS-PARTY</h2>
+                                <div class="item__text">
+                                    <p>
+                                        Проекти з блогерами
+                                    </p>
+                                </div>
+                                <div class="item__btn text__bold">
+                                    <a class="btn_more" href="#">Більше
+                                        <span class="icons">
+                                            <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <div class="services__footer action text__link">
+                    <a class="btn_action" href="#">
+                        Обговорити проект
                     </a>
                 </div>
-                <div class="footer__menu menu">
-                    <nav class="footer__nav nav">
-                        <div class="footer__icons">
-                            <div class="footer__mini_logo mobile__logo">
-                                <a class="mobile_logo-link" href="#">
-                                    <div class="">
-                                        <span class="icon-burda"></span>
-                                        <span class="icon-media"></span>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__logo logo">
+                        <a class="logo__link" href="#">
+                            <div>
+                                <span class="icon-burda_big"></span>
+                                <span class="icon-media_big"></span>
+                            </div>
+                            <span class="icon-ukraine"></span>
+                        </a>
+                    </div>
+                    <div class="footer__menu menu">
+                        <nav class="footer__nav nav">
+                            <div class="footer__icons">
+                                <div class="footer__mini_logo mobile__logo">
+                                    <a class="mobile_logo-link" href="#">
+                                        <div class="">
+                                            <span class="icon-burda"></span>
+                                            <span class="icon-media"></span>
+                                        </div>
+                                        <span class="icon-uk"></span>
+                                    </a>
+                                </div>
+                                <div class="footer__social icons">
+                                    <ul class="icons__list">
+                                        <li class="icons__item">
+                                            <a class="icon-facebook icons__link" href="#"></a>
+                                        </li>
+                                        <li class="icons__item">
+                                            <a class="icon-youtube icons__link" href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="menu__list  text__title">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">INFLUENCER</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">DIGITAL</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">MAGAZINES</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">CREATIVE</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">EVENTS</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">DISTRIBUTION</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-dep">
+                            <div class="dep__item">
+                                <h6 class="dep__title text__title">Головний офіс</h6>
+                                <div class="dep__text text__link">
+                                    <a class="dep__email" href="mailto:office@burda.ua">office@burda.ua</a>
+                                    <div class="dep__phone">
+                                        <a href="tel:+380444908361">+38 (044) 490 83 61</a>
+                                        <a href="tel:+380444908360">+38 (044) 490 83 60</a>
                                     </div>
-                                    <span class="icon-uk"></span>
-                                </a>
+                                </div>
                             </div>
-                            <div class="footer__social icons">
-                                <ul class="icons__list">
-                                    <li class="icons__item">
-                                        <a class="icon-facebook icons__link" href="#"></a>
-                                    </li>
-                                    <li class="icons__item">
-                                        <a class="icon-youtube icons__link" href="#"></a>
-                                    </li>
-                                </ul>
+                            <div class="dep__item">
+                                <h6 class="dep__title text__title">Відділ підписки</h6>
+                                <div class="dep__text text__link">
+                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                    <div class="dep__phone">
+                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <ul class="menu__list  text__title">
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">INFLUENCER</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">DIGITAL</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">MAGAZINES</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">CREATIVE</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">EVENTS</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">DISTRIBUTION</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer__contacts">
-                    <div class="footer__contacts-dep">
-                        <div class="dep__item">
-                            <h6 class="dep__title text__title">Головний офіс</h6>
-                            <div class="dep__text text__link">
-                                <a class="dep__email" href="mailto:office@burda.ua">office@burda.ua</a>
-                                <div class="dep__phone">
-                                    <a href="tel:+380444908361">+38 (044) 490 83 61</a>
-                                    <a href="tel:+380444908360">+38 (044) 490 83 60</a>
+                            <div class="dep__item">
+                                <h6 class="dep__title text__title">Для клієнтів</h6>
+                                <div class="dep__text text__link">
+                                    <a class="dep__email" href="mailto:reklama@burda.ua">reklama@burda.ua</a>
+                                </div>
+                            </div>
+                            <div class="dep__item">
+                                <h6 class="dep__title text__title">HR manager</h6>
+                                <div class="dep__text text__link">
+                                    <a class="dep__email" href="mailto:personal@burda.ua">personal@burda.ua</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="dep__item">
-                            <h6 class="dep__title text__title">Відділ підписки</h6>
-                            <div class="dep__text text__link">
-                                <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
-                                <div class="dep__phone">
-                                    <a href="tel:+380444940790">+38 (044) 494 07 90</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dep__item">
-                            <h6 class="dep__title text__title">Для клієнтів</h6>
-                            <div class="dep__text text__link">
-                                <a class="dep__email" href="mailto:reklama@burda.ua">reklama@burda.ua</a>
-                            </div>
-                        </div>
-                        <div class="dep__item">
-                            <h6 class="dep__title text__title">HR manager</h6>
-                            <div class="dep__text text__link">
-                                <a class="dep__email" href="mailto:personal@burda.ua">personal@burda.ua</a>
+                        <div class="footer__contacts-org">
+                            <h5 class="org__title text__title">Медіакомпанія «Бурда-Україна»</h5>
+                            <div class="org__text text__link">
+                                <div class="org__city">м. Київ, 03124,</div>
+                                <div class="org__address">вул. Волноваська, 10/14, корп. Б, 8-й поверх</div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer__contacts-org">
-                        <h5 class="org__title text__title">Медіакомпанія «Бурда-Україна»</h5>
-                        <div class="org__text text__link">
-                            <div class="org__city">м. Київ, 03124,</div>
-                            <div class="org__address">вул. Волноваська, 10/14, корп. Б, 8-й поверх</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__copyright">
-                    <div class="footer__copyright-text">
-                        <div class="footer__copyright-years">
-                            © 1999-2023
-                        </div>
+                    <div class="footer__copyright">
                         <div class="footer__copyright-text">
-                            Бурда Медіа Україна. Всі права захищені
+                            <div class="footer__copyright-years">
+                                © 1999-2023
+                            </div>
+                            <div class="footer__copyright-text">
+                                Бурда Медіа Україна. Всі права захищені
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer__copyright-cookies">
-                        <a href="#" class="cookies-link">Cookies</a>
+                        <div class="footer__copyright-cookies">
+                            <a href="#" class="cookies-link">Cookies</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="js/slick.min.js"></script>
