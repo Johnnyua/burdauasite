@@ -718,9 +718,9 @@
 
 .vacancii__about__content,
 .newsid__about__content {
-    .about__date {
-      color: $colorGrey;
-    }
+  .about__date {
+    color: $colorGrey;
+  }
   .about__text {
     .text__content {
       margin: 0 0 rem(20) 0;
@@ -732,6 +732,42 @@
       text-align: start;
     }
     .text__btn {
+      text-align: start;
+    }
+  }
+  .about__logo {
+    .icon-ukraine {
+      color: $colorBlue;
+    }
+  }
+}
+
+//News page
+.news__about__content {
+  .about__text__content {
+    .content__image {
+      position: relative;
+      flex: 1 0 33%;
+      height: 100%;
+      min-width: rem(380);
+      min-height: rem(200);
+      img {
+        position: absolute;
+      }
+    }
+    .content__item {
+      background-color: $colorHome;
+      flex-basis: 67%;
+      min-width: rem(380);
+      @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+    }
+    .item__date {
+      color: $colorGrey;
+    }
+    .item__title {
       text-align: start;
     }
   }

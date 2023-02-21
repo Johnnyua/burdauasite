@@ -499,6 +499,7 @@ body {
   grid-auto-flow: row;
   grid-template: max-content 1fr auto/1fr;
   justify-items: start;
+  row-gap: 1.25rem;
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );

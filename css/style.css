@@ -526,6 +526,7 @@ body {
   grid-auto-flow: row;
   grid-template: max-content 1fr auto/1fr;
   justify-items: start;
+  row-gap: 1.25rem;
   row-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
@@ -1477,6 +1478,44 @@ body {
 }
 .vacancii__about__content .about__text .text__btn,
 .newsid__about__content .about__text .text__btn {
+  text-align: start;
+}
+.vacancii__about__content .about__logo .icon-ukraine,
+.newsid__about__content .about__logo .icon-ukraine {
+  color: #14276F;
+}
+
+.news__about__content .about__text__content .content__image {
+  position: relative;
+  flex: 1 0 33%;
+  height: 100%;
+  min-width: 23.75rem;
+  min-height: 12.5rem;
+}
+.news__about__content .about__text__content .content__image img {
+  position: absolute;
+}
+.news__about__content .about__text__content .content__item {
+  background-color: #faf7f5;
+  flex-basis: 67%;
+  min-width: 23.75rem;
+  padding-top: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
+}
+.news__about__content .about__text__content .item__date {
+  color: #8B939A;
+}
+.news__about__content .about__text__content .item__title {
   text-align: start;
 }
 
