@@ -1505,6 +1505,13 @@ body {
   min-width: 21.875rem;
   min-height: 12.5rem;
 }
+@media (max-width: 48rem) {
+  .news__about__content .about__text__content .cards__image {
+    max-height: calc(
+      200px + 100 * ((100vw - 380px) / 1560)
+    );
+  }
+}
 .news__about__content .about__text__content .cards__image img {
   position: absolute;
 }
