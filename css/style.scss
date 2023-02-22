@@ -745,20 +745,28 @@
 //News page
 .news__about__content {
   .about__text__content {
-    .content__image {
+    @media (max-width: rem($bp7)) {
+      display: block;
+    }
+    grid-template-columns: repeat(3,  1fr);
+    @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
+    &:nth-child(even) {
+      .cards__image {
+        order: 2;
+      }
+    }
+    .cards__image {
       position: relative;
-      flex: 1 0 33%;
       height: 100%;
-      min-width: rem(380);
+      min-width: rem(350);
       min-height: rem(200);
       img {
         position: absolute;
       }
     }
-    .content__item {
+    .cards__item {
+      grid-column: span 2;
       background-color: $colorHome;
-      flex-basis: 67%;
-      min-width: rem(380);
       @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
@@ -769,6 +777,18 @@
     }
     .item__title {
       text-align: start;
+      &::after {
+        @include lineBeforeAfter(rem(80), 2px, $colorBlack);
+        margin: rem(10) 0 0 0;
+      }
+    }
+    .item__text {
+      max-height: rem(150);
+      overflow: hidden;
+    }
+    .text__text {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

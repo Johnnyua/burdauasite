@@ -115,7 +115,8 @@
   background-color: transparent;
   cursor: pointer;
   &:hover {
-    font-weight: 800;
+    color: $colorBlack;
+      text-transform: uppercase;
   }
 }
 // End buttons

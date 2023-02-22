@@ -2,7 +2,7 @@
 @import "null.css";
 @import "projects.css";
 @import "services.css";
-.header__menu .menu__item.active::after,
+.news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
@@ -24,7 +24,7 @@ Now let’s see some common breakpoints for widths of devices:
 1201px and more —  Extra large screens, TV
 */
 /*End Width ====================================================*/
-.header__menu .menu__item.active::after,
+.news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
@@ -46,7 +46,7 @@ Now let’s see some common breakpoints for widths of devices:
 1201px and more —  Extra large screens, TV
 */
 /*End Width ====================================================*/
-.header__menu .menu__item.active::after,
+.news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
 .header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
   content: "";
   display: block;
@@ -183,7 +183,8 @@ Now let’s see some common breakpoints for widths of devices:
   cursor: pointer;
 }
 .btn_more:hover {
-  font-weight: 800;
+  color: #28282C;
+  text-transform: uppercase;
 }
 
 body {
@@ -191,7 +192,7 @@ body {
   color: #28282C;
   font-family: "Nunito Sans";
   font-size: 1.125rem;
-  line-height: 1.44;
+  line-height: 1.4;
   font-weight: 400;
 }
 
@@ -232,12 +233,12 @@ body {
 }
 
 .container_block {
-  max-width: 76.25rem;
+  max-width: 76.875rem;
 }
 
 .text__default {
   font-size: 1.125rem;
-  line-height: 1.44;
+  line-height: 1.4;
   font-weight: 400;
 }
 
@@ -526,9 +527,8 @@ body {
   grid-auto-flow: row;
   grid-template: max-content 1fr auto/1fr;
   justify-items: start;
-  row-gap: 1.25rem;
   row-gap: calc(
-      10px + 20 * ((100vw - 380px) / 1560)
+      10px + 10 * ((100vw - 380px) / 1560)
     );
 }
 .cards__item .cards__content {
@@ -1485,20 +1485,32 @@ body {
   color: #14276F;
 }
 
-.news__about__content .about__text__content .content__image {
+.news__about__content .about__text__content {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: calc(
+      20px + 10 * ((100vw - 380px) / 1560)
+    );
+}
+@media (max-width: 48rem) {
+  .news__about__content .about__text__content {
+    display: block;
+  }
+}
+.news__about__content .about__text__content:nth-child(even) .cards__image {
+  order: 2;
+}
+.news__about__content .about__text__content .cards__image {
   position: relative;
-  flex: 1 0 33%;
   height: 100%;
-  min-width: 23.75rem;
+  min-width: 21.875rem;
   min-height: 12.5rem;
 }
-.news__about__content .about__text__content .content__image img {
+.news__about__content .about__text__content .cards__image img {
   position: absolute;
 }
-.news__about__content .about__text__content .content__item {
+.news__about__content .about__text__content .cards__item {
+  grid-column: span 2;
   background-color: #faf7f5;
-  flex-basis: 67%;
-  min-width: 23.75rem;
   padding-top: calc(
       20px + 20 * ((100vw - 380px) / 1560)
     );
@@ -1517,6 +1529,20 @@ body {
 }
 .news__about__content .about__text__content .item__title {
   text-align: start;
+}
+.news__about__content .about__text__content .item__title::after {
+  width: 5rem;
+  height: 2px;
+  background: #28282C;
+  margin: 0.625rem 0 0 0;
+}
+.news__about__content .about__text__content .item__text {
+  max-height: 9.375rem;
+  overflow: hidden;
+}
+.news__about__content .about__text__content .text__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .footer {

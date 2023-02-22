@@ -3,7 +3,9 @@
 /*Fonts ====================================================*/
 $fontfamily: "Nunito Sans";
 $defaultFontSize: rem(18);
-$defaultLineHeight: 1.44;
+$defaultLineHeight: 1.4;
+$maxLineHeight: 1.4;
+$minLineHeight: 1.35;
 $defaultFontWeight: 400;
 /*End Fonts ====================================================*/
 
@@ -28,7 +30,7 @@ $minWidth: 380;
 $maxWidth: 1920;
 $maxWidthContainerFluid: 1860;
 $maxWidthContainer: 1630;
-$maxWidthContainerBlock: 1190;
+$maxWidthContainerBlock: 1200;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 $containerWidthFluid: $maxWidthContainerFluid + $containerPadding;
@@ -42,6 +44,7 @@ $bp3: 1440;
 $bp4: 1200;
 $bp5: 990;
 $bp6: 480;
+$bp7: 768;
 
 /*
 Now let’s see some common breakpoints for widths of devices:
