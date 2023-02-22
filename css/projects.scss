@@ -36,6 +36,7 @@
   color: $mainColor;
   .cards__item {
     height: auto;
+    max-height: rem(500);
     position: relative;
     padding-top: rem(20);
     @include adaptiveValue("padding-left", 225, 40, 0, $maxWidth, $minWidth);
