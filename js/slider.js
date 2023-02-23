@@ -70,3 +70,16 @@ new Swiper(".projects__slides_max_container", {
     },
   },
 });
+
+new Swiper(".magazines__slides_container", {
+  slidesPerView: 1.5,
+  centeredSlides: true,
+  loop: true,
+  slideToClickedSlide: true,
+  watchSlidesVisibility: true,
+  pagination: {
+    el: ".magazines__slides_pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});

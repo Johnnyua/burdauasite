@@ -52,8 +52,8 @@ $("body").click(function (e) {
 });
 
 const reviewItemList = document.querySelectorAll(".reviews__item");
-const reviewItemCountClassName = ".cards__text p";
-const reviewItemBtnClassName = ".cards__btn";
+const reviewItemCountClassName = ".reviews__item .text__text";
+const reviewItemBtnClassName = ".reviews__item .item__btn";
 
 window.addEventListener("resize", function () {
   showContainerElementByClassName(

@@ -134,6 +134,5 @@ Now let’s see some common breakpoints for widths of devices:
   cursor: pointer;
 }
 .btn_more:hover {
-  color: #28282C;
   text-transform: uppercase;
 }/*# sourceMappingURL=ui.css.map */

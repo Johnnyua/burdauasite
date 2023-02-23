@@ -15,29 +15,29 @@ body {
 }
 
 .on_top_window {
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border: 1px solid $colorBlack;
-    border-radius: 50%;
-    padding-top: 10px;
-    position: fixed;
-    z-index: 10000;
-    bottom: 40px;
-    right: 10px;
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px $colorGrey;
-    .icon_arrow__link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-90deg);
-    }
-    &:hover {
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out 0s;
-    }
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid $colorBlack;
+  border-radius: 50%;
+  padding-top: 10px;
+  position: fixed;
+  z-index: 10000;
+  bottom: 40px;
+  right: 10px;
+  opacity: 0.5;
+  box-shadow: 5px 5px 5px $colorGrey;
+  .icon_arrow__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0s;
+  }
 }
 
 .wrapper {
@@ -61,7 +61,7 @@ body {
     max-width: $bp1 + px;
   }
   height: 100%;
-  padding: 0 rem(15);
+  // padding: 0 rem(15);
 }
 .container {
   max-width: rem($containerWidth);
@@ -210,9 +210,25 @@ body {
   @include dFlexRow(space-between, center);
 }
 
-.sub__menu__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
+.submenu {
+  .submenu__list {
+    display: grid;
+    background-color: $colorHome;
+    grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
+    gap: rem(1);
+    text-align: center;
+  }
+  .submenu__item {
+    background-color: $colorBlack;
+    position: relative;
+    color: $colorHome;
+    z-index: 0;
+    padding: rem(11) 0;
+    text-align: center;
+    &:hover {
+      background-color: $colorDarkGrey;
+    }
+  }
 }
 .title_baseline {
   @include dFlexRow(center, baseline);
@@ -240,10 +256,10 @@ body {
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
   row-gap: rem(20);
   justify-items: start;
-  // @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
-  // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
-  // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
-  // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   &.item_big {
     @media (min-width: rem($bp1)) {
       grid-column: span 2;
@@ -255,12 +271,30 @@ body {
     z-index: -1;
   }
   .item__title {
-    
   }
   .item__subtitle {
     color: $colorHome;
     &::after {
       @include lineBeforeAfter(50%, 2px, $colorHome);
+    }
+  }
+  .item__text {
+    display: grid;
+    grid-auto-flow: row;
+    @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
+    max-height: rem(250);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .text__subtitle {
+      position: relative;
+      text-align: start;
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include lineBeforeAfter(50%, 2px, $colorHome);
+        @include adaptiveValue("margin-top", 20, 10, 0, $maxWidth, $minWidth);
+      }
     }
   }
   .item__btn {
@@ -296,7 +330,7 @@ body {
 
 .item__btn {
   @include dFlexRow(center, center);
-  justify-self: center;
+  // justify-self: center;
 }
 
 .action {

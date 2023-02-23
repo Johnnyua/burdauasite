@@ -42,14 +42,14 @@
                             <li class="menu__item">
                                 <a class="menu__link" href="index.html">Головна</a>
                             </li>
-                            <li id="menuServiceOpen" class="menu__item active">
+                            <li id="menuServiceOpen" class="menu__item">
                                 <a class="menu__link" href="services_influencer.html">Сервіси</a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu__item active">
                                 <a class="menu__link" href="#">Журнали</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="magazines.html">Проекти</a>
+                                <a class="menu__link" href="projects.html">Проекти</a>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="news.html">Новини</a>
@@ -124,217 +124,322 @@
         <main class="main">
             <div class="magazines__wrapper">
                 <section class="magazines__slides">
-                    <div class="magazines__slides_max_container swiper-container">
+                    <div class="magazines__slides_container swiper-container">
                         <div class="magazines__slides swiper-wrapper">
-                            <article class="cards__item item swiper-slide">
-                                <img class="item__image" src="images/Cards/Frame 12.jpg" alt="home image" />
-                                <div class="item__content">
-                                    <h3 class="item__title main__title">OPTIMEAL</h3>
-                                </div>
+                            <article class="cards__slides__item item_big item swiper-slide">
+                                <img class="cards__item__image" src="images/magazines/slide_1.jpg" alt="home image" />
                             </article>
-                            <article class="cards__item swiper-slide">
+                            <article class="cards__slides__item swiper-slide item swiper-slide">
                                 <img class="cards__item__image" src="images/Cards/Frame 8.jpg" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">05.06</div>
-                                    <h2 class="cards__title main__title">ПУМБ</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            Проекти з блогерами
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
-                            <article class="cards__item swiper-slide">
+                            <article class="cards__slides__item swiper-slide item swiper-slide">
                                 <img class="cards__item__image" src="images/Cards/Frame 11.png" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">08.04</div>
-                                    <h2 class="cards__title main__title">TRESEMMÉ</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            STYLE-КЕЙС
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
-                            <article class="cards__item swiper-slide">
+                            <article class="cards__slides__item swiper-slide item swiper-slide">
                                 <img class="cards__item__image" src="images/Cards/Frame 10.jpg" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">09.03</div>
-                                    <h2 class="cards__title main__title">СИЛА ЖІНКИ</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            Проекти з блогерами
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
-                            <article class="cards__item swiper-slide">
+                            <article class="cards__slides__item swiper-slide item swiper-slide">
                                 <img class="cards__item__image" src="images/Cards/Frame 9.jpg" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">04.02</div>
-                                    <h2 class="cards__title main__title">GIRLS-PARTY</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            Проекти з блогерами
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="cards__item swiper-slide">
-                                <img class="cards__item__image" src="images/Cards/Frame 11.png" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">08.04</div>
-                                    <h2 class="cards__title main__title">TRESEMMÉ</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            STYLE-КЕЙС
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="cards__item swiper-slide">
-                                <img class="cards__item__image" src="images/Cards/Frame 10.jpg" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">09.03</div>
-                                    <h2 class="cards__title main__title">СИЛА ЖІНКИ</h2>
-                                    <div class="card__title">
-                                        <p>
-                                            Проекти з блогерами
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="cards__item swiper-slide">
-                                <img class="cards__item__image" src="images/Cards/Frame 9.jpg" alt="home image" />
-                                <div class="cards__content">
-                                    <div class="cards__data section__title">04.02</div>
-                                    <h2 class="cards__title main__title">GIRLS-PARTY</h2>
-                                    <div class="card__title">main__title
-                                        <p>
-                                            Проекти з блогерами
-                                        </p>
-                                    </div>
-                                </div>
                             </article>
                         </div>
-                        <a class="magazines__slides_button-prev button-prev">
-                            <span class="icons">
-                                <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                            </span>
-                        </a>
-                        <a class="magazines__slides_button-next button-next">
-                            <span class="icons">
-                                <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
-                            </span>
-                        </a>
                         <div class="magazines__slides_pagination pagination"></div>
                     </div>
                 </section>
-                <section class="services__about">
+                <section class="magazines__about">
+                    <div class="magazines__title title__subtitle title_baseline">
+                        <h2 class="title__subtitle">ЖУРНАЛИ</h2>
+                        <div class="magazines__logo logo">
+                            <span class="icon-burda_big"></span>
+                            <span class="icon-media_big"></span>
+                        </div>
+                    </div>
+                    <nav class="magazines__submenu submenu">
+                        <ul class="submenu__list text__link">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">ЗІРКИ</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">ФЕШН</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">ЛАЙФСТАЙЛ</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">КРАФТИНГ</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">КУЛІНАРІЯ</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">КРОСВОРДИ</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="container">
-                        <div class="container_block">
-                            <nav class="services__submenu menu">
-                                <ul class="menu__list">
-                                    <li class="menu__item active">
-                                        <a class="menu__link" href="services_influencer.html">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_purpule">
-                                                <h1 class="text__bold">INFLUENCER</h1>
+                        <div class="magazines__about__content content about">
+                            <div class="about__content cards">
+                                <ul class="cards__list">
+                                    <li class="cards__item item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/mc.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
-                                    <li class="menu__item">
-                                        <a class="menu__link" href="services_digital.html">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_green">
-                                                <h2 class="text__bold">DIGITAL</h2>
+                                    <li class="cards__item item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/knip.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
-                                    <li class="menu__item">
-                                        <a class="menu__link" href="services_magazines.html">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_orange">
-                                                <h2 class="text__bold">MAGAZINES</h2>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/bs.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
-                                    <li class="menu__item">
-                                        <a class="menu__link" href="#">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_cyan">
-                                                <h2 class="text__bold">CREATIVE</h2>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/dp.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
-                                    <li class="menu__item">
-                                        <a class="menu__link" href="services_events.html">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_red">
-                                                <h2 class="text__bold">EVENTS</h2>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/sabr.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
-                                    <li class="menu__item">
-                                        <a class="menu__link" href="services_distribution.html">
-                                            <span class="logo">
-                                                <span class="icon-burda_big"></span>
-                                                <span class="icon-media_big"></span>
-                                            </span>
-                                            <div class="c_grey">
-                                                <h2 class="text__bold">DISTRIBUTION</h2>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/lg.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
                                             </div>
-                                        </a>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/bu.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
+                                            </div>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/bakom.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
+                                            </div>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/sol.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
+                                            </div>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item">
+                                        <div class="item__image">
+                                            <img src="images/magazines/krossdliavsih.jpg" alt="home image" />
+                                            <div class="item__btn btn action">
+                                                <a class="btn_action">
+                                                    Підписатися
+                                                </a>
+                                            </div>
+                                            <div class="item__dep dep">
+                                                <div class="dep__title text__link">Відділ підписки</div>
+                                                <div class="dep__text">
+                                                    <a class="dep__email" href="mailto:podpiska@burda.ua">podpiska@burda.ua</a>
+                                                    <div class="dep__phone">
+                                                        <a href="tel:+380444940790">+38 (044) 494 07 90</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item__btn btn text__bold more">
+                                            <a class="btn_more" href="#">Більше
+                                                <span class="icons">
+                                                    <img class="icon_arrow__link" src="images/read-more-icon.svg" alt="More">
+                                                </span>
+                                            </a>
+                                        </div>
                                     </li>
                                 </ul>
-                            </nav>
-                            <div class="services__about__content content about">
-                                <div class="about__title main__title">
-                                    <span class="logo">
-                                        <span class="icon-burda_big"></span>
-                                        <span class="icon-media_big"></span>
-                                    </span>
-                                    <div class="c_cyan">
-                                        <h2 class="main__title">CREATIVE</h2>
-                                    </div>
-                                </div>
-                                <h5 class="about__subtitle section__subtitle">
-                                    сильна команда, яка продає і просуває
-                                    власний та партнерський контент
-                                </h5>
-                                <div class="about__text">
-                                    <p>
-                                        Створення контенту, який працює на ваш бренд Креативні маркетингові рішення
-                                        Агентство тематичних маркетингових рішень.
-                                    </p>
-                                    <p>
-                                        Ми вирішуємо як ситуативні, так і стратегічні завдання клієнтів: від розробки
-                                        комунікаційної стратегії до реалізації
-                                        точкових рекламних або PR-кампаній. Створюємо будь-які види контенту для різних
-                                        каналів комунікації: соціальних мереж,
-                                        сайтів, друкованих видань.
-                                    </p>
-                                    <p>
-                                        Наша команда - експерт у виробництві рекламно-маркетингових продуктів - від
-                                        нішевих
-                                        видань книг до настільних ігор.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -561,7 +666,6 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/main.js"></script>

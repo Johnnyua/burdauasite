@@ -3,7 +3,7 @@
 @import "projects.css";
 @import "services.css";
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -25,7 +25,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -47,7 +47,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -187,7 +187,6 @@ Now let’s see some common breakpoints for widths of devices:
   cursor: pointer;
 }
 .btn_more:hover {
-  color: #28282C;
   text-transform: uppercase;
 }
 
@@ -244,7 +243,6 @@ body {
 .container_block {
   margin: 0 auto;
   height: 100%;
-  padding: 0 0.9375rem;
 }
 @media (max-width: 55rem) {
   .container,
@@ -502,9 +500,23 @@ body {
   flex-wrap: wrap;
 }
 
-.sub__menu__list {
+.submenu .submenu__list {
   display: grid;
+  background-color: #faf7f5;
   grid-template-columns: repeat(auto-fit, minmax(6.875rem, 1fr));
+  gap: 0.0625rem;
+  text-align: center;
+}
+.submenu .submenu__item {
+  background-color: #28282C;
+  position: relative;
+  color: #faf7f5;
+  z-index: 0;
+  padding: 0.6875rem 0;
+  text-align: center;
+}
+.submenu .submenu__item:hover {
+  background-color: #505356;
 }
 
 .title_baseline {
@@ -537,6 +549,18 @@ body {
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: 1.25rem;
   justify-items: start;
+  padding-top: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
+  padding-left: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-right: calc(
+      20px + 65 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 20 * ((100vw - 380px) / 1560)
+    );
 }
 @media (min-width: 55rem) {
   .cards__slides__item.item_big {
@@ -555,6 +579,31 @@ body {
   width: 50%;
   height: 2px;
   background: #faf7f5;
+}
+.cards__slides__item .item__text {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: calc(
+      10px + 10 * ((100vw - 380px) / 1560)
+    );
+  max-height: 15.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cards__slides__item .item__text .text__subtitle {
+  position: relative;
+  text-align: start;
+}
+.cards__slides__item .item__text .text__subtitle::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: #faf7f5;
+  margin-top: calc(
+      10px + 10 * ((100vw - 380px) / 1560)
+    );
 }
 .cards__slides__item .item__btn {
   justify-self: start;
@@ -600,7 +649,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  justify-self: center;
 }
 
 .action {
@@ -1215,24 +1263,15 @@ body {
       30px + 105 * ((100vw - 380px) / 1560)
     );
 }
+.services__content .cards__slides__item .item__btn {
+  justify-self: center;
+}
 
-.home__projects .projects__container {
+.projects__container {
   position: relative;
   background-color: #28282C;
   color: #faf7f5;
   z-index: 0;
-}
-.home__projects .sub__menu__list {
-  background-color: #faf7f5;
-  gap: 0.0625rem;
-}
-.home__projects .sub__menu__item {
-  background-color: #28282C;
-  padding: 0.6875rem 0;
-  text-align: center;
-}
-.home__projects .sub__menu__item:hover {
-  background-color: #505356;
 }
 
 .projects__cards .cards__slides__item {
@@ -1359,7 +1398,6 @@ body {
   gap: 0.125rem;
 }
 .home__news .cards__slides .cards__slides__item {
-  grid-template: auto 1fr 1fr minmax(40px, auto)/1fr;
   row-gap: calc(
       10px + 10 * ((100vw - 380px) / 1560)
     );
@@ -1367,10 +1405,10 @@ body {
       20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-left: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
+      20px + 60 * ((100vw - 380px) / 1560)
     );
   padding-right: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
+      20px + 60 * ((100vw - 380px) / 1560)
     );
   padding-bottom: calc(
       20px + 20 * ((100vw - 380px) / 1560)
@@ -1401,10 +1439,10 @@ body {
       20px + 20 * ((100vw - 380px) / 1560)
     );
   padding-left: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
+      20px + 60 * ((100vw - 380px) / 1560)
     );
   padding-right: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
+      20px + 60 * ((100vw - 380px) / 1560)
     );
   padding-bottom: calc(
       20px + 20 * ((100vw - 380px) / 1560)
@@ -1414,28 +1452,28 @@ body {
 .reviews__item.swiper-slide {
   width: auto;
 }
-.reviews__item .cards__text {
+.reviews__item .item__text {
   max-height: 100%;
   overflow: hidden;
   transition: all 0.5s ease-in-out 0s;
 }
-.reviews__item .cards__text.hide {
+.reviews__item .item__text.hide {
   max-height: 9.75rem;
   overflow: hidden;
   transition: all 0.1s ease-in-out 0s;
 }
-.reviews__item .cards__btn {
+.reviews__item .item__btn {
   display: none;
   justify-self: start;
 }
-.reviews__item .cards__btn.show {
+.reviews__item .item__btn.show {
   display: flex;
 }
-.reviews__item .cards__btn.less .icons {
+.reviews__item .item__btn.less .icons {
   transition: all 0.3s ease-in-out 0s;
   transform: rotate(-90deg);
 }
-.reviews__item .cards__btn.less .btn_more span:first-child {
+.reviews__item .item__btn.less .btn_more span:first-child {
   opacity: 0;
 }
 .reviews__item .btn_more {
@@ -1586,6 +1624,12 @@ body {
 .news__about__content .about__text__content .text__text {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.magazines__slides .cards__slides__item {
+  min-height: calc(
+      145px + 415 * ((100vw - 380px) / 1560)
+    );
 }
 
 .footer {

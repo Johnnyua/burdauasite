@@ -445,31 +445,21 @@
     @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
     @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
+    .item__btn {
+      justify-self: center;
+    }
   }
 }
 
 // End Home Service section
 
 // Home Projects section
-.home__projects {
-  .projects__container {
+
+.projects__container {
     position: relative;
     background-color: $colorBlack;
     color: $colorHome;
     z-index: 0;
-  }
-  .sub__menu__list {
-    background-color: $colorHome;
-    gap: rem(1);
-  }
-  .sub__menu__item {
-    background-color: $colorBlack;
-    padding: rem(11) 0;
-    text-align: center;
-    &:hover {
-      background-color: $colorDarkGrey;
-    }
-  }
 }
 
 .projects__cards {
@@ -591,11 +581,11 @@
   .cards__slides {
     gap: rem(2);
     .cards__slides__item {
-      grid-template: auto 1fr 1fr minmax(40px, auto) / 1fr;
+      // grid-template: auto 1fr 1fr minmax(40px, auto) / 1fr;
       @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
-      @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
-      @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 80, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 80, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
       background-color: $colorBlack;
       color: $colorHome;
@@ -625,8 +615,8 @@
     gap: rem(2);
     .cards__slides__item {
       @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
-      @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
-      @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-left", 80, 20, 0, $maxWidth, $minWidth);
+      @include adaptiveValue("padding-right", 80, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
     }
   }
@@ -635,7 +625,7 @@
   &.swiper-slide {
     width: auto;
   }
-  .cards__text {
+  .item__text {
     max-height: 100%;
     overflow: hidden;
     transition: all 0.5s ease-in-out 0s;
@@ -645,7 +635,7 @@
       transition: all 0.1s ease-in-out 0s;
     }
   }
-  .cards__btn {
+  .item__btn {
     display: none;
     justify-self: start;
     &.show {
@@ -795,6 +785,13 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+}
+
+// Magazine page
+.magazines__slides {
+  .cards__slides__item {
+     @include adaptiveValue("min-height", 560, 145, 0, $maxWidth, $minWidth)
   }
 }
 
