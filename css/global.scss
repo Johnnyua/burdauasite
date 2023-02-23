@@ -214,6 +214,10 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
 }
+.title_baseline {
+  @include dFlexRow(center, baseline);
+  gap: rem(10);
+}
 //End flex
 
 // Grid
@@ -230,6 +234,7 @@ body {
 }
 
 .cards__slides__item {
+  position: relative;
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
@@ -239,18 +244,20 @@ body {
   // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
-  position: relative;
   &.item_big {
     @media (min-width: rem($bp1)) {
       grid-column: span 2;
     }
   }
-  .item__image {
+  .cards__item__image {
     position: absolute;
     width: 100%;
     z-index: -1;
   }
   .item__title {
+    
+  }
+  .item__subtitle {
     color: $colorHome;
     &::after {
       @include lineBeforeAfter(50%, 2px, $colorHome);
@@ -272,7 +279,7 @@ body {
   // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
   // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
-  .cards__content {
+  .item__content {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px, auto) / 1fr;
@@ -287,7 +294,7 @@ body {
   @include dFlexRow(center, center);
 }
 
-.cards__btn {
+.item__btn {
   @include dFlexRow(center, center);
   justify-self: center;
 }

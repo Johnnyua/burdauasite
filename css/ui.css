@@ -97,6 +97,10 @@ Now let’s see some common breakpoints for widths of devices:
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
   font-size: 0.8em;
 }
 .logo .icon-media_big {

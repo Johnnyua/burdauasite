@@ -83,6 +83,7 @@
 }
 
 .logo {
+  @include dFlexRow(center, baseline);
   font-size: 0.8em;
   .icon-media_big {
     color: $colorGrey;

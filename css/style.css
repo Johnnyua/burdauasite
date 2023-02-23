@@ -3,7 +3,7 @@
 @import "projects.css";
 @import "services.css";
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -25,7 +25,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -47,7 +47,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__title::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -150,6 +150,10 @@ Now let’s see some common breakpoints for widths of devices:
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
   font-size: 0.8em;
 }
 .logo .icon-media_big {
@@ -503,6 +507,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(6.875rem, 1fr));
 }
 
+.title_baseline {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
@@ -519,27 +531,27 @@ body {
 }
 
 .cards__slides__item {
+  position: relative;
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: 1.25rem;
   justify-items: start;
-  position: relative;
 }
 @media (min-width: 55rem) {
   .cards__slides__item.item_big {
     grid-column: span 2;
   }
 }
-.cards__slides__item .item__image {
+.cards__slides__item .cards__item__image {
   position: absolute;
   width: 100%;
   z-index: -1;
 }
-.cards__slides__item .item__title {
+.cards__slides__item .item__subtitle {
   color: #faf7f5;
 }
-.cards__slides__item .item__title::after {
+.cards__slides__item .item__subtitle::after {
   width: 50%;
   height: 2px;
   background: #faf7f5;
@@ -557,7 +569,7 @@ body {
       10px + 10 * ((100vw - 380px) / 1560)
     );
 }
-.cards__item .cards__content {
+.cards__item .item__content {
   display: grid;
   grid-auto-flow: row;
   grid-template: auto 1fr minmax(40px, auto)/1fr;
@@ -583,7 +595,7 @@ body {
   flex-wrap: wrap;
 }
 
-.cards__btn {
+.item__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1281,7 +1293,7 @@ body {
 .home__magazines .magazines__content .cards__item {
   padding: 0;
 }
-.home__magazines .magazines__content .cards__image {
+.home__magazines .magazines__content .cards__item .item__image {
   max-width: 16.875rem;
   max-height: 23.4375rem;
   display: flex;
@@ -1292,32 +1304,30 @@ body {
   flex-wrap: nowrap;
   position: relative;
 }
-.home__magazines .magazines__content .cards__image:hover .cards__btn {
+.home__magazines .magazines__content .cards__item .item__image:hover .item__btn {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-.home__magazines .magazines__content .cards__btn {
-  position: absolute;
-  bottom: 0;
-}
-.home__magazines .magazines__content .cards__btn.action {
+.home__magazines .magazines__content .cards__item .item__btn.action {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
   margin: 0;
+  position: absolute;
+  bottom: 0;
 }
-.home__magazines .magazines__content .cards__btn:hover .btn_action {
+.home__magazines .magazines__content .cards__item .item__btn:hover .btn_action {
   background-color: #505356;
 }
-.home__magazines .magazines__content .cards__btn:hover ~ .cards__dep {
+.home__magazines .magazines__content .cards__item .item__btn:hover ~ .item__dep {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
 
-.cards__dep {
+.item__dep {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -1330,7 +1340,7 @@ body {
   padding: 1.25rem 0;
   text-align: center;
 }
-.cards__dep:hover {
+.item__dep:hover {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);

@@ -517,45 +517,47 @@
     }
     .cards__item {
       padding: 0;
-    }
-    .cards__image {
+      .item__image {
       max-width: rem(270);
       max-height: rem(375);
       @include dFlexColumn(center, center);
       flex-wrap: nowrap;
       position: relative;
-      &:hover .cards__btn {
+      &:hover .item__btn {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .cards__btn {
+    .item__btn {
       &.action {
         visibility: hidden;
         opacity: 0;
         transform: translateY(-2em);
         transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
         margin: 0;
-      }
-      position: absolute;
+        position: absolute;
       bottom: 0;
+      }
+      
       &:hover {
         .btn_action {
           background-color: $colorDarkGrey;
         }
-        ~ .cards__dep {
+        ~ .item__dep {
           visibility: visible;
           opacity: 1;
           transform: translateY(0);
         }
       }
     }
+    }
+    
   }
 }
 
-.cards__dep {
+.item__dep {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
