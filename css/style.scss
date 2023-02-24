@@ -217,44 +217,12 @@
   .search__text {
     visibility: hidden;
     opacity: 0;
-    @include dFlexRow(space-between, center);
-    background-color: $colorHome;
-    border: 1px solid $colorBlack;
-    border-radius: 50px;
-    height: 2em;
     position: absolute;
     z-index: 5;
-    width: rem(500);
     top: 0;
     left: 0;
-    padding: rem(2) rem(2) rem(2) rem(20);
     transform: translate(300%, 100%);
     transition: all 1s ease 0s;
-    &.active {
-      @media (max-width: rem($bp1)) {
-        transform: translate(0%, 100%);
-        width: 70vw;
-      }
-      visibility: visible;
-      opacity: 1;
-      transform: translate(-100%, 100%);
-      transition: all 1s ease 0s;
-    }
-  }
-  .search__input,
-  .search__btn {
-    display: inline-block;
-    height: 100%;
-  }
-  .search__input {
-    background-color: transparent;
-    width: 50%;
-  }
-  .search__btn {
-    background-color: $colorBlack;
-    color: $mainColor;
-    border-radius: 50px;
-    padding: rem(2) rem(17);
   }
 }
 
@@ -807,19 +775,26 @@
     }
   }
 }
+
+.magazinesid__about__title {
+  @include adaptiveValue("padding-top", 100, 30, 0, $maxWidth, $minWidth);
+  @include adaptiveValue("padding-bottom", 30, 20, 0, $maxWidth, $minWidth);
+}
 .magazinesid__about__content {
   .magazines__content {
     justify-items: center;
-    .cards__item {
-      .item__btn {
-        &.action {
-          visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-        position: static;
-        justify-self: center;
-        }
-      }
+    .content__item {
+      @include adaptiveValue("row-gap", 30, 20, 0, $maxWidth, $minWidth);
+      justify-content: center;
+      max-width: rem(650);
+    }
+  }
+  .about__text {
+    .text__image {
+      max-width: rem(500);
+    }
+    .content {
+      gap: rem(10) rem(30);
     }
   }
 }

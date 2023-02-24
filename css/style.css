@@ -172,6 +172,13 @@ Now let’s see some common breakpoints for widths of devices:
   background-color: #fff;
   color: #fff;
   text-align: center;
+  margin-bottom: calc(
+      50px + 40 * ((100vw - 380px) / 1560)
+    );
+}
+
+.text__btn.action {
+  margin-bottom: 0;
 }
 
 .btn_action {
@@ -197,6 +204,47 @@ Now let’s see some common breakpoints for widths of devices:
 }
 .btn_more:hover {
   text-transform: uppercase;
+}
+
+#searchText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #faf7f5;
+  border: 1px solid #28282C;
+  border-radius: 50px;
+  height: 2em;
+  width: 31.25rem;
+  padding: 0.125rem 0.125rem 0.125rem 1.25rem;
+}
+#searchText.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-100%, 100%);
+  transition: all 1s ease 0s;
+}
+@media (max-width: 55rem) {
+  #searchText.active {
+    transform: translate(0%, 100%);
+    width: 70vw;
+  }
+}
+#searchText .search__input,
+#searchText .search__btn {
+  display: inline-block;
+  height: 100%;
+}
+#searchText .search__input {
+  background-color: transparent;
+  width: 50%;
+}
+#searchText .search__btn {
+  background-color: #28282C;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.125rem 1.0625rem;
 }
 
 body {
@@ -252,6 +300,7 @@ body {
 .container_block {
   margin: 0 auto;
   height: 100%;
+  padding: 0 0.9375rem;
 }
 @media (max-width: 55rem) {
   .container,
@@ -513,13 +562,17 @@ body {
 }
 
 .submenu .submenu__list {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #faf7f5;
-  grid-template-columns: repeat(auto-fit, minmax(6.875rem, 1fr));
   gap: 0.0625rem;
   text-align: center;
 }
 .submenu .submenu__item {
+  flex: 1 0 11.5625rem;
   background-color: #28282C;
   position: relative;
   color: #faf7f5;
@@ -660,12 +713,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.action {
-  margin-bottom: calc(
-      50px + 40 * ((100vw - 380px) / 1560)
-    );
 }
 
 .button-prev,
@@ -978,50 +1025,12 @@ body {
 .header__search .search__text {
   visibility: hidden;
   opacity: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #faf7f5;
-  border: 1px solid #28282C;
-  border-radius: 50px;
-  height: 2em;
   position: absolute;
   z-index: 5;
-  width: 31.25rem;
   top: 0;
   left: 0;
-  padding: 0.125rem 0.125rem 0.125rem 1.25rem;
   transform: translate(300%, 100%);
   transition: all 1s ease 0s;
-}
-.header__search .search__text.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-100%, 100%);
-  transition: all 1s ease 0s;
-}
-@media (max-width: 55rem) {
-  .header__search .search__text.active {
-    transform: translate(0%, 100%);
-    width: 70vw;
-  }
-}
-.header__search .search__input,
-.header__search .search__btn {
-  display: inline-block;
-  height: 100%;
-}
-.header__search .search__input {
-  background-color: transparent;
-  width: 50%;
-}
-.header__search .search__btn {
-  background-color: #28282C;
-  color: #fff;
-  border-radius: 50px;
-  padding: 0.125rem 1.0625rem;
 }
 
 .header__mini_logo .icon-uk {
@@ -1666,15 +1675,30 @@ body {
   }
 }
 
+.magazinesid__about__title {
+  padding-top: calc(
+      30px + 70 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      20px + 10 * ((100vw - 380px) / 1560)
+    );
+}
+
 .magazinesid__about__content .magazines__content {
   justify-items: center;
 }
-.magazinesid__about__content .magazines__content .cards__item .item__btn.action {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  position: static;
-  justify-self: center;
+.magazinesid__about__content .magazines__content .content__item {
+  row-gap: calc(
+      20px + 10 * ((100vw - 380px) / 1560)
+    );
+  justify-content: center;
+  max-width: 40.625rem;
+}
+.magazinesid__about__content .about__text .text__image {
+  max-width: 31.25rem;
+}
+.magazinesid__about__content .about__text .content {
+  gap: 0.625rem 1.875rem;
 }
 
 .footer {

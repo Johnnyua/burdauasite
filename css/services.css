@@ -212,12 +212,19 @@ Now let’s see some common breakpoints for widths of devices:
 .about .about__title {
   margin: 0 0 1.25rem 0;
 }
+.about .about__text {
+  margin-bottom: 6.25rem;
+}
 .about .text .text__content:not(:last-child) {
   padding: 0 0 1.25rem 0;
 }
 .about .text .text__title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  text-align: start;
+}
+.about .text .text__subtitle {
+  text-align: start;
   text-transform: uppercase;
 }
 .about .text .text__list {

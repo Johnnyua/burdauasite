@@ -61,7 +61,7 @@ body {
     max-width: $bp1 + px;
   }
   height: 100%;
-  // padding: 0 rem(15);
+  padding: 0 rem(15);
 }
 .container {
   max-width: rem($containerWidth);
@@ -212,13 +212,15 @@ body {
 
 .submenu {
   .submenu__list {
-    display: grid;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
+    @include dFlexRow(center, center);
     background-color: $colorHome;
-    grid-template-columns: repeat(auto-fit, minmax(rem(110), 1fr));
     gap: rem(1);
     text-align: center;
   }
   .submenu__item {
+    flex: 1 0 rem(185);
     background-color: $colorBlack;
     position: relative;
     color: $colorHome;
@@ -339,9 +341,7 @@ body {
   // justify-self: center;
 }
 
-.action {
-  @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
-}
+
 
 // Slides
 .button-prev,

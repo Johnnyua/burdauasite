@@ -96,15 +96,19 @@
   background-color: $mainColor;
   color: $mainColor;
   text-align: center;
+  @include adaptiveValue("margin-bottom", 90, 50, 0, $maxWidth, $minWidth);
 }
-
+.text__btn {
+  &.action {
+    margin-bottom: 0;
+  }
+}
 .btn_action {
   display: inline-block;
   background-color: $colorBlack;
   cursor: pointer;
   font-weight: 800;
   padding: rem(10) rem(20);
-
 }
 
 .more {
@@ -116,7 +120,43 @@
   background-color: transparent;
   cursor: pointer;
   &:hover {
-      text-transform: uppercase;
+    text-transform: uppercase;
   }
 }
 // End buttons
+
+// Search
+#searchText {
+  @include dFlexRow(space-between, center);
+  background-color: $colorHome;
+  border: 1px solid $colorBlack;
+  border-radius: 50px;
+  height: 2em;
+  width: rem(500);
+  padding: rem(2) rem(2) rem(2) rem(20);
+  &.active {
+    @media (max-width: rem($bp1)) {
+      transform: translate(0%, 100%);
+      width: 70vw;
+    }
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-100%, 100%);
+    transition: all 1s ease 0s;
+  }
+  .search__input,
+  .search__btn {
+    display: inline-block;
+    height: 100%;
+  }
+  .search__input {
+    background-color: transparent;
+    width: 50%;
+  }
+  .search__btn {
+    background-color: $colorBlack;
+    color: $mainColor;
+    border-radius: 50px;
+    padding: rem(2) rem(17);
+  }
+}
