@@ -1356,6 +1356,7 @@ body {
   margin-bottom: calc(
       20px + 10 * ((100vw - 380px) / 1560)
     );
+  justify-items: center;
 }
 .magazines .magazines__content .cards__item {
   max-width: 16.875rem;
