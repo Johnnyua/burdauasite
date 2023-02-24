@@ -3,7 +3,9 @@
 @import "projects.css";
 @import "services.css";
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.cards__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -25,7 +27,9 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.cards__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -47,7 +51,9 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after {
+.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.cards__item .item__subtitle::after {
   content: "";
   display: block;
 }
@@ -530,6 +536,7 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
+  justify-items: center;
 }
 
 .cards__slides {
@@ -542,7 +549,8 @@ body {
   }
 }
 
-.cards__slides__item {
+.cards__slides__item,
+.cards__item {
   position: relative;
   display: grid;
   grid-auto-flow: row;
@@ -563,24 +571,29 @@ body {
     );
 }
 @media (min-width: 55rem) {
-  .cards__slides__item.item_big {
+  .cards__slides__item.item_big,
+  .cards__item.item_big {
     grid-column: span 2;
   }
 }
-.cards__slides__item .cards__item__image {
+.cards__slides__item .cards__item__image,
+.cards__item .cards__item__image {
   position: absolute;
   width: 100%;
   z-index: -1;
 }
-.cards__slides__item .item__subtitle {
+.cards__slides__item .item__subtitle,
+.cards__item .item__subtitle {
   color: #faf7f5;
 }
-.cards__slides__item .item__subtitle::after {
+.cards__slides__item .item__subtitle::after,
+.cards__item .item__subtitle::after {
   width: 50%;
   height: 2px;
   background: #faf7f5;
 }
-.cards__slides__item .item__text {
+.cards__slides__item .item__text,
+.cards__item .item__text {
   display: grid;
   grid-auto-flow: row;
   row-gap: calc(
@@ -590,22 +603,20 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cards__slides__item .item__text .text__subtitle {
-  position: relative;
+.cards__slides__item .item__text .text__subtitle,
+.cards__item .item__text .text__subtitle {
   text-align: start;
 }
-.cards__slides__item .item__text .text__subtitle::after {
-  position: absolute;
-  bottom: 0;
+.cards__slides__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__subtitle::after {
   left: 0;
   width: 50%;
   height: 2px;
   background: #faf7f5;
-  margin-top: calc(
-      10px + 10 * ((100vw - 380px) / 1560)
-    );
+  margin-top: 0.625rem;
 }
-.cards__slides__item .item__btn {
+.cards__slides__item .item__btn,
+.cards__item .item__btn {
   justify-self: start;
 }
 
@@ -638,10 +649,7 @@ body {
 }
 
 .cards__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .item__btn {
@@ -1315,7 +1323,7 @@ body {
     );
 }
 
-.home__magazines .magazines__content .cards__list {
+.magazines .magazines__content .cards__list {
   -moz-column-gap: calc(
       10px + 20 * ((100vw - 380px) / 1560)
     );
@@ -1329,26 +1337,32 @@ body {
       20px + 10 * ((100vw - 380px) / 1560)
     );
 }
-.home__magazines .magazines__content .cards__item {
+.magazines .magazines__content .cards__item {
+  max-width: 16.875rem;
   padding: 0;
 }
-.home__magazines .magazines__content .cards__item .item__image {
-  max-width: 16.875rem;
-  max-height: 23.4375rem;
+.magazines .magazines__content .cards__item .item__image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
+  max-height: 23.4375rem;
   position: relative;
 }
-.home__magazines .magazines__content .cards__item .item__image:hover .item__btn {
+.magazines .magazines__content .cards__item .item__image:hover .item__btn {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-.home__magazines .magazines__content .cards__item .item__btn.action {
+.magazines .magazines__content .cards__item .text__subtitle {
+  text-transform: uppercase;
+}
+.magazines .magazines__content .cards__item .text__subtitle::after {
+  background: #28282C;
+}
+.magazines .magazines__content .cards__item .item__btn.action {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-2em);
@@ -1357,10 +1371,10 @@ body {
   position: absolute;
   bottom: 0;
 }
-.home__magazines .magazines__content .cards__item .item__btn:hover .btn_action {
+.magazines .magazines__content .cards__item .item__btn:hover .btn_action {
   background-color: #505356;
 }
-.home__magazines .magazines__content .cards__item .item__btn:hover ~ .item__dep {
+.magazines .magazines__content .cards__item .item__btn:hover ~ .item__dep {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
@@ -1630,6 +1644,15 @@ body {
   min-height: calc(
       145px + 415 * ((100vw - 380px) / 1560)
     );
+}
+
+.magazines__about__content {
+  padding: 3.125rem 0.9375rem;
+}
+@media (max-width: 30rem) {
+  .magazines__about__content .text__text {
+    display: none;
+  }
 }
 
 .footer {

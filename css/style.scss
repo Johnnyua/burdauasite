@@ -498,7 +498,7 @@
 // End Home Sites section
 
 // Home Magazines section
-.home__magazines {
+.magazines {
   .magazines__content {
     .cards__list {
       @include adaptiveValue("column-gap", 30, 10, 0, $maxWidth, $minWidth);
@@ -506,17 +506,23 @@
       @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
     }
     .cards__item {
+      max-width: rem(270);
       padding: 0;
       .item__image {
-      max-width: rem(270);
-      max-height: rem(375);
       @include dFlexColumn(center, center);
       flex-wrap: nowrap;
+      max-height: rem(375);
       position: relative;
       &:hover .item__btn {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+    .text__subtitle {
+      text-transform: uppercase;
+      &::after {
+        background: $colorBlack;
       }
     }
 
@@ -528,7 +534,7 @@
         transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
         margin: 0;
         position: absolute;
-      bottom: 0;
+        bottom: 0;
       }
       
       &:hover {
@@ -793,6 +799,15 @@
   .cards__slides__item {
      @include adaptiveValue("min-height", 560, 145, 0, $maxWidth, $minWidth)
   }
+}
+.magazines__about__content {
+  padding: rem(50) rem(15);
+  @media (max-width: rem($bp6)) {
+    .text__text {
+      display: none;
+    }
+  }
+
 }
 
 // Footer

@@ -240,6 +240,7 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
+  justify-items: center;
 }
 .cards__slides {
   display: grid;
@@ -249,7 +250,8 @@ body {
   }
 }
 
-.cards__slides__item {
+.cards__slides__item,
+.cards__item {
   position: relative;
   display: grid;
   grid-auto-flow: row;
@@ -270,8 +272,6 @@ body {
     width: 100%;
     z-index: -1;
   }
-  .item__title {
-  }
   .item__subtitle {
     color: $colorHome;
     &::after {
@@ -286,14 +286,14 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     .text__subtitle {
-      position: relative;
+      // position: relative;
       text-align: start;
       &::after {
-        position: absolute;
-        bottom: 0;
+        // position: absolute;
         left: 0;
         @include lineBeforeAfter(50%, 2px, $colorHome);
-        @include adaptiveValue("margin-top", 20, 10, 0, $maxWidth, $minWidth);
+        margin-top: rem(10);
+        // @include adaptiveValue("margin-top", 20, 10, 0, $maxWidth, $minWidth);
       }
     }
   }
@@ -325,7 +325,8 @@ body {
   }
 }
 .cards__list {
-  @include dFlexRow(center, center);
+  width: 100%;
+  // @include dFlexRow(center, flex-start);
 }
 
 .item__btn {
