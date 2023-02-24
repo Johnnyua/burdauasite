@@ -116,6 +116,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .icons__list {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
@@ -157,6 +158,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .logo {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
@@ -186,6 +188,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .btn_more {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -486,6 +489,7 @@ body {
 .menu,
 .content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -494,6 +498,7 @@ body {
 .menu__list,
 .content__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -501,6 +506,7 @@ body {
 
 .content__item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -527,6 +533,7 @@ body {
 
 .title_baseline {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
@@ -536,7 +543,6 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
-  justify-items: center;
 }
 
 .cards__slides {
@@ -557,18 +563,6 @@ body {
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: 1.25rem;
   justify-items: start;
-  padding-top: calc(
-      20px + 20 * ((100vw - 380px) / 1560)
-    );
-  padding-left: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
-    );
-  padding-right: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
-    );
-  padding-bottom: calc(
-      20px + 20 * ((100vw - 380px) / 1560)
-    );
 }
 @media (min-width: 55rem) {
   .cards__slides__item.item_big,
@@ -594,17 +588,25 @@ body {
 }
 .cards__slides__item .item__text,
 .cards__item .item__text {
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
   row-gap: calc(
       10px + 10 * ((100vw - 380px) / 1560)
     );
-  max-height: 15.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.cards__slides__item .item__text .text__title,
+.cards__item .item__text .text__title {
+  flex-grow: 1;
+}
 .cards__slides__item .item__text .text__subtitle,
 .cards__item .item__text .text__subtitle {
+  flex-grow: 1;
   text-align: start;
 }
 .cards__slides__item .item__text .text__subtitle::after,
@@ -613,7 +615,7 @@ body {
   width: 50%;
   height: 2px;
   background: #faf7f5;
-  margin-top: 0.625rem;
+  margin: 0.625rem 0;
 }
 .cards__slides__item .item__btn,
 .cards__item .item__btn {
@@ -654,6 +656,7 @@ body {
 
 .item__btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -759,6 +762,7 @@ body {
 
 .header__content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -872,6 +876,7 @@ body {
 @media (min-width: 55rem) and (max-width: 75rem) {
   .header__menu .submenu {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -959,6 +964,7 @@ body {
 
 .burger_search {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -973,6 +979,7 @@ body {
   visibility: hidden;
   opacity: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1023,6 +1030,7 @@ body {
 
 .search-lang {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1049,6 +1057,7 @@ body {
 
 .lang {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -1061,6 +1070,7 @@ body {
 
 .lang__list {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1188,6 +1198,7 @@ body {
 }
 .home__content .content__description {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
@@ -1655,6 +1666,17 @@ body {
   }
 }
 
+.magazinesid__about__content .magazines__content {
+  justify-items: center;
+}
+.magazinesid__about__content .magazines__content .cards__item .item__btn.action {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  position: static;
+  justify-self: center;
+}
+
 .footer {
   background-color: #28282C;
   color: #fff;
@@ -1719,6 +1741,7 @@ body {
 
 .footer__contacts {
   display: flex;
+  flex-direction: row;
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
@@ -1726,6 +1749,7 @@ body {
 
 .footer__icons {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1740,6 +1764,7 @@ body {
 
 .footer__nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1747,6 +1772,7 @@ body {
 }
 .footer__nav .menu__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -1769,6 +1795,7 @@ body {
 
 .footer__contacts-dep {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -1789,6 +1816,7 @@ body {
 
 .footer__copyright-text {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

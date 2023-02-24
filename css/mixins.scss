@@ -4,6 +4,7 @@
 
 @mixin dFlexRow($juscon, $alitems) {
   display: flex;
+  flex-direction: row;
   justify-content: $juscon;
   align-items: $alitems;
   flex-wrap: wrap;

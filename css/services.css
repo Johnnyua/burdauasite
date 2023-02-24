@@ -232,6 +232,7 @@ Now let’s see some common breakpoints for widths of devices:
 }
 .objective .objective__item .item__list .list__item {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -282,8 +283,9 @@ Now let’s see some common breakpoints for widths of devices:
     );
 }
 
-.services__description__activites .item__text {
+.services__description__activites .cards__item .item__text {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;

@@ -456,10 +456,10 @@
 // Home Projects section
 
 .projects__container {
-    position: relative;
-    background-color: $colorBlack;
-    color: $colorHome;
-    z-index: 0;
+  position: relative;
+  background-color: $colorBlack;
+  color: $colorHome;
+  z-index: 0;
 }
 
 .projects__cards {
@@ -509,47 +509,46 @@
       max-width: rem(270);
       padding: 0;
       .item__image {
-      @include dFlexColumn(center, center);
-      flex-wrap: nowrap;
-      max-height: rem(375);
-      position: relative;
-      &:hover .item__btn {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .text__subtitle {
-      text-transform: uppercase;
-      &::after {
-        background: $colorBlack;
-      }
-    }
-
-    .item__btn {
-      &.action {
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-2em);
-        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-      }
-      
-      &:hover {
-        .btn_action {
-          background-color: $colorDarkGrey;
-        }
-        ~ .item__dep {
+        @include dFlexColumn(center, center);
+        flex-wrap: nowrap;
+        max-height: rem(375);
+        position: relative;
+        &:hover .item__btn {
           visibility: visible;
           opacity: 1;
           transform: translateY(0);
         }
       }
+      .text__subtitle {
+        text-transform: uppercase;
+        &::after {
+          background: $colorBlack;
+        }
+      }
+
+      .item__btn {
+        &.action {
+          visibility: hidden;
+          opacity: 0;
+          transform: translateY(-2em);
+          transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+          margin: 0;
+          position: absolute;
+          bottom: 0;
+        }
+
+        &:hover {
+          .btn_action {
+            background-color: $colorDarkGrey;
+          }
+          ~ .item__dep {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
     }
-    }
-    
   }
 }
 
@@ -746,7 +745,7 @@
     @media (max-width: rem($bp7)) {
       display: block;
     }
-    grid-template-columns: repeat(3,  1fr);
+    grid-template-columns: repeat(3, 1fr);
     @include adaptiveValue("margin-bottom", 30, 20, 0, $maxWidth, $minWidth);
     &:nth-child(even) {
       .cards__image {
@@ -756,7 +755,7 @@
     .cards__image {
       @media (max-width: rem($bp7)) {
         @include adaptiveValue("max-height", 300, 200, 0, $maxWidth, $minWidth);
-    }
+      }
       position: relative;
       height: 100%;
       min-width: rem(350);
@@ -797,7 +796,7 @@
 // Magazine page
 .magazines__slides {
   .cards__slides__item {
-     @include adaptiveValue("min-height", 560, 145, 0, $maxWidth, $minWidth)
+    @include adaptiveValue("min-height", 560, 145, 0, $maxWidth, $minWidth);
   }
 }
 .magazines__about__content {
@@ -807,7 +806,22 @@
       display: none;
     }
   }
-
+}
+.magazinesid__about__content {
+  .magazines__content {
+    justify-items: center;
+    .cards__item {
+      .item__btn {
+        &.action {
+          visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        position: static;
+        justify-self: center;
+        }
+      }
+    }
+  }
 }
 
 // Footer

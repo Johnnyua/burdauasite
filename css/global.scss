@@ -240,7 +240,6 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
-  justify-items: center;
 }
 .cards__slides {
   display: grid;
@@ -258,10 +257,10 @@ body {
   grid-template: auto 1fr minmax(40px, auto) / 1fr;
   row-gap: rem(20);
   justify-items: start;
-  @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
-  @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-left", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-right", 85, 20, 0, $maxWidth, $minWidth);
+  // @include adaptiveValue("padding-bottom", 40, 20, 0, $maxWidth, $minWidth);
   &.item_big {
     @media (min-width: rem($bp1)) {
       grid-column: span 2;
@@ -279,20 +278,26 @@ body {
     }
   }
   .item__text {
-    display: grid;
-    grid-auto-flow: row;
+    // display: grid;
+    // grid-auto-flow: row;
+    @include dFlexColumn(center, flex-start);
+    flex-wrap: wrap;
     @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
-    max-height: rem(250);
+    // max-height: rem(250);
     overflow: hidden;
     text-overflow: ellipsis;
+    .text__title {
+      flex-grow: 1;
+    }
     .text__subtitle {
       // position: relative;
+      flex-grow: 1;
       text-align: start;
       &::after {
         // position: absolute;
         left: 0;
         @include lineBeforeAfter(50%, 2px, $colorHome);
-        margin-top: rem(10);
+        margin: rem(10) 0;
         // @include adaptiveValue("margin-top", 20, 10, 0, $maxWidth, $minWidth);
       }
     }

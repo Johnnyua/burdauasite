@@ -87,6 +87,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .icons__list {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
@@ -128,6 +129,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .logo {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
@@ -157,6 +159,7 @@ Now let’s see some common breakpoints for widths of devices:
 
 .btn_more {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -457,6 +460,7 @@ body {
 .menu,
 .content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -465,6 +469,7 @@ body {
 .menu__list,
 .content__list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -472,6 +477,7 @@ body {
 
 .content__item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -498,6 +504,7 @@ body {
 
 .title_baseline {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
@@ -507,7 +514,6 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
-  justify-items: center;
 }
 
 .cards__slides {
@@ -528,18 +534,6 @@ body {
   grid-template: auto 1fr minmax(40px, auto)/1fr;
   row-gap: 1.25rem;
   justify-items: start;
-  padding-top: calc(
-      20px + 20 * ((100vw - 380px) / 1560)
-    );
-  padding-left: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
-    );
-  padding-right: calc(
-      20px + 65 * ((100vw - 380px) / 1560)
-    );
-  padding-bottom: calc(
-      20px + 20 * ((100vw - 380px) / 1560)
-    );
 }
 @media (min-width: 55rem) {
   .cards__slides__item.item_big,
@@ -565,17 +559,25 @@ body {
 }
 .cards__slides__item .item__text,
 .cards__item .item__text {
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
   row-gap: calc(
       10px + 10 * ((100vw - 380px) / 1560)
     );
-  max-height: 15.625rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.cards__slides__item .item__text .text__title,
+.cards__item .item__text .text__title {
+  flex-grow: 1;
+}
 .cards__slides__item .item__text .text__subtitle,
 .cards__item .item__text .text__subtitle {
+  flex-grow: 1;
   text-align: start;
 }
 .cards__slides__item .item__text .text__subtitle::after,
@@ -584,7 +586,7 @@ body {
   width: 50%;
   height: 2px;
   background: #faf7f5;
-  margin-top: 0.625rem;
+  margin: 0.625rem 0;
 }
 .cards__slides__item .item__btn,
 .cards__item .item__btn {
@@ -625,6 +627,7 @@ body {
 
 .item__btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

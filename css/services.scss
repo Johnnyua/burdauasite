@@ -251,15 +251,18 @@
 }
 
 .services__description__activites {
-  .item__text {
-    @include dFlexRow(flex-start, flex-start);
-    gap: rem(20);
-    text-transform: uppercase;
-  }
-  .places {
+  .cards__item {
     .item__text {
-      flex-direction: column;
+      @include dFlexRow(flex-start, flex-start);
+      gap: rem(20);
+      text-transform: uppercase;
     }
+  }
+
+  .places {
+      .item__text {
+        flex-direction: column;
+      }
     .icons__item {
       background-color: $colorDarkGrey;
       border: none;
