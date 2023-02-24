@@ -1,4 +1,8 @@
 window.addEventListener("load", init);
+window.onscroll = function () {
+  scrollFunction();
+};
+
 
 function init() {
   const langLink = document.querySelectorAll(".lang__list .lang__link");
@@ -7,8 +11,21 @@ function init() {
   langLink.forEach((elem) => {
     elem.addEventListener("click", changeLanguage);
   });
+  topButton.addEventListener("click", topFunction);
 }
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 function showMobileMenu(e) {
   const mobileNav = document.querySelector(".header__menu");
