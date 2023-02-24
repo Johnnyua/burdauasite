@@ -218,8 +218,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 }
 .cards__slides {
-  display: grid;
+  @media (min-width: rem($bp6)) {
+    display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+  }
   @media (min-width: rem($bp3)) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -256,7 +258,7 @@ body {
   .item__text {
     // display: grid;
     // grid-auto-flow: row;
-    @include dFlexColumn(center, flex-start);
+    @include dFlexColumn(flex-start, flex-start);
     flex-wrap: wrap;
     @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
     // max-height: rem(250);

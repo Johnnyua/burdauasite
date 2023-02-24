@@ -599,9 +599,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
 }
 
-.cards__slides {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+@media (min-width: 30rem) {
+  .cards__slides {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  }
 }
 @media (min-width: 90rem) {
   .cards__slides {
@@ -644,7 +646,7 @@ body {
 .cards__item .item__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   flex-wrap: wrap;
