@@ -71,14 +71,14 @@ new Swiper(".projects__slides_max_container", {
   },
 });
 
-new Swiper(".magazines__slides_container", {
+new Swiper(".slides_medium", {
   slidesPerView: 1.5,
   centeredSlides: true,
   loop: true,
   slideToClickedSlide: true,
   watchSlidesVisibility: true,
   pagination: {
-    el: ".magazines__slides_pagination",
+    el: ".slides_medium__pagination",
     type: "bullets",
     clickable: true,
   },

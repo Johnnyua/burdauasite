@@ -133,9 +133,15 @@
 .btn_action {
   display: inline-block;
   background-color: $colorBlack;
+  color: $mainColor;
   cursor: pointer;
   font-weight: 800;
   padding: rem(10) rem(20);
+  &:hover {
+    background-color: $colorGrey;
+    color: $colorBlack;
+    transition: all 0.3s ease-in-out 0s;
+  }
 }
 
 .more {

@@ -680,6 +680,9 @@
   &.content {
     justify-content: flex-start;
   }
+  .card__title {
+    text-transform: uppercase;
+  }
 }
 
 .vacancii__about__content,
@@ -763,11 +766,6 @@
 }
 
 // Magazine page
-.magazines__slides {
-  .cards__slides__item {
-    @include adaptiveValue("min-height", 560, 145, 0, $maxWidth, $minWidth);
-  }
-}
 .magazines__about__content {
   padding: rem(50) rem(15);
   @media (max-width: rem($bp6)) {
@@ -845,11 +843,10 @@
   }
 }
 
-.footer__nav {
-  @include dFlexRow(space-between, center);
+.footer__menu {
+  justify-content: space-between;
   flex: auto;
   .menu__list {
-    @include dFlexRow(center, center);
     row-gap: rem(30);
     @media (max-width: rem($bp2)) {
       display: none;
@@ -891,7 +888,7 @@
   color: $colorGrey;
 }
 
-.footer__nav,
+.footer__menu,
 .footer__contacts,
 .footer__social-list,
 .footer__contacts-dep,

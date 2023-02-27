@@ -152,9 +152,15 @@ Now let’s see some common breakpoints for widths of devices:
 .btn_action {
   display: inline-block;
   background-color: #28282C;
+  color: #fff;
   cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
+}
+.btn_action:hover {
+  background-color: #8B939A;
+  color: #28282C;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .more {

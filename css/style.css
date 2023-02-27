@@ -3,8 +3,10 @@
 @import "projects.css";
 @import "services.css";
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__slides__item .item__text .text__title::after,
+.cards__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
   display: block;
@@ -27,8 +29,10 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__slides__item .item__text .text__title::after,
+.cards__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
   display: block;
@@ -51,8 +55,10 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__item .item__text .text__subtitle::after, .cards__slides__item .item__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
+.cards__slides__item .item__text .text__title::after,
+.cards__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
   display: block;
@@ -211,9 +217,15 @@ Now let’s see some common breakpoints for widths of devices:
 .btn_action {
   display: inline-block;
   background-color: #28282C;
+  color: #fff;
   cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
+}
+.btn_action:hover {
+  background-color: #8B939A;
+  color: #28282C;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .more {
@@ -451,7 +463,7 @@ body {
 }
 
 .title__subtitle {
-  font-weight: 800;
+  font-weight: 700;
   padding: 0.625rem 0;
 }
 @media (max-width: 880px) {
@@ -466,7 +478,7 @@ body {
 }
 @media (max-width: 55rem) {
   .title__subtitle {
-    font-weight: 700;
+    font-weight: 800;
   }
 }
 
@@ -649,24 +661,22 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  flex-wrap: wrap;
   row-gap: calc(
       10px + 10 * ((100vw - 380px) / 1560)
     );
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cards__slides__item .item__text .text__title,
-.cards__item .item__text .text__title {
-  flex-grow: 1;
-}
 .cards__slides__item .item__text .text__subtitle,
-.cards__item .item__text .text__subtitle {
-  flex-grow: 1;
+.cards__slides__item .item__text .text__title,
+.cards__item .item__text .text__subtitle,
+.cards__item .item__text .text__title {
   text-align: start;
 }
 .cards__slides__item .item__text .text__subtitle::after,
-.cards__item .item__text .text__subtitle::after {
+.cards__slides__item .item__text .text__title::after,
+.cards__item .item__text .text__subtitle::after,
+.cards__item .item__text .text__title::after {
   left: 0;
   width: 50%;
   height: 2px;
@@ -718,6 +728,12 @@ body {
   flex-wrap: wrap;
 }
 
+.slides_medium .cards__slides__item {
+  min-height: calc(
+      145px + 415 * ((100vw - 380px) / 1560)
+    );
+}
+
 .button-prev,
 .button-next {
   display: none;
@@ -760,6 +776,162 @@ body {
 }
 .pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #505356;
+}
+
+/*==========================================*/
+.about {
+  padding-top: calc(
+      60px + 40 * ((100vw - 380px) / 1560)
+    );
+  padding-bottom: calc(
+      30px + 20 * ((100vw - 380px) / 1560)
+    );
+}
+.about .about__title {
+  margin: 0 0 1.25rem 0;
+}
+.about .about__text {
+  margin-bottom: 6.25rem;
+}
+.about .text__content:not(:last-child) {
+  padding: 0 0 1.25rem 0;
+}
+.about .text__title {
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  text-align: start;
+}
+.about .text__subtitle {
+  text-align: start;
+  text-transform: uppercase;
+}
+.about .list__item {
+  list-style: disc;
+  margin: 0 0 0 1.875rem;
+}
+
+.indicators {
+  width: 100%;
+}
+.indicators .indicators__title {
+  text-align: center;
+}
+.indicators .cards {
+  gap: 3.125rem 3.125rem;
+}
+.indicators .cards__item {
+  gap: 0.625rem;
+}
+.indicators .cards__item .item__title::after {
+  width: 5rem;
+  height: 2px;
+  background: #28282C;
+  margin: 0.625rem 0 0 0;
+}
+.indicators .cards__item .text__text {
+  text-align: start;
+}
+
+.objective .objective__item .item__list {
+  gap: 0.625rem;
+}
+.objective .objective__item .item__list .list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #14276F;
+  grid-template: 1fr/1fr;
+  text-align: center;
+  padding: 0.9375rem 1.25rem;
+  min-height: 9.375rem;
+  width: 100%;
+}
+@media (min-width: 30rem) {
+  .objective .objective__item .item__list .list__item {
+    max-width: 12.5rem;
+  }
+}
+
+.products {
+  width: 100%;
+}
+.products .cards {
+  grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
+  gap: 3.125rem 1.875rem;
+  justify-items: center;
+}
+.products .products__title {
+  margin: 0 0 3.125rem 0;
+}
+.products .cards__item {
+  grid-template: minmax(5rem, max-content) auto 1fr auto/1fr;
+  row-gap: 1.25rem;
+  border: none;
+  max-width: 16.875rem;
+}
+.products .cards__item .item__image {
+  width: 100%;
+  max-height: 23.4375rem;
+}
+.products .cards__item .item__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.products .cards__item .text__title {
+  font-weight: 800;
+}
+.products .cards__item .text__title::after {
+  width: 5rem;
+  height: 2px;
+  background: #28282C;
+  margin: 0.625rem 0 0 0;
+}
+
+.solutions {
+  background-color: #E3E3E3;
+  padding: 1.875rem;
+}
+.solutions.content {
+  flex-direction: column;
+  align-items: center;
+}
+.solutions .solutions__cards {
+  background-color: #28282C;
+  gap: 1px 1px;
+}
+.solutions .solutions__title {
+  margin: 0 0 1.25rem 0;
+}
+.solutions .content__item {
+  flex: auto;
+  background-color: #E3E3E3;
+  padding: 1.25rem 3.125rem;
+}
+@media (max-width: 30rem) {
+  .solutions .content__item {
+    padding: 1.25rem 0.3125rem;
+  }
+}
+.solutions .content__item .item__text {
+  text-transform: uppercase;
+}
+
+.portfolio {
+  padding: calc(
+      0px + 100 * ((100vw - 380px) / 1560)
+    );
+  padding-top: 0;
+  gap: 1.25rem;
+}
+.portfolio .portfolio__content {
+  gap: 1.25rem;
+}
+.portfolio .content__item img {
+  max-width: calc(
+      70px + 100 * ((100vw - 380px) / 1560)
+    );
 }
 
 .path-name {
@@ -1571,6 +1743,9 @@ body {
 .cinnosti__about__content.content {
   justify-content: flex-start;
 }
+.cinnosti__about__content .card__title {
+  text-transform: uppercase;
+}
 
 .vacancii__about__content .about__date,
 .newsid__about__content .about__date {
@@ -1662,12 +1837,6 @@ body {
 .news__about__content .about__text__content .text__text {
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.magazines__slides .cards__slides__item {
-  min-height: calc(
-      145px + 415 * ((100vw - 380px) / 1560)
-    );
 }
 
 .magazines__about__content {
@@ -1790,34 +1959,25 @@ body {
   background-color: #14276F;
 }
 
-.footer__nav {
-  display: flex;
-  flex-direction: row;
+.footer__menu {
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
   flex: auto;
 }
-.footer__nav .menu__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.footer__menu .menu__list {
   row-gap: 1.875rem;
 }
 @media (max-width: 43.75rem) {
-  .footer__nav .menu__list {
+  .footer__menu .menu__list {
     display: none;
   }
 }
-.footer__nav .menu__item {
+.footer__menu .menu__item {
   padding: 0.6875rem 1.75rem;
 }
-.footer__nav .menu__item:not(:last-child) {
+.footer__menu .menu__item:not(:last-child) {
   border-right: 2px solid #8B939A;
 }
-.footer__nav .menu__item:hover {
+.footer__menu .menu__item:hover {
   background-color: #8B939A;
 }
 
@@ -1856,7 +2016,7 @@ body {
   color: #8B939A;
 }
 
-.footer__nav,
+.footer__menu,
 .footer__contacts,
 .footer__social-list,
 .footer__contacts-dep,
@@ -1864,7 +2024,7 @@ body {
   gap: 1.875rem;
 }
 @media (max-width: 1920px) {
-  .footer__nav,
+  .footer__menu,
   .footer__contacts,
   .footer__social-list,
   .footer__contacts-dep,
