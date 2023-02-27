@@ -245,6 +245,7 @@ body {
     color: $colorHome;
     &::after {
       @include lineBeforeAfter(50%, 2px, $colorHome);
+      margin: rem(10) 0;
     }
   }
   .item__text {

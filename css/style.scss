@@ -554,8 +554,7 @@
   }
   .cards__slides {
     gap: rem(2);
-    .cards__slides__item {
-      // grid-template: auto 1fr 1fr minmax(40px, auto) / 1fr;
+    .cards__item {
       @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-top", 40, 20, 0, $maxWidth, $minWidth);
       @include adaptiveValue("padding-left", 80, 20, 0, $maxWidth, $minWidth);

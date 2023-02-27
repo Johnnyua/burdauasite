@@ -653,6 +653,7 @@ body {
   width: 50%;
   height: 2px;
   background: #faf7f5;
+  margin: 0.625rem 0;
 }
 .cards__slides__item .item__text,
 .cards__item .item__text {
@@ -1607,7 +1608,7 @@ body {
 .home__news .cards__slides {
   gap: 0.125rem;
 }
-.home__news .cards__slides .cards__slides__item {
+.home__news .cards__slides .cards__item {
   row-gap: calc(
       10px + 10 * ((100vw - 380px) / 1560)
     );

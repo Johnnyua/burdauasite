@@ -186,6 +186,7 @@ Now let’s see some common breakpoints for widths of devices:
 .btn_action {
   display: inline-block;
   background-color: #28282C;
+  color: #fff;
   cursor: pointer;
   font-weight: 800;
   padding: 0.625rem 1.25rem;
@@ -621,6 +622,7 @@ body {
   width: 50%;
   height: 2px;
   background: #faf7f5;
+  margin: 0.625rem 0;
 }
 .cards__slides__item .item__text,
 .cards__item .item__text {
