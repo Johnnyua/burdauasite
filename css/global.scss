@@ -233,7 +233,7 @@ body {
   row-gap: rem(20);
   justify-items: start;
   &.item_big {
-    @media (min-width: rem($bp1)) {
+    @media (min-width: rem($bp7)) {
       grid-column: span 2;
     }
   }
@@ -241,7 +241,6 @@ body {
     position: absolute;
     width: 100%;
     z-index: -1;
-    object-position: top left;
   }
   .item__subtitle {
     color: $colorHome;

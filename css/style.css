@@ -635,7 +635,7 @@ body {
   row-gap: 1.25rem;
   justify-items: start;
 }
-@media (min-width: 55rem) {
+@media (min-width: 48rem) {
   .cards__slides__item.item_big,
   .cards__item.item_big {
     grid-column: span 2;
@@ -646,8 +646,6 @@ body {
   position: absolute;
   width: 100%;
   z-index: -1;
-  -o-object-position: top left;
-     object-position: top left;
 }
 .cards__slides__item .item__subtitle,
 .cards__item .item__subtitle {
