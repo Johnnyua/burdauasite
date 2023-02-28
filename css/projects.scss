@@ -16,15 +16,12 @@
     position: relative;
     opacity: 0.2;
     transition: opacity 0.3s ease 0s;
-    padding: 0;
+    padding-top: rem(10);
+    @include adaptiveValue("padding-left", 40, 15, 0, $maxWidth, $minWidth);
     .cards__image {
       object-position: top;
       position: absolute;
       z-index: -1;
-    }
-    .cards__content {
-      padding-top: rem(10);
-      @include adaptiveValue("padding-left", 40, 15, 0, $maxWidth, $minWidth);
     }
     &.swiper-slide-thumb-active {
       opacity: 1;

@@ -71,7 +71,7 @@
   }
   .menu__list {
     font-weight: 400;
-    @include adaptiveValue("gap", 40, 5, 2, 1630, 800);
+    @include adaptiveValue("gap", 40, 5, 2, $maxWidth, $minWidth);
     @media (max-width: rem($bp1)) {
       flex-direction: column;
       width: rem(220);
@@ -80,9 +80,8 @@
     }
   }
   .menu__submenu {
-    display: flex;
-    gap: calc(5px + 35 * ((100vw - 360px) / 1270));
-    flex-direction: column;
+    @include dFlexColumn(center,center);
+    @include adaptiveValue("gap", 40, 5, 2, $maxWidth, $minWidth);
     width: 100%;
     @media (min-width: rem($bp1)) and (max-width: rem($bp4)) {
       display: none;
@@ -409,10 +408,10 @@
   gap: rem(2);
   .cards__slides__item {
     background-color: $colorLightGrey;
-    @include adaptiveValue("padding-top", 50, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-left", 135, 30, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-bottom", 50, 20, 0, $maxWidth, $minWidth);
-    @include adaptiveValue("padding-right", 135, 30, 0, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-top", 50, 20, 2, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-left", 135, 30, 2, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-bottom", 50, 20, 2, $maxWidth, $minWidth);
+    @include adaptiveValue("padding-right", 135, 30, 2, $maxWidth, $minWidth);
     .item__btn {
       justify-self: center;
     }

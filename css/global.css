@@ -580,10 +580,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(16.875rem, 1fr));
 }
 
-@media (min-width: 30rem) {
+.cards__slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+}
+@media (min-width: 61.875rem) {
   .cards__slides {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
   }
 }
 @media (min-width: 90rem) {
@@ -612,6 +615,8 @@ body {
   position: absolute;
   width: 100%;
   z-index: -1;
+  -o-object-position: top left;
+     object-position: top left;
 }
 .cards__slides__item .item__subtitle,
 .cards__item .item__subtitle {

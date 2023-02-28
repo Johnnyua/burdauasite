@@ -214,9 +214,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
 }
 .cards__slides {
-  @media (min-width: rem($bp6)) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+  @media (min-width: rem($bp5)) {
+    grid-template-columns: repeat(auto-fit, minmax(rem(500), 1fr));
   }
   @media (min-width: rem($bp3)) {
     grid-template-columns: repeat(3, 1fr);
@@ -240,6 +241,7 @@ body {
     position: absolute;
     width: 100%;
     z-index: -1;
+    object-position: top left;
   }
   .item__subtitle {
     color: $colorHome;
