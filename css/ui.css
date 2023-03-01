@@ -157,11 +157,6 @@ Now let’s see some common breakpoints for widths of devices:
   font-weight: 800;
   padding: 0.625rem 1.25rem;
 }
-.btn_action:hover {
-  background-color: #8B939A;
-  color: #28282C;
-  transition: all 0.3s ease-in-out 0s;
-}
 
 .more {
   color: #8B939A;
@@ -219,4 +214,11 @@ Now let’s see some common breakpoints for widths of devices:
   color: #fff;
   border-radius: 50px;
   padding: 0.125rem 1.0625rem;
+}
+
+.btn_action:hover,
+#searchText .search__btn:hover {
+  background-color: #8B939A;
+  color: #28282C;
+  transition: all 0.3s ease-in-out 0s;
 }/*# sourceMappingURL=ui.css.map */

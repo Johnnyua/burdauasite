@@ -1,7 +1,5 @@
 @charset "UTF-8";
-.products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
+.products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__title::after,
 .cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
@@ -24,9 +22,7 @@ Now let’s see some common breakpoints for widths of devices:
 1201px and more —  Extra large screens, TV
 */
 /*End Width ====================================================*/
-.products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
+.products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__title::after,
 .cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
@@ -646,15 +642,15 @@ body {
 .cards__item .item__text .text__title {
   text-align: start;
 }
-.cards__slides__item .item__text .text__subtitle::after,
 .cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
 .cards__item .item__text .text__title::after {
   left: 0;
-  width: 50%;
+  width: 5rem;
   height: 2px;
   background: #faf7f5;
-  margin: 0.625rem 0;
+  margin-top: calc(
+      10px + 10 * ((100vw - 380px) / 1560)
+    );
 }
 .cards__slides__item .item__btn,
 .cards__item .item__btn {

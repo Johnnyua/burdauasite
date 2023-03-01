@@ -378,7 +378,7 @@
     height: 100%;
     margin-right: 16px;
     img {
-      max-width: fit-content;
+      max-width: fit-contentж
     }
   }
   .section__title {
@@ -487,7 +487,7 @@
           transform: translateY(0);
         }
       }
-      .text__subtitle {
+      .text__title {
         text-transform: uppercase;
         &::after {
           background: $colorBlack;

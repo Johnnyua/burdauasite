@@ -3,9 +3,7 @@
 @import "projects.css";
 @import "services.css";
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__title::after,
 .cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
@@ -29,9 +27,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__title::after,
 .cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
@@ -55,9 +51,7 @@ Now let’s see some common breakpoints for widths of devices:
 */
 /*End Width ====================================================*/
 .news__about__content .about__text__content .item__title::after, .header__menu .menu__item.active::after,
-.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__subtitle::after,
-.cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
+.header__menu .submenu__item.active::after, .products .cards__item .text__title::after, .indicators .cards__item .item__title::after, .cards__slides__item .item__text .text__title::after,
 .cards__item .item__text .text__title::after, .cards__slides__item .item__subtitle::after,
 .cards__item .item__subtitle::after {
   content: "";
@@ -222,11 +216,6 @@ Now let’s see some common breakpoints for widths of devices:
   font-weight: 800;
   padding: 0.625rem 1.25rem;
 }
-.btn_action:hover {
-  background-color: #8B939A;
-  color: #28282C;
-  transition: all 0.3s ease-in-out 0s;
-}
 
 .more {
   color: #8B939A;
@@ -284,6 +273,13 @@ Now let’s see some common breakpoints for widths of devices:
   color: #fff;
   border-radius: 50px;
   padding: 0.125rem 1.0625rem;
+}
+
+.btn_action:hover,
+#searchText .search__btn:hover {
+  background-color: #8B939A;
+  color: #28282C;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 body {
@@ -677,15 +673,15 @@ body {
 .cards__item .item__text .text__title {
   text-align: start;
 }
-.cards__slides__item .item__text .text__subtitle::after,
 .cards__slides__item .item__text .text__title::after,
-.cards__item .item__text .text__subtitle::after,
 .cards__item .item__text .text__title::after {
   left: 0;
-  width: 50%;
+  width: 5rem;
   height: 2px;
   background: #faf7f5;
-  margin: 0.625rem 0;
+  margin-top: calc(
+      10px + 10 * ((100vw - 380px) / 1560)
+    );
 }
 .cards__slides__item .item__btn,
 .cards__item .item__btn {
@@ -1437,8 +1433,7 @@ body {
   margin-right: 16px;
 }
 .home__content .description__number img {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: fit-contentж;
 }
 .home__content .section__title {
   color: #14276F;
@@ -1586,10 +1581,10 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-.magazines .magazines__content .cards__item .text__subtitle {
+.magazines .magazines__content .cards__item .text__title {
   text-transform: uppercase;
 }
-.magazines .magazines__content .cards__item .text__subtitle::after {
+.magazines .magazines__content .cards__item .text__title::after {
   background: #28282C;
 }
 .magazines .magazines__content .cards__item .item__btn.action {

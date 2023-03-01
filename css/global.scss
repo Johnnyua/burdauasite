@@ -251,16 +251,21 @@ body {
   }
   .item__text {
     @include dFlexColumn(flex-start, flex-start);
+    // display: grid;
+    // grid-auto-flow: row;
+    // grid-template-rows: minmax(max-content, 1fr) 1fr; 
     @include adaptiveValue("row-gap", 20, 10, 0, $maxWidth, $minWidth);
     overflow: hidden;
     text-overflow: ellipsis;
     .text__subtitle,
     .text__title {
       text-align: start;
+    }
+    .text__title {
       &::after {
         left: 0;
-        @include lineBeforeAfter(50%, 2px, $colorHome);
-        margin: rem(10) 0;
+        @include lineBeforeAfter(rem(80), 2px, $colorHome);
+        @include adaptiveValue("margin-top", 20, 10, 0, $maxWidth, $minWidth);
       }
     }
   }
